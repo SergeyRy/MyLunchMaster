@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B45306882A3CAB3F073DDF55 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB70F74D6AEDE8265DB802D /* libPods.a */; };
+		CD6A298F1B9D939D008E31C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A298E1B9D939D008E31C6 /* main.m */; };
+		CD6A29921B9D939D008E31C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A29911B9D939D008E31C6 /* AppDelegate.m */; };
+		CD6A29951B9D939D008E31C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A29941B9D939D008E31C6 /* ViewController.m */; };
+		CD6A29981B9D939D008E31C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD6A29961B9D939D008E31C6 /* Main.storyboard */; };
+		CD6A299A1B9D939D008E31C6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD6A29991B9D939D008E31C6 /* Images.xcassets */; };
+		CD6A299D1B9D939D008E31C6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD6A299B1B9D939D008E31C6 /* LaunchScreen.xib */; };
+		CD6A29A91B9D939D008E31C6 /* MyLunchMasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A29A81B9D939D008E31C6 /* MyLunchMasterTests.m */; };
+		CD6A29C01BA0431D008E31C6 /* HttpApiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A29BF1BA0431D008E31C6 /* HttpApiHelper.m */; };
+		CD6A29C31BA166B9008E31C6 /* ViewHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A29C21BA166B9008E31C6 /* ViewHomeController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD6A29A31B9D939D008E31C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD6A29811B9D939D008E31C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD6A29881B9D939D008E31C6;
+			remoteInfo = MyLunchMaster;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F59403458D15BB955ED8637 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8FB70F74D6AEDE8265DB802D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD6A29891B9D939D008E31C6 /* MyLunchMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLunchMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD6A298D1B9D939D008E31C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD6A298E1B9D939D008E31C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CD6A29901B9D939D008E31C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CD6A29911B9D939D008E31C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CD6A29931B9D939D008E31C6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CD6A29941B9D939D008E31C6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CD6A29971B9D939D008E31C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD6A29991B9D939D008E31C6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CD6A299C1B9D939D008E31C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CD6A29A21B9D939D008E31C6 /* MyLunchMasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLunchMasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD6A29A71B9D939D008E31C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD6A29A81B9D939D008E31C6 /* MyLunchMasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLunchMasterTests.m; sourceTree = "<group>"; };
+		CD6A29BE1BA0431D008E31C6 /* HttpApiHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpApiHelper.h; path = ../HttpApiHelper.h; sourceTree = "<group>"; };
+		CD6A29BF1BA0431D008E31C6 /* HttpApiHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpApiHelper.m; path = ../HttpApiHelper.m; sourceTree = "<group>"; };
+		CD6A29C11BA166B9008E31C6 /* ViewHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewHomeController.h; sourceTree = "<group>"; };
+		CD6A29C21BA166B9008E31C6 /* ViewHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewHomeController.m; sourceTree = "<group>"; };
+		D340F1DBE224231264469A87 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD6A29861B9D939D008E31C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B45306882A3CAB3F073DDF55 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD6A299F1B9D939D008E31C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B713EEF328E31B80FCFEFC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FB70F74D6AEDE8265DB802D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD6A29801B9D939D008E31C6 = {
+			isa = PBXGroup;
+			children = (
+				CD6A298B1B9D939D008E31C6 /* MyLunchMaster */,
+				CD6A29A51B9D939D008E31C6 /* MyLunchMasterTests */,
+				CD6A298A1B9D939D008E31C6 /* Products */,
+				EA6AEEF175A63B619BA3CEB6 /* Pods */,
+				9B713EEF328E31B80FCFEFC9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CD6A298A1B9D939D008E31C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD6A29891B9D939D008E31C6 /* MyLunchMaster.app */,
+				CD6A29A21B9D939D008E31C6 /* MyLunchMasterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD6A298B1B9D939D008E31C6 /* MyLunchMaster */ = {
+			isa = PBXGroup;
+			children = (
+				CD6A29901B9D939D008E31C6 /* AppDelegate.h */,
+				CD6A29911B9D939D008E31C6 /* AppDelegate.m */,
+				CD6A29931B9D939D008E31C6 /* ViewController.h */,
+				CD6A29941B9D939D008E31C6 /* ViewController.m */,
+				CD6A29961B9D939D008E31C6 /* Main.storyboard */,
+				CD6A29991B9D939D008E31C6 /* Images.xcassets */,
+				CD6A299B1B9D939D008E31C6 /* LaunchScreen.xib */,
+				CD6A29BE1BA0431D008E31C6 /* HttpApiHelper.h */,
+				CD6A29BF1BA0431D008E31C6 /* HttpApiHelper.m */,
+				CD6A298C1B9D939D008E31C6 /* Supporting Files */,
+				CD6A29C11BA166B9008E31C6 /* ViewHomeController.h */,
+				CD6A29C21BA166B9008E31C6 /* ViewHomeController.m */,
+			);
+			path = MyLunchMaster;
+			sourceTree = "<group>";
+		};
+		CD6A298C1B9D939D008E31C6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD6A298D1B9D939D008E31C6 /* Info.plist */,
+				CD6A298E1B9D939D008E31C6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD6A29A51B9D939D008E31C6 /* MyLunchMasterTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD6A29A81B9D939D008E31C6 /* MyLunchMasterTests.m */,
+				CD6A29A61B9D939D008E31C6 /* Supporting Files */,
+			);
+			path = MyLunchMasterTests;
+			sourceTree = "<group>";
+		};
+		CD6A29A61B9D939D008E31C6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD6A29A71B9D939D008E31C6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA6AEEF175A63B619BA3CEB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D340F1DBE224231264469A87 /* Pods.debug.xcconfig */,
+				2F59403458D15BB955ED8637 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD6A29881B9D939D008E31C6 /* MyLunchMaster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD6A29AC1B9D939D008E31C6 /* Build configuration list for PBXNativeTarget "MyLunchMaster" */;
+			buildPhases = (
+				F321FC5764F869E5D41B1A01 /* Check Pods Manifest.lock */,
+				CD6A29851B9D939D008E31C6 /* Sources */,
+				CD6A29861B9D939D008E31C6 /* Frameworks */,
+				CD6A29871B9D939D008E31C6 /* Resources */,
+				70DB1A1E28CC6F8B99861F5C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyLunchMaster;
+			productName = MyLunchMaster;
+			productReference = CD6A29891B9D939D008E31C6 /* MyLunchMaster.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD6A29A11B9D939D008E31C6 /* MyLunchMasterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD6A29AF1B9D939D008E31C6 /* Build configuration list for PBXNativeTarget "MyLunchMasterTests" */;
+			buildPhases = (
+				CD6A299E1B9D939D008E31C6 /* Sources */,
+				CD6A299F1B9D939D008E31C6 /* Frameworks */,
+				CD6A29A01B9D939D008E31C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD6A29A41B9D939D008E31C6 /* PBXTargetDependency */,
+			);
+			name = MyLunchMasterTests;
+			productName = MyLunchMasterTests;
+			productReference = CD6A29A21B9D939D008E31C6 /* MyLunchMasterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD6A29811B9D939D008E31C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Employee;
+				TargetAttributes = {
+					CD6A29881B9D939D008E31C6 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					CD6A29A11B9D939D008E31C6 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = CD6A29881B9D939D008E31C6;
+					};
+				};
+			};
+			buildConfigurationList = CD6A29841B9D939D008E31C6 /* Build configuration list for PBXProject "MyLunchMaster" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD6A29801B9D939D008E31C6;
+			productRefGroup = CD6A298A1B9D939D008E31C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD6A29881B9D939D008E31C6 /* MyLunchMaster */,
+				CD6A29A11B9D939D008E31C6 /* MyLunchMasterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD6A29871B9D939D008E31C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD6A29981B9D939D008E31C6 /* Main.storyboard in Resources */,
+				CD6A299D1B9D939D008E31C6 /* LaunchScreen.xib in Resources */,
+				CD6A299A1B9D939D008E31C6 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD6A29A01B9D939D008E31C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		70DB1A1E28CC6F8B99861F5C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F321FC5764F869E5D41B1A01 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD6A29851B9D939D008E31C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD6A29C01BA0431D008E31C6 /* HttpApiHelper.m in Sources */,
+				CD6A29951B9D939D008E31C6 /* ViewController.m in Sources */,
+				CD6A29921B9D939D008E31C6 /* AppDelegate.m in Sources */,
+				CD6A298F1B9D939D008E31C6 /* main.m in Sources */,
+				CD6A29C31BA166B9008E31C6 /* ViewHomeController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD6A299E1B9D939D008E31C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD6A29A91B9D939D008E31C6 /* MyLunchMasterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD6A29A41B9D939D008E31C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD6A29881B9D939D008E31C6 /* MyLunchMaster */;
+			targetProxy = CD6A29A31B9D939D008E31C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD6A29961B9D939D008E31C6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD6A29971B9D939D008E31C6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD6A299B1B9D939D008E31C6 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD6A299C1B9D939D008E31C6 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD6A29AA1B9D939D008E31C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD6A29AB1B9D939D008E31C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD6A29AD1B9D939D008E31C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D340F1DBE224231264469A87 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MyLunchMaster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CD6A29AE1B9D939D008E31C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F59403458D15BB955ED8637 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MyLunchMaster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CD6A29B01B9D939D008E31C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MyLunchMasterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyLunchMaster.app/MyLunchMaster";
+			};
+			name = Debug;
+		};
+		CD6A29B11B9D939D008E31C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MyLunchMasterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyLunchMaster.app/MyLunchMaster";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD6A29841B9D939D008E31C6 /* Build configuration list for PBXProject "MyLunchMaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD6A29AA1B9D939D008E31C6 /* Debug */,
+				CD6A29AB1B9D939D008E31C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD6A29AC1B9D939D008E31C6 /* Build configuration list for PBXNativeTarget "MyLunchMaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD6A29AD1B9D939D008E31C6 /* Debug */,
+				CD6A29AE1B9D939D008E31C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD6A29AF1B9D939D008E31C6 /* Build configuration list for PBXNativeTarget "MyLunchMasterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD6A29B01B9D939D008E31C6 /* Debug */,
+				CD6A29B11B9D939D008E31C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD6A29811B9D939D008E31C6 /* Project object */;
+}

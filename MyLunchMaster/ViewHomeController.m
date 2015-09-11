@@ -30,9 +30,4 @@
     return YES;
 }
 
-- (void)goToHomePage
-{
-    //    [self performSegueWithIdentifier:@"Login_succes" sender:self];
-}
-
 @end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B45306882A3CAB3F073DDF55 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB70F74D6AEDE8265DB802D /* libPods.a */; };
+		CD464D951BA30C820082079A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD464D941BA30C820082079A /* Security.framework */; };
 		CD6A298F1B9D939D008E31C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A298E1B9D939D008E31C6 /* main.m */; };
 		CD6A29921B9D939D008E31C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A29911B9D939D008E31C6 /* AppDelegate.m */; };
 		CD6A29951B9D939D008E31C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A29941B9D939D008E31C6 /* ViewController.m */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		2F59403458D15BB955ED8637 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8FB70F74D6AEDE8265DB802D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD464D941BA30C820082079A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CD6A29891B9D939D008E31C6 /* MyLunchMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLunchMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6A298D1B9D939D008E31C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD6A298E1B9D939D008E31C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD464D951BA30C820082079A /* Security.framework in Frameworks */,
 				B45306882A3CAB3F073DDF55 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +77,7 @@
 		9B713EEF328E31B80FCFEFC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD464D941BA30C820082079A /* Security.framework */,
 				8FB70F74D6AEDE8265DB802D /* libPods.a */,
 			);
 			name = Frameworks;

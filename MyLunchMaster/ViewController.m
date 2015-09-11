@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "HttpApiHelper.h"
-#import <AFNetworking/AFNetworking.h>
+#import <Security/Security.h>
 
 @interface ViewController ()
 
@@ -34,10 +34,10 @@
     [httpClient loginWithUserName:[self.txtLogin text]
                          password:[self.txtPassword text]
                           success:^(AFHTTPRequestOperation *task, id responseObject) {
-                              NSLog(@"Success -- %@", responseObject);                              
-                          }
+                               [self saveLogin:[self.txtLogin text] andPassword:[self.txtPassword text]];
+                           }
                           failure:^(AFHTTPRequestOperation *task, NSError *error) {
-                              NSLog(@"Failure -- %@", error);
+
                           }];
 
 }
@@ -51,8 +51,32 @@
     return YES;
 }
 
-- (void)goToHomePage
+- (void)saveLogin:(NSString *)login andPassword:(NSString *)password
 {
+    NSMutableDictionary *keychainItem = [NSMutableDictionary dictionary];
+
+    NSString *username = self.txtLogin.text;
+    NSString *pw = self.txtPassword.text;
+
+    keychainItem[(__bridge id)kSecClass] = (__bridge id)kSecClassInternetPassword;
+    keychainItem[(__bridge id)kSecAttrAccessible] = (__bridge id)kSecAttrAccessibleWhenUnlocked;
+    keychainItem[(__bridge id)kSecAttrAccount] = username;
+
+
+    if(SecItemCopyMatching((__bridge CFDictionaryRef)keychainItem, NULL) == noErr) {
+
+        NSMutableDictionary *attributesToUpdate = [NSMutableDictionary dictionary];
+        attributesToUpdate[(__bridge id)kSecValueData] = [password dataUsingEncoding:NSUTF8StringEncoding];
+
+        OSStatus sts = SecItemUpdate((__bridge CFDictionaryRef)keychainItem, (__bridge CFDictionaryRef)attributesToUpdate);
+        NSLog(@"Error Code: %d", (int)sts);
+        NSLog(@"Update");
+
+    } else {
+        keychainItem[(__bridge id)kSecValueData] = [pw dataUsingEncoding:NSUTF8StringEncoding];
+        OSStatus sts = SecItemAdd((__bridge CFDictionaryRef)keychainItem, NULL);
+        NSLog(@"Add");
+    }
 
 }
 

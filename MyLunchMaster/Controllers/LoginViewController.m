@@ -10,6 +10,7 @@
 #import "HttpApiHelper.h"
 #import "SimpleKeychain.h"
 #import "Constants.h"
+#import "TabHomeViewController.h"
 
 
 @interface LoginViewController ()
@@ -21,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES];
+
+    NSLog(@"login view did load");
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -36,14 +39,24 @@
                           success:^(AFHTTPRequestOperation *task, id responseObject) {
                               NSString *token = [responseObject valueForKeyPath:@"auth_token"];
                               if (token) {
-                                  [[A0SimpleKeychain keychain] setString:[self.txtPassword text] forKey:TOKEN_KEY];
+                                  [[A0SimpleKeychain keychain] setString:token forKey:TOKEN_KEY];
                                   [httpClient setToken:token];
+                                  [self goToTabHomePage];
                               }
                            }
                           failure:^(AFHTTPRequestOperation *task, NSError *error) {
 
                           }];
 
+}
+
+- (void)goToTabHomePage {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"loginSuccessful" object:self];
+
+    // Dismiss login screen
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+    NSLog(@"Post notification CLOSE LOGIN PAGE");
 }
 
 - (IBAction)backgroundTap:(id)sender {

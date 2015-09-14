@@ -11,6 +11,7 @@
 extern NSString * const baseURLString;
 
 @interface HttpApiHelper : AFHTTPRequestOperationManager
+    @property (nonatomic, strong) NSString *token;
 
 + (HttpApiHelper *)httpClient;
 
@@ -18,5 +19,6 @@ extern NSString * const baseURLString;
                password:(NSString *)password
                 success:(void(^)(AFHTTPRequestOperation *task, id responseObject))success
                 failure:(void(^)(AFHTTPRequestOperation *task, NSError *error))failure;
-
+- (void)getOrdersForCurrentWeekSuccess:(void(^)(AFHTTPRequestOperation *task, id responseObject))success
+                               failure:(void(^)(AFHTTPRequestOperation *task, NSError *error))failure;
 @end

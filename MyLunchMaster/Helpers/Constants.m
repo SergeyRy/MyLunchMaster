@@ -6,7 +6,6 @@
 #import "Constants.h"
 
 
-@implementation Constants {
-
-}
+@implementation Constants
+    NSString *const TOKEN_KEY = @"com.eatnow.lunchmaster.token";
 @end

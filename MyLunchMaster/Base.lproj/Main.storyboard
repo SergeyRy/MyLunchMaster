@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginPage" id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -90,7 +90,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="btnLoginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="olK-ef-y4H"/>
-                                    <segue destination="gbB-Tg-u4G" kind="show" id="Zs5-aX-ZFJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -132,7 +131,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1493" y="306"/>
+            <point key="canvasLocation" x="995.5" y="305.5"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="GfU-iW-aO5">
@@ -156,7 +155,7 @@
         <!--Home-->
         <scene sceneID="y3j-pJ-DJG">
             <objects>
-                <tableViewController id="MXq-un-6XM" sceneMemberID="viewController">
+                <tableViewController id="MXq-un-6XM" customClass="WeekOrdersTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8Ix-Ug-dnF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,10 +180,11 @@
             </objects>
             <point key="canvasLocation" x="2614" y="35"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Home View Controller-->
         <scene sceneID="gzJ-C4-cLC">
             <objects>
-                <tabBarController id="gbB-Tg-u4G" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabHomePage" id="gbB-Tg-u4G" customClass="TabHomeViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vIU-NT-t41"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="nKw-zH-m5L">
@@ -206,18 +206,19 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QKT-Ip-L0D" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c9H-jT-DN4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="t13-5l-0QK"/>
+                        <segue destination="gbB-Tg-u4G" kind="relationship" relationship="rootViewController" id="A1n-6I-HZI"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DwF-ZT-lqn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="699" y="306"/>
+            <point key="canvasLocation" x="1504.5" y="305.5"/>
         </scene>
     </scenes>
 </document>

@@ -5,6 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString *const TOKEN_KEY;
 
 @interface Constants : NSObject
 @end

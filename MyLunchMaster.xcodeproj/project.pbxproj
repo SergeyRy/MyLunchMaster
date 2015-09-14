@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4722EB008F984BA5B0B76ED7 /* HttpApiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EF8D735114A390F9CC2B /* HttpApiHelper.m */; };
+		4722EC0863FB926387175219 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E103A5FA1C214ADEA20D /* LoginViewController.m */; };
+		4722EC14BFB89FD558FF9E1C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E5B55C587E38C235B3DB /* Constants.m */; };
+		4722EDD9968DD7CD41E114C7 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E5B55C587E38C235B3DB /* Constants.m */; };
+		4722EF1B66DDBE023444463B /* TabHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E320E7815DF3D43C0113 /* TabHomeViewController.m */; };
 		B45306882A3CAB3F073DDF55 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB70F74D6AEDE8265DB802D /* libPods.a */; };
 		CD464D951BA30C820082079A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD464D941BA30C820082079A /* Security.framework */; };
+		CD464D981BA6E63F0082079A /* WeekOrdersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD464D971BA6E63F0082079A /* WeekOrdersTableViewController.m */; };
 		CD6A298F1B9D939D008E31C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A298E1B9D939D008E31C6 /* main.m */; };
 		CD6A29921B9D939D008E31C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A29911B9D939D008E31C6 /* AppDelegate.m */; };
-		CD6A29951B9D939D008E31C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A29941B9D939D008E31C6 /* ViewController.m */; };
 		CD6A29981B9D939D008E31C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD6A29961B9D939D008E31C6 /* Main.storyboard */; };
 		CD6A299A1B9D939D008E31C6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD6A29991B9D939D008E31C6 /* Images.xcassets */; };
 		CD6A299D1B9D939D008E31C6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD6A299B1B9D939D008E31C6 /* LaunchScreen.xib */; };
 		CD6A29A91B9D939D008E31C6 /* MyLunchMasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A29A81B9D939D008E31C6 /* MyLunchMasterTests.m */; };
-		CD6A29C01BA0431D008E31C6 /* HttpApiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A29BF1BA0431D008E31C6 /* HttpApiHelper.m */; };
-		CD6A29C31BA166B9008E31C6 /* ViewHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A29C21BA166B9008E31C6 /* ViewHomeController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,25 +35,29 @@
 
 /* Begin PBXFileReference section */
 		2F59403458D15BB955ED8637 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4722E103A5FA1C214ADEA20D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4722E320E7815DF3D43C0113 /* TabHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabHomeViewController.m; sourceTree = "<group>"; };
+		4722E5B55C587E38C235B3DB /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		4722E651EFB3384568E5FC1F /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		4722E67A562F4E7FEBB939B5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4722E89927716D77583CBD61 /* HttpApiHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpApiHelper.h; sourceTree = "<group>"; };
+		4722E90DBFC47B3D50983A4F /* TabHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabHomeViewController.h; sourceTree = "<group>"; };
+		4722EF8D735114A390F9CC2B /* HttpApiHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpApiHelper.m; sourceTree = "<group>"; };
 		8FB70F74D6AEDE8265DB802D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD464D941BA30C820082079A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CD464D961BA6E63F0082079A /* WeekOrdersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekOrdersTableViewController.h; sourceTree = "<group>"; };
+		CD464D971BA6E63F0082079A /* WeekOrdersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekOrdersTableViewController.m; sourceTree = "<group>"; };
 		CD6A29891B9D939D008E31C6 /* MyLunchMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLunchMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6A298D1B9D939D008E31C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD6A298E1B9D939D008E31C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD6A29901B9D939D008E31C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CD6A29911B9D939D008E31C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CD6A29931B9D939D008E31C6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CD6A29941B9D939D008E31C6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CD6A29971B9D939D008E31C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD6A29991B9D939D008E31C6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CD6A299C1B9D939D008E31C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CD6A29A21B9D939D008E31C6 /* MyLunchMasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLunchMasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6A29A71B9D939D008E31C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD6A29A81B9D939D008E31C6 /* MyLunchMasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLunchMasterTests.m; sourceTree = "<group>"; };
-		CD6A29BE1BA0431D008E31C6 /* HttpApiHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpApiHelper.h; path = ../HttpApiHelper.h; sourceTree = "<group>"; };
-		CD6A29BF1BA0431D008E31C6 /* HttpApiHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpApiHelper.m; path = ../HttpApiHelper.m; sourceTree = "<group>"; };
-		CD6A29C11BA166B9008E31C6 /* ViewHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewHomeController.h; sourceTree = "<group>"; };
-		CD6A29C21BA166B9008E31C6 /* ViewHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewHomeController.m; sourceTree = "<group>"; };
 		D340F1DBE224231264469A87 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +81,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4722E48BA967EDA0337671F2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4722EF8D735114A390F9CC2B /* HttpApiHelper.m */,
+				4722E89927716D77583CBD61 /* HttpApiHelper.h */,
+				4722E5B55C587E38C235B3DB /* Constants.m */,
+				4722E651EFB3384568E5FC1F /* Constants.h */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4722E4A087A0CD10A2C8017C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4722E103A5FA1C214ADEA20D /* LoginViewController.m */,
+				4722E320E7815DF3D43C0113 /* TabHomeViewController.m */,
+				4722E67A562F4E7FEBB939B5 /* LoginViewController.h */,
+				4722E90DBFC47B3D50983A4F /* TabHomeViewController.h */,
+				CD464D961BA6E63F0082079A /* WeekOrdersTableViewController.h */,
+				CD464D971BA6E63F0082079A /* WeekOrdersTableViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		9B713EEF328E31B80FCFEFC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,16 +139,12 @@
 			children = (
 				CD6A29901B9D939D008E31C6 /* AppDelegate.h */,
 				CD6A29911B9D939D008E31C6 /* AppDelegate.m */,
-				CD6A29931B9D939D008E31C6 /* ViewController.h */,
-				CD6A29941B9D939D008E31C6 /* ViewController.m */,
 				CD6A29961B9D939D008E31C6 /* Main.storyboard */,
 				CD6A29991B9D939D008E31C6 /* Images.xcassets */,
 				CD6A299B1B9D939D008E31C6 /* LaunchScreen.xib */,
-				CD6A29BE1BA0431D008E31C6 /* HttpApiHelper.h */,
-				CD6A29BF1BA0431D008E31C6 /* HttpApiHelper.m */,
 				CD6A298C1B9D939D008E31C6 /* Supporting Files */,
-				CD6A29C11BA166B9008E31C6 /* ViewHomeController.h */,
-				CD6A29C21BA166B9008E31C6 /* ViewHomeController.m */,
+				4722E4A087A0CD10A2C8017C /* Controllers */,
+				4722E48BA967EDA0337671F2 /* Helpers */,
 			);
 			path = MyLunchMaster;
 			sourceTree = "<group>";
@@ -292,11 +319,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD6A29C01BA0431D008E31C6 /* HttpApiHelper.m in Sources */,
-				CD6A29951B9D939D008E31C6 /* ViewController.m in Sources */,
 				CD6A29921B9D939D008E31C6 /* AppDelegate.m in Sources */,
 				CD6A298F1B9D939D008E31C6 /* main.m in Sources */,
-				CD6A29C31BA166B9008E31C6 /* ViewHomeController.m in Sources */,
+				CD464D981BA6E63F0082079A /* WeekOrdersTableViewController.m in Sources */,
+				4722EC0863FB926387175219 /* LoginViewController.m in Sources */,
+				4722EF1B66DDBE023444463B /* TabHomeViewController.m in Sources */,
+				4722EB008F984BA5B0B76ED7 /* HttpApiHelper.m in Sources */,
+				4722EDD9968DD7CD41E114C7 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD6A29A91B9D939D008E31C6 /* MyLunchMasterTests.m in Sources */,
+				4722EC14BFB89FD558FF9E1C /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

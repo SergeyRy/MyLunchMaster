@@ -20,11 +20,14 @@ PODS:
   - AFNetworking/UIKit (2.6.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - SimpleKeychain (0.5.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
+  - SimpleKeychain
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  SimpleKeychain: ae04c7ca6a960a146081010b412cf0ba2ecb10fe
 
 COCOAPODS: 0.38.2

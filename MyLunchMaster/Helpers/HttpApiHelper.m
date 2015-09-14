@@ -10,6 +10,8 @@
 
 NSString * const baseURLString = @"https://eatnow.thelunchmaster.com";
 NSString * const authorizationURLString = @"api/v1/users/sign_in";
+NSString * const getOrdersForCurrentWeekURLString = @"api/v1/weekly_order";
+
 
 
 @implementation HttpApiHelper
@@ -42,16 +44,24 @@ NSString * const authorizationURLString = @"api/v1/users/sign_in";
 {
     NSDictionary *parameters = @{@"login": login,
                               @"password": password};
-    
+
     [self POST:authorizationURLString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         success(operation, responseObject);
-        NSLog(@"JSON: %@", responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         failure(operation, error);
-        NSLog(@"Error: %@", error);
     }];
+}
 
+- (void)getOrdersForCurrentWeekSuccess:(void (^)(AFHTTPRequestOperation *task, id responseObject))success
+                               failure:(void (^)(AFHTTPRequestOperation *task, NSError *error))failure {
 
+    [self.requestSerializer setValue:_token forHTTPHeaderField:@"X-Auth-Token"];
+    [self GET:getOrdersForCurrentWeekURLString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"%@", operation);
+        success(operation, responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        failure(operation, error);
+    }];
 }
 
 @end

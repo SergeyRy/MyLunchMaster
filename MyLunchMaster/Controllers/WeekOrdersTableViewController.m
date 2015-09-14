@@ -7,6 +7,8 @@
 //
 
 #import "WeekOrdersTableViewController.h"
+#import "HttpApiHelper.h"
+#import "SimpleKeychain.h"
 
 @interface WeekOrdersTableViewController ()
 
@@ -16,7 +18,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+    [self.navigationController setNavigationBarHidden:NO];
+
+    NSLog(@"table view did load");
+
+    [[A0SimpleKeychain keychain] deleteEntryForKey:@"com.eatnow.lunchmaster.token"];
+
+    HttpApiHelper *httpClient = [HttpApiHelper httpClient];
+    httpClient.token = [[A0SimpleKeychain keychain] stringForKey:@"com.eatnow.lunchmaster.token"];
+
+    NSLog(@"token %@", [httpClient token]);
+    NSLog(@"token %@", [[A0SimpleKeychain keychain] stringForKey:@"com.eatnow.lunchmaster.token"]);
+
+    [httpClient getOrdersForCurrentWeekSuccess:^(AFHTTPRequestOperation *task, id responseObject) {
+                                           NSLog(@"%@", responseObject);
+                                       }
+                                       failure:^(AFHTTPRequestOperation *task, NSError *error) {
+                                           NSLog(@"ERROR");
+                                           NSLog(@"%@", error);
+                                           NSLog(@"ERROR");
+                                       }];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

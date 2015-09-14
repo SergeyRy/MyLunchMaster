@@ -1,5 +1,5 @@
 //
-//  ViewHomeController.h
+//  TabHomeViewController.h
 //  MyLunchMaster
 //
 //  Created by Employee on 10.09.15.
@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface ViewHomeController : UIViewController
+@interface TabHomeViewController : UITabBarController
 
 @end

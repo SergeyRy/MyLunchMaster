@@ -1,19 +1,21 @@
 //
-//  ViewHomeController.m
+//  TabHomeViewController.m
 //  MyLunchMaster
 //
 //  Created by Employee on 10.09.15.
 //  Copyright (c) 2015 Employee. All rights reserved.
 //
 
-#import "ViewHomeController.h"
+#import "TabHomeViewController.h"
 
-@implementation ViewHomeController
+
+@implementation TabHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:NO];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    NSLog(@"tab bar view did load");
 }
 
 - (void)didReceiveMemoryWarning {

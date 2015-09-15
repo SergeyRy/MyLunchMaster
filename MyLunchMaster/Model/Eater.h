@@ -7,4 +7,10 @@
 
 
 @interface Eater : NSObject
+
+@property NSNumber *id;
+@property (nonatomic, strong) NSString *name;
+
+- (id) initWithId:(NSNumber *)id andName:(NSString *) name;
+
 @end

@@ -7,6 +7,9 @@
 //
 
 #import "RootViewController.h"
+#import "SimpleKeychain.h"
+#import "LoginViewController.h"
+#import "TabHomeViewController.h"
 
 @interface RootViewController ()
 
@@ -16,7 +19,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSLog(@"Root controll viewDidLoad");
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    NSLog(@"Root controll viewDidAppear");
+
+    if(![[A0SimpleKeychain keychain] stringForKey:@"com.eatnow.lunchmaster.token"]) {
+        NSLog(@"Go to Login screnen ");
+        [self showLoginScreen];
+    } else {
+        NSLog(@"Go to Tab home screnen ");
+        [self showTabHomePage];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,6 +39,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)showLoginScreen
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    LoginViewController *viewController = (LoginViewController *)[storyboard instantiateViewControllerWithIdentifier:@"LoginPage"];
+    [self presentViewController:viewController
+                       animated:NO
+                     completion:nil];
+}
+
+-(void)showTabHomePage {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UINavigationController *viewController = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"NavigationView"];
+    [self presentViewController:viewController
+                       animated:YES
+                     completion:nil];
+}
 /*
 #pragma mark - Navigation
 

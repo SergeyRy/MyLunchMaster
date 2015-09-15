@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4722E3F1DD6FEE7EAE4318F6 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EF3491407C4E68055CF6 /* Order.m */; };
+		4722E758CF79C99C6AF07DA8 /* Eater.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EB3DE64280238FEF5523 /* Eater.m */; };
+		4722E82AD90E6AB17A355D31 /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E670D15425367C9B3405 /* Meal.m */; };
+		4722E8456B8A1B6BA2BF608F /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E79A128D3EC39D5CC7A8 /* AppData.m */; };
 		4722EB008F984BA5B0B76ED7 /* HttpApiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EF8D735114A390F9CC2B /* HttpApiHelper.m */; };
 		4722EC0863FB926387175219 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E103A5FA1C214ADEA20D /* LoginViewController.m */; };
 		4722EC14BFB89FD558FF9E1C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E5B55C587E38C235B3DB /* Constants.m */; };
@@ -15,6 +19,10 @@
 		B45306882A3CAB3F073DDF55 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB70F74D6AEDE8265DB802D /* libPods.a */; };
 		CD464D951BA30C820082079A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD464D941BA30C820082079A /* Security.framework */; };
 		CD464D981BA6E63F0082079A /* WeekOrdersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD464D971BA6E63F0082079A /* WeekOrdersTableViewController.m */; };
+		CD464D9C1BA7FB970082079A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD464D9B1BA7FB970082079A /* RootViewController.m */; };
+		CD464D9E1BA7FF960082079A /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD464D9D1BA7FF960082079A /* Root.storyboard */; };
+		CD464DA01BA802480082079A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD464D9F1BA802480082079A /* Login.storyboard */; };
+		CD464DA31BA806210082079A /* KeychainHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD464DA21BA806210082079A /* KeychainHelper.m */; };
 		CD6A298F1B9D939D008E31C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A298E1B9D939D008E31C6 /* main.m */; };
 		CD6A29921B9D939D008E31C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A29911B9D939D008E31C6 /* AppDelegate.m */; };
 		CD6A29981B9D939D008E31C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD6A29961B9D939D008E31C6 /* Main.storyboard */; };
@@ -35,18 +43,32 @@
 
 /* Begin PBXFileReference section */
 		2F59403458D15BB955ED8637 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4722E037CD8F0854013C4E1C /* Meal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
 		4722E103A5FA1C214ADEA20D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4722E320E7815DF3D43C0113 /* TabHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabHomeViewController.m; sourceTree = "<group>"; };
+		4722E392D392D881E95F0A2C /* AppData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppData.h; sourceTree = "<group>"; };
+		4722E48E67CF800412C6D925 /* Eater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eater.h; sourceTree = "<group>"; };
 		4722E5B55C587E38C235B3DB /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		4722E651EFB3384568E5FC1F /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		4722E670D15425367C9B3405 /* Meal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meal.m; sourceTree = "<group>"; };
 		4722E67A562F4E7FEBB939B5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4722E794F11E76EB876AE685 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		4722E79A128D3EC39D5CC7A8 /* AppData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppData.m; sourceTree = "<group>"; };
 		4722E89927716D77583CBD61 /* HttpApiHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpApiHelper.h; sourceTree = "<group>"; };
 		4722E90DBFC47B3D50983A4F /* TabHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabHomeViewController.h; sourceTree = "<group>"; };
+		4722EB3DE64280238FEF5523 /* Eater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Eater.m; sourceTree = "<group>"; };
+		4722EF3491407C4E68055CF6 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
 		4722EF8D735114A390F9CC2B /* HttpApiHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpApiHelper.m; sourceTree = "<group>"; };
 		8FB70F74D6AEDE8265DB802D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD464D941BA30C820082079A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CD464D961BA6E63F0082079A /* WeekOrdersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekOrdersTableViewController.h; sourceTree = "<group>"; };
 		CD464D971BA6E63F0082079A /* WeekOrdersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekOrdersTableViewController.m; sourceTree = "<group>"; };
+		CD464D9A1BA7FB970082079A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		CD464D9B1BA7FB970082079A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		CD464D9D1BA7FF960082079A /* Root.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		CD464D9F1BA802480082079A /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		CD464DA11BA806210082079A /* KeychainHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainHelper.h; sourceTree = "<group>"; };
+		CD464DA21BA806210082079A /* KeychainHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainHelper.m; sourceTree = "<group>"; };
 		CD6A29891B9D939D008E31C6 /* MyLunchMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLunchMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6A298D1B9D939D008E31C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD6A298E1B9D939D008E31C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +110,8 @@
 				4722E89927716D77583CBD61 /* HttpApiHelper.h */,
 				4722E5B55C587E38C235B3DB /* Constants.m */,
 				4722E651EFB3384568E5FC1F /* Constants.h */,
+				CD464DA11BA806210082079A /* KeychainHelper.h */,
+				CD464DA21BA806210082079A /* KeychainHelper.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -95,14 +119,31 @@
 		4722E4A087A0CD10A2C8017C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CD464D9A1BA7FB970082079A /* RootViewController.h */,
+				CD464D9B1BA7FB970082079A /* RootViewController.m */,
+				4722E67A562F4E7FEBB939B5 /* LoginViewController.h */,
 				4722E103A5FA1C214ADEA20D /* LoginViewController.m */,
 				4722E320E7815DF3D43C0113 /* TabHomeViewController.m */,
-				4722E67A562F4E7FEBB939B5 /* LoginViewController.h */,
 				4722E90DBFC47B3D50983A4F /* TabHomeViewController.h */,
 				CD464D961BA6E63F0082079A /* WeekOrdersTableViewController.h */,
 				CD464D971BA6E63F0082079A /* WeekOrdersTableViewController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4722EB5CB491BDFF1A4F6E44 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4722E79A128D3EC39D5CC7A8 /* AppData.m */,
+				4722E392D392D881E95F0A2C /* AppData.h */,
+				4722EB3DE64280238FEF5523 /* Eater.m */,
+				4722E48E67CF800412C6D925 /* Eater.h */,
+				4722EF3491407C4E68055CF6 /* Order.m */,
+				4722E794F11E76EB876AE685 /* Order.h */,
+				4722E670D15425367C9B3405 /* Meal.m */,
+				4722E037CD8F0854013C4E1C /* Meal.h */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9B713EEF328E31B80FCFEFC9 /* Frameworks */ = {
@@ -139,12 +180,15 @@
 			children = (
 				CD6A29901B9D939D008E31C6 /* AppDelegate.h */,
 				CD6A29911B9D939D008E31C6 /* AppDelegate.m */,
+				CD464D9D1BA7FF960082079A /* Root.storyboard */,
+				CD464D9F1BA802480082079A /* Login.storyboard */,
 				CD6A29961B9D939D008E31C6 /* Main.storyboard */,
 				CD6A29991B9D939D008E31C6 /* Images.xcassets */,
 				CD6A299B1B9D939D008E31C6 /* LaunchScreen.xib */,
 				CD6A298C1B9D939D008E31C6 /* Supporting Files */,
 				4722E4A087A0CD10A2C8017C /* Controllers */,
 				4722E48BA967EDA0337671F2 /* Helpers */,
+				4722EB5CB491BDFF1A4F6E44 /* Model */,
 			);
 			path = MyLunchMaster;
 			sourceTree = "<group>";
@@ -268,6 +312,8 @@
 			files = (
 				CD6A29981B9D939D008E31C6 /* Main.storyboard in Resources */,
 				CD6A299D1B9D939D008E31C6 /* LaunchScreen.xib in Resources */,
+				CD464D9E1BA7FF960082079A /* Root.storyboard in Resources */,
+				CD464DA01BA802480082079A /* Login.storyboard in Resources */,
 				CD6A299A1B9D939D008E31C6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,11 +367,17 @@
 			files = (
 				CD6A29921B9D939D008E31C6 /* AppDelegate.m in Sources */,
 				CD6A298F1B9D939D008E31C6 /* main.m in Sources */,
+				CD464D9C1BA7FB970082079A /* RootViewController.m in Sources */,
 				CD464D981BA6E63F0082079A /* WeekOrdersTableViewController.m in Sources */,
 				4722EC0863FB926387175219 /* LoginViewController.m in Sources */,
 				4722EF1B66DDBE023444463B /* TabHomeViewController.m in Sources */,
 				4722EB008F984BA5B0B76ED7 /* HttpApiHelper.m in Sources */,
 				4722EDD9968DD7CD41E114C7 /* Constants.m in Sources */,
+				CD464DA31BA806210082079A /* KeychainHelper.m in Sources */,
+				4722E8456B8A1B6BA2BF608F /* AppData.m in Sources */,
+				4722E758CF79C99C6AF07DA8 /* Eater.m in Sources */,
+				4722E3F1DD6FEE7EAE4318F6 /* Order.m in Sources */,
+				4722E82AD90E6AB17A355D31 /* Meal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

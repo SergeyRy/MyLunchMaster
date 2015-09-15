@@ -7,4 +7,7 @@
 
 
 @interface Meal : NSObject
+
+@property (nonatomic, strong) NSString *description;
+
 @end

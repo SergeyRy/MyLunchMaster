@@ -7,4 +7,8 @@
 
 
 @interface Order : NSObject
+
+@property int id;
+@property (copy) NSString *name;
+
 @end

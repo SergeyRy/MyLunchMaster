@@ -19,37 +19,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
     NSLog(@"saved token %@", [[A0SimpleKeychain keychain] stringForKey:@"com.eatnow.lunchmaster.token"]);
-
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccessful:) name:@"showTabHomePage" object:nil];
-
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-    if(![[A0SimpleKeychain keychain] stringForKey:@"com.eatnow.lunchmaster.token"]) {
-        NSLog(@"Go to Login screnen ");
-        [self showLoginScreen:NO];
-    }
+
     return YES;
-}
-
--(void) showLoginScreen:(BOOL)animated
-{
-    // Get login screen from storyboard and present it
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    LoginViewController *viewController = (LoginViewController *)[storyboard instantiateViewControllerWithIdentifier:@"LoginPage"];
-    [self.window makeKeyAndVisible];
-    [self.window.rootViewController presentViewController:viewController
-                                                 animated:animated
-                                               completion:nil];
-}
-
--(void) showTabHomePage {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    LoginViewController *viewController = (LoginViewController *)[storyboard instantiateViewControllerWithIdentifier:@"TabHomePage"];
-    [self.window makeKeyAndVisible];
-    [self.window.rootViewController presentViewController:viewController
-                                                 animated:YES
-                                               completion:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -9,35 +9,32 @@
 #import "WeekOrdersTableViewController.h"
 #import "HttpApiHelper.h"
 #import "SimpleKeychain.h"
+#import "AppData.h"
+#import "Eater.h"
 
 @interface WeekOrdersTableViewController ()
-
+    @property (nonatomic, strong) AppData *appData;
+    @property (nonatomic, strong) HttpApiHelper *httpClient;
 @end
 
 @implementation WeekOrdersTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     [self.navigationController setNavigationBarHidden:NO];
+    [self initProperties];
 
     NSLog(@"table view did load");
 
-    [[A0SimpleKeychain keychain] deleteEntryForKey:@"com.eatnow.lunchmaster.token"];
+    //[[A0SimpleKeychain keychain] deleteEntryForKey:@"com.eatnow.lunchmaster.token"];
 
-    HttpApiHelper *httpClient = [HttpApiHelper httpClient];
-    httpClient.token = [[A0SimpleKeychain keychain] stringForKey:@"com.eatnow.lunchmaster.token"];
+    [[self httpClient] getOrdersForCurrentWeekSuccess:^(AFHTTPRequestOperation *task, id responseObject) {
+                                            NSArray *eaters = [responseObject valueForKeyPath:@"eaters"];
+                                            NSArray *orders = [responseObject valueForKeyPath:@"orders"];
 
-    NSLog(@"token %@", [httpClient token]);
-    NSLog(@"token %@", [[A0SimpleKeychain keychain] stringForKey:@"com.eatnow.lunchmaster.token"]);
-
-    [httpClient getOrdersForCurrentWeekSuccess:^(AFHTTPRequestOperation *task, id responseObject) {
-                                           NSLog(@"%@", responseObject);
+                                            [[self appData] setEaters:[self parceJsonEaters:eaters]];
                                        }
                                        failure:^(AFHTTPRequestOperation *task, NSError *error) {
-                                           NSLog(@"ERROR");
-                                           NSLog(@"%@", error);
-                                           NSLog(@"ERROR");
                                        }];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -45,6 +42,23 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void) initProperties {
+    [self setAppData:[AppData getInstance]];
+    [self setHttpClient:[HttpApiHelper httpClient]];
+    [[self httpClient] setToken:[[A0SimpleKeychain keychain] stringForKey:@"com.eatnow.lunchmaster.token"]];
+}
+
+- (NSMutableArray *) parceJsonEaters: (NSArray *) eaters {
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+
+    for (NSDictionary *item in eaters) {
+        Eater *eater = [[Eater alloc] initWithId:item[@"id"] andName:item[@"last_name"]];
+        [result addObject:eater];
+    }
+
+    return result;
 }
 
 - (void)didReceiveMemoryWarning {

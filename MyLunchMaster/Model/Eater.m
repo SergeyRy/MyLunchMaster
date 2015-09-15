@@ -6,7 +6,15 @@
 #import "Eater.h"
 
 
-@implementation Eater {
+@implementation Eater {}
 
+- (id) initWithId:(NSNumber *)id andName:(NSString *) name {
+    self = [super init];
+    if (self) {
+        self.id = id;
+        self.name = name;
+    }
+    return self;
 }
+
 @end

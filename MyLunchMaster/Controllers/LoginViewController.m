@@ -25,6 +25,8 @@
 
     NSLog(@"login view did load");
     // Do any additional setup after loading the view, typically from a nib.
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,23 +42,22 @@
                               NSString *token = [responseObject valueForKeyPath:@"auth_token"];
                               if (token) {
                                   [[A0SimpleKeychain keychain] setString:token forKey:TOKEN_KEY];
-                                  [httpClient setToken:token];
-                                  [self goToTabHomePage];
+                                  //[httpClient setToken:token];
+                                  [self showTabHomePage];
                               }
-                           }
+                          }
                           failure:^(AFHTTPRequestOperation *task, NSError *error) {
 
                           }];
 
 }
 
-- (void)goToTabHomePage {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"loginSuccessful" object:self];
-
-    // Dismiss login screen
-    [self dismissViewControllerAnimated:YES completion:nil];
-
-    NSLog(@"Post notification CLOSE LOGIN PAGE");
+- (void)showTabHomePage {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UINavigationController *viewController = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"NavigationView"];
+    [self presentViewController:viewController
+                       animated:YES
+                     completion:nil];
 }
 
 - (IBAction)backgroundTap:(id)sender {
@@ -68,15 +69,15 @@
     return YES;
 }
 
-//- (void)saveLogin:(NSString *)login andPassword:(NSString *)password
-//{
-//    NSString *token = [self.txtPassword text];
-//    [[A0SimpleKeychain keychain] setString:@"123" forKey:@"com.eatnow.lunchmaster.token"];
-//
-//
-//    NSLog(@"Save pw: %@", [self.txtPassword text]);
-//
-//}
+- (void)saveLogin:(NSString *)login andPassword:(NSString *)password
+{
+    NSString *token = [self.txtPassword text];
+    [[A0SimpleKeychain keychain] setString:@"123" forKey:@"com.eatnow.lunchmaster.token"];
+
+
+    NSLog(@"Save pw: %@", [self.txtPassword text]);
+
+}
 //
 //- (void)getLoginAndPassword
 //{

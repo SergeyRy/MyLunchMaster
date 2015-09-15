@@ -57,7 +57,6 @@ NSString * const getOrdersForCurrentWeekURLString = @"api/v1/weekly_order";
 
     [self.requestSerializer setValue:_token forHTTPHeaderField:@"X-Auth-Token"];
     [self GET:getOrdersForCurrentWeekURLString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"%@", operation);
         success(operation, responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         failure(operation, error);

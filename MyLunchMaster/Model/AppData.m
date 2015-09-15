@@ -4,9 +4,18 @@
 //
 
 #import "AppData.h"
+#import "Eater.h"
 
 
-@implementation AppData {
+@implementation AppData
 
++ (id) getInstance {
+    static AppData *_appData = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _appData = [[self alloc] init];
+    });
+    return _appData;
 }
+
 @end

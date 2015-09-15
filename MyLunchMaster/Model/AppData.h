@@ -5,6 +5,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class Eater;
+
 
 @interface AppData : NSObject
+    @property (nonatomic, strong) NSMutableArray *eaters;
+    @property (nonatomic, strong) Eater *currentEater;
+    @property (nonatomic, strong) NSMutableArray *weekOrders;
+
++ (AppData *)getInstance;
+
+
+
 @end

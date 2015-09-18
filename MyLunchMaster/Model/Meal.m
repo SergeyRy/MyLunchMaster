@@ -6,7 +6,18 @@
 #import "Meal.h"
 
 
-@implementation Meal {
+@implementation Meal {}
 
+- (id) initWithId:(NSNumber *)id title:(NSString *) title descr:(NSString *) descr allergens:(NSString *)allergens imagePath:(NSString *) imagePath {
+    self = [super init];
+    if (self) {
+        self.id = id;
+        self.title = title;
+        self.descr = descr;
+        self.allergens = allergens;
+        self.imagePath = imagePath;
+    }
+    return self;
 }
+
 @end

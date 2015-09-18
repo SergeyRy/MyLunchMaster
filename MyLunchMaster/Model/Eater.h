@@ -6,7 +6,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Eater : NSObject
+@interface Eater : NSObject <NSCopying>
 
 @property NSNumber *id;
 @property (nonatomic, strong) NSString *name;

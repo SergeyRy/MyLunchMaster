@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4722E298DE16B8D9280BFB90 /* JsonParserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E0200B6DEE9D24E96DED /* JsonParserHelper.m */; };
+		4722E2C5FE8608D8226F060F /* MealDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E89109AC64C73570CE96 /* MealDetailController.m */; };
 		4722E3F1DD6FEE7EAE4318F6 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EF3491407C4E68055CF6 /* Order.m */; };
 		4722E758CF79C99C6AF07DA8 /* Eater.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EB3DE64280238FEF5523 /* Eater.m */; };
 		4722E82AD90E6AB17A355D31 /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E670D15425367C9B3405 /* Meal.m */; };
@@ -43,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		2F59403458D15BB955ED8637 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4722E0200B6DEE9D24E96DED /* JsonParserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonParserHelper.m; sourceTree = "<group>"; };
 		4722E037CD8F0854013C4E1C /* Meal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
 		4722E103A5FA1C214ADEA20D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4722E320E7815DF3D43C0113 /* TabHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabHomeViewController.m; sourceTree = "<group>"; };
@@ -54,9 +57,12 @@
 		4722E67A562F4E7FEBB939B5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		4722E794F11E76EB876AE685 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
 		4722E79A128D3EC39D5CC7A8 /* AppData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppData.m; sourceTree = "<group>"; };
+		4722E7F701A079F33FA96ECA /* JsonParserHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonParserHelper.h; sourceTree = "<group>"; };
+		4722E89109AC64C73570CE96 /* MealDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealDetailController.m; sourceTree = "<group>"; };
 		4722E89927716D77583CBD61 /* HttpApiHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpApiHelper.h; sourceTree = "<group>"; };
 		4722E90DBFC47B3D50983A4F /* TabHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabHomeViewController.h; sourceTree = "<group>"; };
 		4722EB3DE64280238FEF5523 /* Eater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Eater.m; sourceTree = "<group>"; };
+		4722EB8897E335930365B4A4 /* MealDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealDetailController.h; sourceTree = "<group>"; };
 		4722EF3491407C4E68055CF6 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
 		4722EF8D735114A390F9CC2B /* HttpApiHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpApiHelper.m; sourceTree = "<group>"; };
 		8FB70F74D6AEDE8265DB802D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +118,8 @@
 				4722E651EFB3384568E5FC1F /* Constants.h */,
 				CD464DA11BA806210082079A /* KeychainHelper.h */,
 				CD464DA21BA806210082079A /* KeychainHelper.m */,
+				4722E0200B6DEE9D24E96DED /* JsonParserHelper.m */,
+				4722E7F701A079F33FA96ECA /* JsonParserHelper.h */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -127,6 +135,8 @@
 				4722E90DBFC47B3D50983A4F /* TabHomeViewController.h */,
 				CD464D961BA6E63F0082079A /* WeekOrdersTableViewController.h */,
 				CD464D971BA6E63F0082079A /* WeekOrdersTableViewController.m */,
+				4722E89109AC64C73570CE96 /* MealDetailController.m */,
+				4722EB8897E335930365B4A4 /* MealDetailController.h */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -378,6 +388,8 @@
 				4722E758CF79C99C6AF07DA8 /* Eater.m in Sources */,
 				4722E3F1DD6FEE7EAE4318F6 /* Order.m in Sources */,
 				4722E82AD90E6AB17A355D31 /* Meal.m in Sources */,
+				4722E298DE16B8D9280BFB90 /* JsonParserHelper.m in Sources */,
+				4722E2C5FE8608D8226F060F /* MealDetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

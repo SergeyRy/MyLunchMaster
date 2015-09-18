@@ -8,4 +8,5 @@
 
 @implementation Constants
     NSString *const TOKEN_KEY = @"com.eatnow.lunchmaster.token";
+    NSString *const BASE_URL = @"https://eatnow.thelunchmaster.com";
 @end

@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 
 extern NSString *const TOKEN_KEY;
+extern NSString *const BASE_URL;
 
 @interface Constants : NSObject
 @end

@@ -5,10 +5,18 @@
 
 #import <Foundation/Foundation.h>
 
+@class Meal;
+
 
 @interface Order : NSObject
 
-@property int id;
-@property (copy) NSString *name;
+@property (nonatomic, strong) NSNumber *id;
+@property (nonatomic, strong) NSString *date;
+@property (nonatomic, strong) NSString *dayOfWeekString;
+@property (nonatomic, strong) NSNumber *dayOfWeekNumber;
+@property (nonatomic, strong) NSNumber *price;
+@property (nonatomic, strong) Meal *meal;
+
+- (id) initWithId:(NSNumber *)id date:(NSString *) date dayOfWeekString:(NSString *) dayOfWeekString dayOfWeekNumber:(NSNumber *)dayOfWeekNumber price:(NSNumber *) price meal:(Meal *) meal;
 
 @end

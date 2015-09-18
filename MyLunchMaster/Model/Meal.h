@@ -8,6 +8,12 @@
 
 @interface Meal : NSObject
 
-@property (nonatomic, strong) NSString *description;
+@property (nonatomic, strong) NSNumber *id;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *descr;
+@property (nonatomic, strong) NSString *allergens;
+@property (nonatomic, strong) NSString *imagePath;
+
+- (id) initWithId:(NSNumber *)id title:(NSString *) title descr:(NSString *) descr allergens:(NSString *)allergens imagePath:(NSString *) imagePath;
 
 @end

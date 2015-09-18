@@ -11,10 +11,8 @@
 @interface AppData : NSObject
     @property (nonatomic, strong) NSMutableArray *eaters;
     @property (nonatomic, strong) Eater *currentEater;
-    @property (nonatomic, strong) NSMutableArray *weekOrders;
+    @property (nonatomic, strong) NSMutableDictionary *weekOrders;
 
 + (AppData *)getInstance;
-
-
 
 @end

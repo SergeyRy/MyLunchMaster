@@ -23,6 +23,16 @@
     NSLog(@"saved token %@", [[A0SimpleKeychain keychain] stringForKey:@"com.eatnow.lunchmaster.token"]);
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
 
+    //[[UINavigationBar appearance] setBarTintColor:[UIColor yellowColor]];
+//    UIImage *img=[UIImage imageNamed:@"logo.png"];
+//    [[UINavigationBar appearance] setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
+
+
+
+    //[[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"logo1-1.png"] forBarMetrics:UIBarMetricsDefault];
+
+
+
     return YES;
 }
 

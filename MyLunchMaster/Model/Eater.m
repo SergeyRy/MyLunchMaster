@@ -17,4 +17,16 @@
     return self;
 }
 
+- (id)copyWithZone:(NSZone *)zone {
+    Eater *result = [[[self class] allocWithZone:zone] init];
+
+    if (result)
+    {
+        result.id = [_id copyWithZone:zone];
+        result.name = [_name copyWithZone:zone];
+    }
+
+    return result;
+}
+
 @end

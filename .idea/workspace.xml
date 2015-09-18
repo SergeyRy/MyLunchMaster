@@ -2,27 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0b84bd6-28cb-4cce-9087-1851decc2ffe" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Model/AppData.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Model/AppData.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Model/Eater.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Model/Eater.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Helpers/KeychainHelper.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Helpers/KeychainHelper.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Login.storyboard" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Model/Meal.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Model/Meal.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Model/Order.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Model/Order.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Root.storyboard" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Controllers/RootViewController.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Controllers/RootViewController.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Images.xcassets/Logo.imageset/logo100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Images.xcassets/Logo.imageset/logo150.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Images.xcassets/Logo.imageset/logo200.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Helpers/JsonParserHelper.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Helpers/JsonParserHelper.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Controllers/MealDetailController.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyLunchMaster/Controllers/MealDetailController.m" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MyLunchMaster/Images.xcassets/Image.imageset/added-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MyLunchMaster/Images.xcassets/Image.imageset/added-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MyLunchMaster/Images.xcassets/Image.imageset/added.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/MyLunchMaster/Images.xcassets/Image.imageset/Contents.json" afterPath="$PROJECT_DIR$/MyLunchMaster/Images.xcassets/Logo.imageset/Contents.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLunchMaster.xcworkspace/xcuserdata/employee.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/MyLunchMaster.xcworkspace/xcuserdata/employee.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLunchMaster/Model/AppData.h" afterPath="$PROJECT_DIR$/MyLunchMaster/Model/AppData.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLunchMaster/AppDelegate.m" afterPath="$PROJECT_DIR$/MyLunchMaster/AppDelegate.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLunchMaster/Helpers/HttpApiHelper.m" afterPath="$PROJECT_DIR$/MyLunchMaster/Helpers/HttpApiHelper.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLunchMaster/Info.plist" afterPath="$PROJECT_DIR$/MyLunchMaster/Info.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLunchMaster/Controllers/LoginViewController.m" afterPath="$PROJECT_DIR$/MyLunchMaster/Controllers/LoginViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLunchMaster.xcworkspace/xcuserdata/employee.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/MyLunchMaster.xcworkspace/xcuserdata/employee.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLunchMaster/Helpers/Constants.h" afterPath="$PROJECT_DIR$/MyLunchMaster/Helpers/Constants.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLunchMaster/Helpers/Constants.m" afterPath="$PROJECT_DIR$/MyLunchMaster/Helpers/Constants.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLunchMaster/Model/Eater.h" afterPath="$PROJECT_DIR$/MyLunchMaster/Model/Eater.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLunchMaster/Model/Eater.m" afterPath="$PROJECT_DIR$/MyLunchMaster/Model/Eater.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLunchMaster/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/MyLunchMaster/Base.lproj/Main.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLunchMaster/Model/Meal.h" afterPath="$PROJECT_DIR$/MyLunchMaster/Model/Meal.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLunchMaster/Model/Meal.m" afterPath="$PROJECT_DIR$/MyLunchMaster/Model/Meal.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/MyLunchMaster.iml" afterPath="$PROJECT_DIR$/.idea/MyLunchMaster.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLunchMaster/Model/Order.h" afterPath="$PROJECT_DIR$/MyLunchMaster/Model/Order.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLunchMaster/Model/Order.m" afterPath="$PROJECT_DIR$/MyLunchMaster/Model/Order.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLunchMaster/Controllers/TabHomeViewController.m" afterPath="$PROJECT_DIR$/MyLunchMaster/Controllers/TabHomeViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLunchMaster/Controllers/WeekOrdersTableViewController.m" afterPath="$PROJECT_DIR$/MyLunchMaster/Controllers/WeekOrdersTableViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLunchMaster.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/MyLunchMaster.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -46,21 +51,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AppData.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/AppData.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="WeekOrdersTableViewController.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyLunchMaster/Controllers/WeekOrdersTableViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42923078">
-              <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.25510204">
+              <caret line="65" column="1" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
               <folding>
                 <element signature="e#155#196#0" expanded="true" />
               </folding>
@@ -68,84 +63,93 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Meal.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/Meal.h">
+      <file leaf-file-name="UIActionSheet.h" pinned="false" current-in-tab="false">
+        <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIActionSheet.h">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+              <caret line="59" column="10" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Meal.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/Meal.m">
+      <file leaf-file-name="UIBarButtonItem.h" pinned="false" current-in-tab="false">
+        <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIBarButtonItem.h">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="54" column="39" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Order.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/Order.h">
+      <file leaf-file-name="AppDelegate.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyLunchMaster/AppDelegate.m">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Eater.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/Eater.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Eater.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/Eater.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppData.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/AppData.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HttpApiHelper.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyLunchMaster/Helpers/HttpApiHelper.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginViewController.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyLunchMaster/Controllers/LoginViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="36" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+              <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
               <folding>
-                <element signature="e#145#176#0" expanded="true" />
+                <element signature="e#137#160#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UIAppearance.h" pinned="false" current-in-tab="false">
+        <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAppearance.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TabHomeViewController.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyLunchMaster/Controllers/TabHomeViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="25" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logo150.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyLunchMaster/Images.xcassets/Logo.imageset/logo150.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TabHomeViewController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyLunchMaster/Controllers/TabHomeViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+              <folding>
+                <element signature="e#147#180#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UITabBarController.h" pinned="false" current-in-tab="false">
+        <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITabBarController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="65" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UINavigationController.h" pinned="false" current-in-tab="false">
+        <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UINavigationController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="120" column="61" selection-start-line="120" selection-start-column="61" selection-end-line="120" selection-end-column="61" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,22 +163,28 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/MyLunchMaster/ViewController.m" />
-        <option value="$PROJECT_DIR$/MyLunchMaster/Helpers/Constants.h" />
-        <option value="$PROJECT_DIR$/MyLunchMaster/Helpers/Constants.m" />
         <option value="$PROJECT_DIR$/MyLunchMaster/Controllers/WeekOrdersTableViewController.h" />
         <option value="$PROJECT_DIR$/MyLunchMaster/Controllers/ViewHomeController.m" />
         <option value="$PROJECT_DIR$/MyLunchMaster/Controllers/ViewController.m" />
         <option value="$PROJECT_DIR$/MyLunchMaster/Helpers/HttpApiHelper.h" />
         <option value="$PROJECT_DIR$/MyLunchMaster/Controllers/RootViewController.m" />
         <option value="$PROJECT_DIR$/MyLunchMaster/Helpers/HttpApiHelper.m" />
-        <option value="$PROJECT_DIR$/MyLunchMaster/AppDelegate.m" />
-        <option value="$PROJECT_DIR$/MyLunchMaster/Model/Order.h" />
-        <option value="$PROJECT_DIR$/MyLunchMaster/Model/Meal.h" />
-        <option value="$PROJECT_DIR$/MyLunchMaster/Controllers/LoginViewController.m" />
         <option value="$PROJECT_DIR$/MyLunchMaster/Model/AppData.m" />
         <option value="$PROJECT_DIR$/MyLunchMaster/Model/AppData.h" />
+        <option value="$PROJECT_DIR$/MyLunchMaster/Model/Meal.h" />
+        <option value="$PROJECT_DIR$/MyLunchMaster/Model/Meal.m" />
         <option value="$PROJECT_DIR$/MyLunchMaster/Model/Eater.h" />
         <option value="$PROJECT_DIR$/MyLunchMaster/Model/Eater.m" />
+        <option value="$PROJECT_DIR$/MyLunchMaster/Model/Order.h" />
+        <option value="$PROJECT_DIR$/MyLunchMaster/Model/Order.m" />
+        <option value="$PROJECT_DIR$/MyLunchMaster/Helpers/JsonParserHelper.m" />
+        <option value="$PROJECT_DIR$/MyLunchMaster/Helpers/Constants.h" />
+        <option value="$PROJECT_DIR$/MyLunchMaster/Helpers/Constants.m" />
+        <option value="$PROJECT_DIR$/MyLunchMaster/Controllers/MealDetailController.m" />
+        <option value="$PROJECT_DIR$/MyLunchMaster/Controllers/MealDetailController.h" />
+        <option value="$PROJECT_DIR$/MyLunchMaster/Controllers/LoginViewController.m" />
+        <option value="$PROJECT_DIR$/MyLunchMaster/AppDelegate.m" />
+        <option value="$PROJECT_DIR$/MyLunchMaster/Controllers/TabHomeViewController.m" />
         <option value="$PROJECT_DIR$/MyLunchMaster/Controllers/WeekOrdersTableViewController.m" />
       </list>
     </option>
@@ -187,8 +197,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="23" />
+    <option name="x" value="91" />
+    <option name="y" value="47" />
     <option name="width" value="1920" />
     <option name="height" value="974" />
   </component>
@@ -409,22 +419,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="23" width="1920" height="974" extended-state="6" />
+    <frame x="91" y="47" width="1920" height="974" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943925" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20794393" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943925" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36915886" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6635514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21028037" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.55841124" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19626169" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18430753" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20560747" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24883178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -446,16 +456,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="18" />
+      <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="appcode.project-settings://e047414d">
-      <provider selected="true" editor-type-id="AppCode.ProjectSettings">
-        <state />
-      </provider>
-    </entry>
     <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/Availability.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2633997">
@@ -512,67 +517,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Controllers/TabHomeViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="23" />
-          <folding>
-            <element signature="e#147#180#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyLunchMaster/AppDelegate.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Controllers/WeekOrdersTableViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyLunchMaster/main.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UINavigationController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Controllers/RootViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="55" selection-end-column="37" />
-          <folding>
-            <element signature="e#144#174#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Controllers/TabHomeViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="32" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Controllers/LoginViewController.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -588,48 +533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyLunchMaster/AppDelegate.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
-          <folding>
-            <element signature="e#137#160#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Helpers/Constants.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Helpers/Constants.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/Order.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Helpers/HttpApiHelper.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/dispatch/once.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -638,13 +541,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Controllers/LoginViewController.m">
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/objc/NSObject.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="36" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
-          <folding>
-            <element signature="e#145#176#0" expanded="true" />
-          </folding>
+          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/Meal.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="82" selection-start-line="10" selection-start-column="82" selection-end-line="10" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/Eater.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/Eater.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSException.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="280" column="8" selection-start-line="280" selection-start-column="8" selection-end-line="280" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -652,6 +593,86 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Helpers/Constants.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/Meal.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Helpers/Constants.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="66" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Helpers/JsonParserHelper.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="126" column="39" selection-start-line="126" selection-start-column="39" selection-end-line="126" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="322" column="40" selection-start-line="322" selection-start-column="40" selection-end-line="322" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/main.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/Order.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="55" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/Order.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/AppData.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -664,39 +685,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/AppData.h">
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Controllers/LoginViewController.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/Eater.h">
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Helpers/JsonParserHelper.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/Eater.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/Order.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/Meal.m">
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Helpers/KeychainHelper.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -704,18 +709,169 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Model/Meal.h">
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Helpers/KeychainHelper.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Helpers/HttpApiHelper.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Controllers/RootViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="55" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Controllers/MealDetailController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#96#128#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Controllers/MealDetailController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#96#129#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Controllers/LoginViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding>
+            <element signature="e#145#176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UINavigationBar.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="174" column="45" selection-start-line="174" selection-start-column="45" selection-end-line="174" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIImageView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Controllers/WeekOrdersTableViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITabBarController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="65" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Controllers/TabHomeViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding>
+            <element signature="e#147#180#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UINavigationController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="120" column="61" selection-start-line="120" selection-start-column="61" selection-end-line="120" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAppearance.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+          <folding>
+            <element signature="e#137#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Images.xcassets/Logo.imageset/logo150.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLunchMaster/Controllers/TabHomeViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="25" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIBarButtonItem.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="39" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIActionSheet.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="10" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MyLunchMaster/Controllers/WeekOrdersTableViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42923078">
-          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.25510204">
+          <caret line="65" column="1" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
           <folding>
             <element signature="e#155#196#0" expanded="true" />
           </folding>

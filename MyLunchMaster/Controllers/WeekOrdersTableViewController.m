@@ -21,6 +21,8 @@
     @property (nonatomic, strong) AppData *appData;
     @property (nonatomic, strong) HttpApiHelper *httpClient;
     @property (nonatomic, strong) NSArray *daysOfWeek;
+    @property (nonatomic, strong) UIBarButtonItem *changeEaterButton;
+
 @end
 
 @implementation WeekOrdersTableViewController
@@ -41,11 +43,11 @@
                                             [[self appData] setCurrentEater:self.appData.eaters[0]];
                                             [self.tableView reloadData];
 
-                                            UIBarButtonItem *changeEaterButton = [[UIBarButtonItem alloc] init];
-                                            changeEaterButton.target = self;
-                                            changeEaterButton.action = @selector(openActionSheet);
-                                            changeEaterButton.title = self.appData.currentEater.name;
-                                            NSArray *actionButtonItems = @[changeEaterButton];
+//                                            UIBarButtonItem *changeEaterButton = [[UIBarButtonItem alloc] init];
+                                            self.changeEaterButton.target = self;
+                                            self.changeEaterButton.action = @selector(openActionSheet);
+                                            self.changeEaterButton.title = self.appData.currentEater.name;
+                                            NSArray *actionButtonItems = @[self.changeEaterButton];
                                             self.parentViewController.navigationItem.rightBarButtonItems = actionButtonItems;
 
                                        }
@@ -53,23 +55,38 @@
                                        }];
 }
 
-- (void) openActionSheet{
+#pragma mark - Methods for Action Sheet
 
+- (void) openActionSheet{
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Select current child please ..."
                                                              delegate:self
                                                     cancelButtonTitle:@"Cancel"
                                                destructiveButtonTitle:nil
                                                     otherButtonTitles:[self.appData.eaters[0] name], [self.appData.eaters[1] name], nil];
-
     [actionSheet showInView:self.view];
 
 }
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@"Index = %d - Title = %@", buttonIndex, [actionSheet buttonTitleAtIndex:buttonIndex]);
+    if (buttonIndex > [self.appData.eaters count] - 1) {
+        return;
+    }
+    [self.appData setCurrentEater:self.appData.eaters[buttonIndex]];
+    self.changeEaterButton.title = self.appData.currentEater.name;
+    [self.tableView reloadData];
+
+
+}
+
 
 - (void) initProperties {
     [self setAppData:[AppData getInstance]];
     [self setHttpClient:[HttpApiHelper httpClient]];
     [[self httpClient] setToken:[[A0SimpleKeychain keychain] stringForKey:@"com.eatnow.lunchmaster.token"]];
     [self setDaysOfWeek: @[@"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday"]];
+
+    self.changeEaterButton = [[UIBarButtonItem alloc] init];
 }
 
 #pragma mark - Methods for parse json response
@@ -153,17 +170,23 @@
     /* Section header is in 0th index... */
     [label setText:string];
     [view addSubview:label];
+    [view addSubview:label];
+
     [view setBackgroundColor:[UIColor colorWithRed:166/255.0 green:177/255.0 blue:186/255.0 alpha:1.0]]; //your background color...
     return view;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    NSArray *val = nil;
-    NSArray *values = [[[self appData] weekOrders] allValues];
+//    NSArray *val = nil;
+//    NSArray *values = [[[self appData] weekOrders] allValues];
+//
+//    if ([values count] != 0)
+//        val = (NSArray *)[values objectAtIndex:0];
 
-    if ([values count] != 0)
-        val = (NSArray *)[values objectAtIndex:0];
+    NSArray *val = self.appData.weekOrders[self.appData.currentEater];
+
+
 
     NSPredicate *theDayEquelSection = [NSPredicate predicateWithBlock:
             ^BOOL(id evaluatedObject, NSDictionary *bindings) {
@@ -177,11 +200,13 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSArray *val = nil;
-    NSArray *values = [[[self appData] weekOrders] allValues];
+//    NSArray *val = nil;
+//    NSArray *values = [[[self appData] weekOrders] allValues];
+//
+//    if ([values count] != 0)
+//        val = (NSArray *)[values objectAtIndex:0];
 
-    if ([values count] != 0)
-        val = (NSArray *)[values objectAtIndex:0];
+    NSArray *val = self.appData.weekOrders[self.appData.currentEater];
 
     static NSString *simpleTableIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier forIndexPath:indexPath];
@@ -257,11 +282,13 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         MealDetailController *detailViewController = (MealDetailController *)segue.destinationViewController;
 
-        NSArray *val = nil;
-        NSArray *values = [[[self appData] weekOrders] allValues];
+//        NSArray *val = nil;
+//        NSArray *values = [[[self appData] weekOrders] allValues];
+//
+//        if ([values count] != 0)
+//            val = (NSArray *)[values objectAtIndex:0];
 
-        if ([values count] != 0)
-            val = (NSArray *)[values objectAtIndex:0];
+        NSArray *val = self.appData.weekOrders[self.appData.currentEater];
 
         detailViewController.order = [val objectAtIndex:indexPath.section];
     }

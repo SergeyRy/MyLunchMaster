@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WeekOrdersTableViewController : UITableViewController
+@interface WeekOrdersTableViewController : UITableViewController <UIActionSheetDelegate>
 
 @end

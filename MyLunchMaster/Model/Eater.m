@@ -29,4 +29,24 @@
     return result;
 }
 
+- (BOOL)isEqual:(id)object {
+    if (object == self) {
+        return YES;
+    }
+
+    if (![object isKindOfClass:[self class]]) {
+        return NO;
+    }
+
+    if ([object id] == [self id]) {
+        return YES;
+    }
+
+    return NO;
+}
+
+- (NSUInteger)hash {
+    return [self id];
+}
+
 @end

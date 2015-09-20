@@ -17,9 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.lblTitle.text = [self.order.meal title];
-    self.lblAlergens.text = [self.order.meal allergens];
-    self.lblDescription.text = [self.order.meal descr];
+    self.txtTitle.text = [self.order.meal title];
+    self.txtAlergents.text = [self.order.meal allergens];
+    self.txtDescription.text = [self.order.meal descr];
 
     NSString *imageUrl= [NSString stringWithFormat:@"%@%@", BASE_URL, self.order.meal.imagePath];
 

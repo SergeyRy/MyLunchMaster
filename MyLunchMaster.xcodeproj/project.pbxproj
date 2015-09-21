@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4722E1B729AAF07B159658D8 /* MealCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E041CF4F22FEDD563436 /* MealCell.m */; };
 		4722E298DE16B8D9280BFB90 /* JsonParserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E0200B6DEE9D24E96DED /* JsonParserHelper.m */; };
 		4722E2C5FE8608D8226F060F /* MealDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E89109AC64C73570CE96 /* MealDetailController.m */; };
 		4722E3F1DD6FEE7EAE4318F6 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EF3491407C4E68055CF6 /* Order.m */; };
@@ -47,6 +48,7 @@
 		2F59403458D15BB955ED8637 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4722E0200B6DEE9D24E96DED /* JsonParserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonParserHelper.m; sourceTree = "<group>"; };
 		4722E037CD8F0854013C4E1C /* Meal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
+		4722E041CF4F22FEDD563436 /* MealCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealCell.m; sourceTree = "<group>"; };
 		4722E103A5FA1C214ADEA20D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4722E320E7815DF3D43C0113 /* TabHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabHomeViewController.m; sourceTree = "<group>"; };
 		4722E392D392D881E95F0A2C /* AppData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppData.h; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		4722E89109AC64C73570CE96 /* MealDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealDetailController.m; sourceTree = "<group>"; };
 		4722E89927716D77583CBD61 /* HttpApiHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpApiHelper.h; sourceTree = "<group>"; };
 		4722E90DBFC47B3D50983A4F /* TabHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabHomeViewController.h; sourceTree = "<group>"; };
+		4722E9A4813E4C0DC69D1BD0 /* MealCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealCell.h; sourceTree = "<group>"; };
 		4722EB3DE64280238FEF5523 /* Eater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Eater.m; sourceTree = "<group>"; };
 		4722EB8897E335930365B4A4 /* MealDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealDetailController.h; sourceTree = "<group>"; };
 		4722EF3491407C4E68055CF6 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
@@ -141,6 +144,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		4722EA0493F3FA37B5C4331A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4722E041CF4F22FEDD563436 /* MealCell.m */,
+				4722E9A4813E4C0DC69D1BD0 /* MealCell.h */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		4722EB5CB491BDFF1A4F6E44 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +211,7 @@
 				4722E4A087A0CD10A2C8017C /* Controllers */,
 				4722E48BA967EDA0337671F2 /* Helpers */,
 				4722EB5CB491BDFF1A4F6E44 /* Model */,
+				4722EA0493F3FA37B5C4331A /* Views */,
 			);
 			path = MyLunchMaster;
 			sourceTree = "<group>";
@@ -390,6 +403,7 @@
 				4722E82AD90E6AB17A355D31 /* Meal.m in Sources */,
 				4722E298DE16B8D9280BFB90 /* JsonParserHelper.m in Sources */,
 				4722E2C5FE8608D8226F060F /* MealDetailController.m in Sources */,
+				4722E1B729AAF07B159658D8 /* MealCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

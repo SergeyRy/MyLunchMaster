@@ -36,6 +36,8 @@
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Model/Order.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Model/Order.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Root.storyboard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Views/MealCell.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Views/MealCell.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/main.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMasterTests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMasterTests/MyLunchMasterTests.m" isTestSource="false" />

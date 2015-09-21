@@ -13,7 +13,16 @@
 
 }
 
-- (NSMutableArray *) parceJsonEaters: (NSArray *) eaters {
++ (JsonParserHelper *)getInstance {
+    static JsonParserHelper *_jsonParserHelper = nil;
+    static dispatch_once_t oncePredicate;
+    dispatch_once(&oncePredicate, ^{
+        _jsonParserHelper = [[self alloc] init];
+    });
+    return _jsonParserHelper;
+}
+
+- (NSMutableArray *) parseEaters: (NSArray *) eaters {
     NSMutableArray *result = [[NSMutableArray alloc] init];
 
     for (NSDictionary *item in eaters) {
@@ -24,7 +33,7 @@
     return result;
 }
 
-- (NSMutableDictionary *) parseJsonOrders: (NSMutableDictionary *) orders : (NSArray *) eaters {
+- (NSMutableDictionary *) parseOrders: (NSMutableDictionary *) orders : (NSArray *) eaters {
     NSMutableDictionary *weekOrders = [[NSMutableDictionary alloc] init];
 
     if ([eaters count] > 0) {
@@ -51,7 +60,7 @@
                 NSString *dayOfWeekString = [dateFormat stringFromDate:dte];
 
                 [dateFormat setDateFormat:@"c"]; // day number, like 7 for saturday
-                NSNumber *dayOfWeekNumber = [dateFormat stringFromDate:dte];
+                NSNumber *dayOfWeekNumber = @([[dateFormat stringFromDate:dte] floatValue] - 1);
 
                 Meal *meal = [[Meal alloc] initWithId:mealId title:mealTitle descr:mealDescription allergens:allergens imagePath:mealPictureUrl];
                 Order *order = [[Order alloc] initWithId:orderId date:orderDate dayOfWeekString:dayOfWeekString dayOfWeekNumber:dayOfWeekNumber price:orderPrice meal:meal];

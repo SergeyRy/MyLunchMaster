@@ -16,12 +16,15 @@
 #import "Constants.h"
 #import "UIImageView+AFNetworking.h"
 #import "MealDetailController.h"
+#import "JsonParserHelper.h"
+#import "MealCell.h"
 
 @interface WeekOrdersTableViewController ()
     @property (nonatomic, strong) AppData *appData;
     @property (nonatomic, strong) HttpApiHelper *httpClient;
     @property (nonatomic, strong) NSArray *daysOfWeek;
     @property (nonatomic, strong) UIBarButtonItem *changeEaterButton;
+    @property (nonatomic, strong) JsonParserHelper *jsonParserHelper;
 
 @end
 
@@ -38,21 +41,40 @@
                                             NSArray *eaters = [responseObject valueForKeyPath:@"eaters"];
                                             NSArray *orders = [responseObject valueForKeyPath:@"orders"];
 
-                                            [[self appData] setEaters:[self parceJsonEaters:eaters]];
-                                            [[self appData] setWeekOrders:[self parseJsonOrders:orders]];
+                                            [self.appData setEaters:[self.jsonParserHelper parseEaters:eaters]];
+                                            [self.appData setWeekOrders:[self.jsonParserHelper parseOrders:orders:self.appData.eaters]];
+
                                             [[self appData] setCurrentEater:self.appData.eaters[0]];
+
                                             [self.tableView reloadData];
 
-//                                            UIBarButtonItem *changeEaterButton = [[UIBarButtonItem alloc] init];
-                                            self.changeEaterButton.target = self;
-                                            self.changeEaterButton.action = @selector(openActionSheet);
-                                            self.changeEaterButton.title = self.appData.currentEater.name;
-                                            NSArray *actionButtonItems = @[self.changeEaterButton];
-                                            self.parentViewController.navigationItem.rightBarButtonItems = actionButtonItems;
+                                            [self setChangeEaterButtonSettings];
 
-                                       }
+                                            [[A0SimpleKeychain keychain] deleteEntryForKey:@"com.eatnow.lunchmaster.token"];
+                                        }
                                        failure:^(AFHTTPRequestOperation *task, NSError *error) {
                                        }];
+}
+
+#pragma mark - init Properties
+
+- (void)initProperties {
+    [self setAppData:[AppData getInstance]];
+    [self setHttpClient:[HttpApiHelper httpClient]];
+    [self setJsonParserHelper:[JsonParserHelper getInstance]];
+
+    [[self httpClient] setToken:[[A0SimpleKeychain keychain] stringForKey:@"com.eatnow.lunchmaster.token"]];
+    [self setDaysOfWeek: @[@"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday"]];
+
+    self.changeEaterButton = [[UIBarButtonItem alloc] init];
+}
+
+- (void) setChangeEaterButtonSettings {
+    self.changeEaterButton.target = self;
+    self.changeEaterButton.action = @selector(openActionSheet);
+    self.changeEaterButton.title = self.appData.currentEater.name;
+    NSArray *actionButtonItems = @[self.changeEaterButton];
+    self.parentViewController.navigationItem.rightBarButtonItems = actionButtonItems;
 }
 
 #pragma mark - Methods for Action Sheet
@@ -79,71 +101,6 @@
 
 }
 
-
-- (void) initProperties {
-    [self setAppData:[AppData getInstance]];
-    [self setHttpClient:[HttpApiHelper httpClient]];
-    [[self httpClient] setToken:[[A0SimpleKeychain keychain] stringForKey:@"com.eatnow.lunchmaster.token"]];
-    [self setDaysOfWeek: @[@"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday"]];
-
-    self.changeEaterButton = [[UIBarButtonItem alloc] init];
-}
-
-#pragma mark - Methods for parse json response
-
-- (NSMutableArray *) parceJsonEaters: (NSArray *) eaters {
-    NSMutableArray *result = [[NSMutableArray alloc] init];
-
-    for (NSDictionary *item in eaters) {
-        Eater *eater = [[Eater alloc] initWithId:item[@"id"] andName:item[@"first_name"]];
-        [result addObject:eater];
-    }
-
-    return result;
-}
-
-- (NSMutableDictionary *) parseJsonOrders: (NSMutableDictionary *) orders {
-    NSMutableDictionary *weekOrders = [[NSMutableDictionary alloc] init];
-
-    if ([[[self appData] eaters] count] > 0) {
-        for (Eater *eater in [[self appData] eaters]) {
-            NSMutableArray *eaterOrders = [[NSMutableArray alloc] init];
-
-            for (NSDictionary *order in orders[[[eater id] stringValue]]) {
-
-                NSString *orderId = order[@"order_id"];
-                NSNumber *orderPrice = (NSNumber *)order[@"order_price"];
-                NSString *allergens = order[@"allergens"];
-                NSString *orderDate = order[@"meal_date"];
-
-                NSString *mealId = order[@"meal_items"][@"id"];
-                NSString *mealTitle = order[@"meal_items"][@"title"];
-                NSString *mealDescription = order[@"meal_items"][@"description"];
-                NSString *mealPictureUrl = order[@"meal_picture_url"];
-
-                NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-                [dateFormat setDateFormat:@"YYYY-MM-dd"];
-                NSDate *dte = [dateFormat dateFromString:orderDate];
-
-                [dateFormat setDateFormat:@"EEEE"]; // day, like "Saturday"
-                NSString *dayOfWeekString = [dateFormat stringFromDate:dte];
-
-                [dateFormat setDateFormat:@"c"]; // day number, like 7 for saturday
-                NSNumber *dayOfWeekNumber = [dateFormat stringFromDate:dte];
-
-                Meal *meal = [[Meal alloc] initWithId:mealId title:mealTitle descr:mealDescription allergens:allergens imagePath:mealPictureUrl];
-                Order *order = [[Order alloc] initWithId:orderId date:orderDate dayOfWeekString:dayOfWeekString dayOfWeekNumber:dayOfWeekNumber price:orderPrice meal:meal];
-
-                [eaterOrders addObject:order];
-            }
-
-            [weekOrders setObject:eaterOrders forKey:eater];
-        }
-    }
-
-    return weekOrders;
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -157,11 +114,13 @@
 
 //- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 //{
-//    return [self.daysOfWeek objectAtIndex:section];
+//    return self.daysOfWeek[section];
 //}
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    //[tableView dequeueReusableHeaderFooterViewWithIdentifier:<#(NSString *)identifier#>]
+
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 18)];
     /* Create custom view to display section header... */
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, 18)];
@@ -172,61 +131,43 @@
     [view addSubview:label];
     [view addSubview:label];
 
-    [view setBackgroundColor:[UIColor colorWithRed:166/255.0 green:177/255.0 blue:186/255.0 alpha:1.0]]; //your background color...
+  //  [view setBackgroundColor:[UIColor colorWithRed:166/255.f green:177/255.f blue:186/255.f alpha:1.0]]; //your background color...
     return view;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-//    NSArray *val = nil;
-//    NSArray *values = [[[self appData] weekOrders] allValues];
-//
-//    if ([values count] != 0)
-//        val = (NSArray *)[values objectAtIndex:0];
-
     NSArray *val = self.appData.weekOrders[self.appData.currentEater];
-
-
-
-    NSPredicate *theDayEquelSection = [NSPredicate predicateWithBlock:
-            ^BOOL(id evaluatedObject, NSDictionary *bindings) {
-                return (section + 1) == ([[evaluatedObject dayOfWeekNumber] integerValue]-1);
-            }];
+    NSPredicate *theDayEquelSection = [NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
+        return (section + 1) == ([[evaluatedObject dayOfWeekNumber] integerValue]);
+    }];
     NSArray *filteredOrders = [val filteredArrayUsingPredicate:theDayEquelSection];
 
     return [filteredOrders count];
-    //return [self.test count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSArray *val = nil;
-//    NSArray *values = [[[self appData] weekOrders] allValues];
-//
-//    if ([values count] != 0)
-//        val = (NSArray *)[values objectAtIndex:0];
 
-    NSArray *val = self.appData.weekOrders[self.appData.currentEater];
+    Order *orderForCurrentSection = [self.appData getOrderForEaterForCurrentEaterBySectionIndex:indexPath.section];
 
-    static NSString *simpleTableIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier forIndexPath:indexPath];
+    MealCell *mealCell = (MealCell *)[tableView dequeueReusableCellWithIdentifier:@"MealCell"];
+//    UIEdgeInsets inst = [UIEdgeInsets ]
+    [mealCell.title setText: orderForCurrentSection.meal.title];
+    [mealCell.descr setText: orderForCurrentSection.meal.descr];
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    mealCell.separatorInset = UIEdgeInsetsZero;
 
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-    }
+    mealCell.mealImage.contentMode = UIViewContentModeScaleAspectFit;
 
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = [[val objectAtIndex:indexPath.section] meal].title;
-    cell.detailTextLabel.text = [[val objectAtIndex:indexPath.section] meal].descr;
-
-    NSString *imageUrl= [NSString stringWithFormat:@"%@%@", BASE_URL, [[val objectAtIndex:indexPath.section] meal].imagePath];
+    NSString *imageUrl= [NSString stringWithFormat:@"%@%@", BASE_URL, [orderForCurrentSection meal].imagePath];
     NSURL *url = [NSURL URLWithString:imageUrl];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     UIImage *placeholderImage = [UIImage imageNamed:@"none"];
 
-    __weak UITableViewCell *weakCell = cell;
+    __weak UITableViewCell *weakCell = mealCell;
 
-    [cell.imageView setImageWithURLRequest:request
+    [mealCell.mealImage setImageWithURLRequest:request
                           placeholderImage:placeholderImage
                                    success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
                                        weakCell.imageView.image = image;
@@ -234,7 +175,35 @@
                                    } failure: ^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
                                         NSLog(@"%@", error);
                                    }];
-    return cell;
+
+
+
+
+//    static NSString *simpleTableIdentifier = @"MealCell";
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier forIndexPath:indexPath];
+//
+//    Order *orderForCurrentSection = [self.appData getOrderForEaterForCurrentEaterBySectionIndex:indexPath.section];
+//
+//    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//    cell.textLabel.text = [orderForCurrentSection meal].title;
+//    cell.detailTextLabel.text = [orderForCurrentSection meal].descr;
+//
+//    NSString *imageUrl= [NSString stringWithFormat:@"%@%@", BASE_URL, [orderForCurrentSection meal].imagePath];
+//    NSURL *url = [NSURL URLWithString:imageUrl];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//    UIImage *placeholderImage = [UIImage imageNamed:@"none"];
+//
+//    __weak UITableViewCell *weakCell = cell;
+//
+//    [cell.imageView setImageWithURLRequest:request
+//                          placeholderImage:placeholderImage
+//                                   success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+//                                       weakCell.imageView.image = image;
+//                                       [weakCell setNeedsLayout];
+//                                   } failure: ^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+//                                        NSLog(@"%@", error);
+//                                   }];
+    return mealCell;
 }
 
 
@@ -282,15 +251,7 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         MealDetailController *detailViewController = (MealDetailController *)segue.destinationViewController;
 
-//        NSArray *val = nil;
-//        NSArray *values = [[[self appData] weekOrders] allValues];
-//
-//        if ([values count] != 0)
-//            val = (NSArray *)[values objectAtIndex:0];
-
-        NSArray *val = self.appData.weekOrders[self.appData.currentEater];
-
-        detailViewController.order = [val objectAtIndex:indexPath.section];
+        detailViewController.order = [self.appData getOrderForEaterForCurrentEaterBySectionIndex:indexPath.section];
     }
 }
 

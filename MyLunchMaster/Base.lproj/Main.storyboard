@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -116,7 +116,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1872.5" y="-290.5"/>
+            <point key="canvasLocation" x="1732.5" y="-322.5"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="GfU-iW-aO5">
@@ -161,35 +161,55 @@
         <scene sceneID="y3j-pJ-DJG">
             <objects>
                 <tableViewController id="MXq-un-6XM" customClass="WeekOrdersTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8Ix-Ug-dnF">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="8Ix-Ug-dnF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="8AW-wD-ep4" detailTextLabel="fvt-7G-U5t" style="IBUITableViewCellStyleSubtitle" id="h4M-dG-Ddd">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MealCell" rowHeight="80" id="h4M-dG-Ddd" customClass="MealCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h4M-dG-Ddd" id="6He-Fq-JuB">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8AW-wD-ep4">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="MealTitle" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujG-7Z-xVG">
+                                            <rect key="frame" x="81" y="8" width="27" height="16"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fvt-7G-U5t">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999964" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVk-a8-YbS">
+                                            <rect key="frame" x="81" y="25" width="64" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K06-7f-gcg">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="79"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="vN2-ka-ibA"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ujG-7Z-xVG" firstAttribute="top" secondItem="6He-Fq-JuB" secondAttribute="top" constant="8" id="CVq-PE-7UB"/>
+                                        <constraint firstItem="ujG-7Z-xVG" firstAttribute="leading" secondItem="K06-7f-gcg" secondAttribute="trailing" constant="1" id="EuR-tT-DI6"/>
+                                        <constraint firstItem="wVk-a8-YbS" firstAttribute="top" secondItem="ujG-7Z-xVG" secondAttribute="bottom" constant="1" id="KSq-U5-Vga"/>
+                                        <constraint firstItem="K06-7f-gcg" firstAttribute="leading" secondItem="6He-Fq-JuB" secondAttribute="leading" id="WUd-P2-Ubw"/>
+                                        <constraint firstItem="wVk-a8-YbS" firstAttribute="leading" secondItem="K06-7f-gcg" secondAttribute="trailing" constant="1" id="gVI-TT-she"/>
+                                        <constraint firstItem="K06-7f-gcg" firstAttribute="top" secondItem="6He-Fq-JuB" secondAttribute="top" id="jUw-lo-t3x"/>
+                                        <constraint firstAttribute="bottom" secondItem="K06-7f-gcg" secondAttribute="bottom" id="mlN-z0-S1L"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
+                                    <outlet property="descr" destination="wVk-a8-YbS" id="IIb-GV-3tQ"/>
+                                    <outlet property="mealImage" destination="K06-7f-gcg" id="LIR-FS-sQx"/>
+                                    <outlet property="title" destination="ujG-7Z-xVG" id="Cwh-fa-nsy"/>
                                     <segue destination="xMI-Xk-ePF" kind="show" identifier="GoToMealDetails" id="Jcy-XH-O3u"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="MXq-un-6XM" id="j1x-W7-zLo"/>
                             <outlet property="delegate" destination="MXq-un-6XM" id="DDS-0y-mwS"/>

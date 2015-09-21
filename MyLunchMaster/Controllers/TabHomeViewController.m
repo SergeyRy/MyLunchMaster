@@ -20,11 +20,6 @@
     [workaroundImageView addSubview:navigationImage];
     self.navigationItem.titleView=workaroundImageView;
 
-//    UIBarButtonItem *changeEaterButton = [[UIBarButtonItem alloc] init];
-//    changeEaterButton.title = @"123";
-//    NSArray *actionButtonItems = @[changeEaterButton];
-//    self.navigationItem.rightBarButtonItems = actionButtonItems;
-
     NSLog(@"tab bar view did load");
 }
 

@@ -23,6 +23,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     NSLog(@"Root controll viewDidAppear");
 
     if(![[A0SimpleKeychain keychain] stringForKey:@"com.eatnow.lunchmaster.token"]) {

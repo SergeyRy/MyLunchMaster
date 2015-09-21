@@ -4,15 +4,18 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class Eater;
-
+#import "Eater.h"
+#import "Order.h"
 
 @interface AppData : NSObject
-    @property (nonatomic, strong) NSMutableArray *eaters;
-    @property (nonatomic, strong) Eater *currentEater;
-    @property (nonatomic, strong) NSMutableDictionary *weekOrders;
+
+@property (nonatomic, strong) NSMutableArray *eaters;
+@property (nonatomic, strong) Eater *currentEater;
+@property (nonatomic, strong) NSMutableDictionary *weekOrders;
 
 + (AppData *)getInstance;
+- (Order *)getOrderForEaterForCurrentEaterBySectionIndex:(NSInteger *)numberOfSection;
+- (NSNumber *)getCountOrderForCurrentEaterBySectionIndex:(NSInteger *)numberOfSection;
 
 @end
+

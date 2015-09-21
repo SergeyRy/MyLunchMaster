@@ -7,4 +7,10 @@
 
 
 @interface JsonParserHelper : NSObject
+
++ (JsonParserHelper *)getInstance;
+
+- (NSMutableArray *) parseEaters: (NSArray *) eaters;
+- (NSMutableDictionary *) parseOrders: (NSMutableDictionary *) orders : (NSArray *) eaters;
+
 @end

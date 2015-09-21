@@ -36,18 +36,34 @@
 
 - (IBAction)btnLoginClicked:(id)sender {
     HttpApiHelper *httpClient = [HttpApiHelper httpClient];
-    [httpClient loginWithUserName:[self.txtLogin text]
-                         password:[self.txtPassword text]
+    [httpClient loginWithUserName:self.txtLogin.text
+                         password:self.txtPassword.text
                           success:^(AFHTTPRequestOperation *task, id responseObject) {
+
+
                               NSString *token = [responseObject valueForKeyPath:@"auth_token"];
                               if (token) {
                                   [[A0SimpleKeychain keychain] setString:token forKey:TOKEN_KEY];
                                   //[httpClient setToken:token];
                                   [self showTabHomePage];
                               }
+
+
                           }
                           failure:^(AFHTTPRequestOperation *task, NSError *error) {
 
+                              NSError *e = [NSError errorWithDomain:@"dfg" code:0 userInfo:@{
+                                      NSLocalizedDescriptionKey : @"My custom text lala"
+                              }];
+
+                              UIAlertView *alertView = [[UIAlertView alloc]
+                                      initWithTitle:@"Error"
+                                            message:e.localizedDescription
+                                           delegate:self
+                                  cancelButtonTitle:nil
+                                  otherButtonTitles:@"OK", nil];
+
+                              [alertView show];
                           }];
 
 }

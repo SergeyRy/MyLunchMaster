@@ -20,11 +20,13 @@
 #import "MealCell.h"
 
 @interface WeekOrdersTableViewController ()
-    @property (nonatomic, strong) AppData *appData;
-    @property (nonatomic, strong) HttpApiHelper *httpClient;
-    @property (nonatomic, strong) NSArray *daysOfWeek;
-    @property (nonatomic, strong) UIBarButtonItem *changeEaterButton;
-    @property (nonatomic, strong) JsonParserHelper *jsonParserHelper;
+
+@property (nonatomic, strong) AppData *appData;
+@property (nonatomic, strong) HttpApiHelper *httpClient;
+@property (nonatomic, strong) NSArray *daysOfWeek;
+@property (nonatomic, strong) NSArray *datesOfWeek;
+@property (nonatomic, strong) UIBarButtonItem *changeEaterButton;
+@property (nonatomic, strong) JsonParserHelper *jsonParserHelper;
 
 @end
 
@@ -33,6 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initProperties];
+
 
 
     NSLog(@"table view did load");
@@ -65,8 +68,39 @@
 
     [[self httpClient] setToken:[[A0SimpleKeychain keychain] stringForKey:@"com.eatnow.lunchmaster.token"]];
     [self setDaysOfWeek: @[@"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday"]];
+    [self fillDatesOfWeek];
 
     self.changeEaterButton = [[UIBarButtonItem alloc] init];
+}
+
+- (void)fillDatesOfWeek {
+    NSDate *weekDate = [NSDate date];
+    NSCalendar *myCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+
+    NSDateComponents *currentComps = [myCalendar components:( NSYearCalendarUnit | NSMonthCalendarUnit | NSWeekOfYearCalendarUnit | NSWeekdayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:weekDate];
+    int ff = currentComps.weekOfYear;
+
+    [currentComps setWeekday:2]; // 2: monday
+    NSDate *firstDayOfTheWeek = [myCalendar dateFromComponents:currentComps];
+    [currentComps setWeekday:3];
+    NSDate *secondDayOfTheWeek = [myCalendar dateFromComponents:currentComps];
+    [currentComps setWeekday:4];
+    NSDate *therdDayOfTheWeek = [myCalendar dateFromComponents:currentComps];
+    [currentComps setWeekday:5];
+    NSDate *fourthDayOfTheWeek = [myCalendar dateFromComponents:currentComps];
+    [currentComps setWeekday:6];
+    NSDate *fifthDayOfTheWeek = [myCalendar dateFromComponents:currentComps];
+
+    NSDateFormatter *myDateFormatter = [[NSDateFormatter alloc] init];
+    myDateFormatter.dateFormat = @"EEEE dd MMMM";
+
+    [self setDatesOfWeek:@[
+            [myDateFormatter stringFromDate:firstDayOfTheWeek],
+            [myDateFormatter stringFromDate:secondDayOfTheWeek],
+            [myDateFormatter stringFromDate:therdDayOfTheWeek],
+            [myDateFormatter stringFromDate:fourthDayOfTheWeek],
+            [myDateFormatter stringFromDate:fifthDayOfTheWeek]
+    ]];
 }
 
 - (void) setChangeEaterButtonSettings {
@@ -122,16 +156,21 @@
     //[tableView dequeueReusableHeaderFooterViewWithIdentifier:<#(NSString *)identifier#>]
 
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 18)];
-    /* Create custom view to display section header... */
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, 18)];
-    [label setFont:[UIFont boldSystemFontOfSize:12]];
-    NSString *string =[self.daysOfWeek objectAtIndex:section];
-    /* Section header is in 0th index... */
-    [label setText:string];
-    [view addSubview:label];
-    [view addSubview:label];
 
-  //  [view setBackgroundColor:[UIColor colorWithRed:166/255.f green:177/255.f blue:186/255.f alpha:1.0]]; //your background color...
+    UILabel *lblDate = [[UILabel alloc] initWithFrame:CGRectMake(30, 5, 170, 18)];
+    [lblDate setFont:[UIFont systemFontOfSize:13]];
+    lblDate.text = self.datesOfWeek[section];
+
+    UIImageView *navigationImage=[[UIImageView alloc]initWithFrame:CGRectMake(10, 6, 15, 15)];
+    navigationImage.image=[UIImage imageNamed:@"TabCalendar"];
+    navigationImage.contentMode = UIViewContentModeScaleAspectFit;
+
+
+
+    [view addSubview:lblDate];
+    [view addSubview:navigationImage];
+    [view setBackgroundColor:[UIColor colorWithRed:166/255.f green:177/255.f blue:186/255.f alpha:0.5]]; //your background color...
+
     return view;
 }
 
@@ -152,6 +191,7 @@
     Order *orderForCurrentSection = [self.appData getOrderForEaterForCurrentEaterBySectionIndex:indexPath.section];
 
     MealCell *mealCell = (MealCell *)[tableView dequeueReusableCellWithIdentifier:@"MealCell"];
+    mealCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 //    UIEdgeInsets inst = [UIEdgeInsets ]
     [mealCell.title setText: orderForCurrentSection.meal.title];
     [mealCell.descr setText: orderForCurrentSection.meal.descr];
@@ -165,44 +205,18 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     UIImage *placeholderImage = [UIImage imageNamed:@"none"];
 
-    __weak UITableViewCell *weakCell = mealCell;
+    __weak MealCell *weakCell = mealCell;
 
     [mealCell.mealImage setImageWithURLRequest:request
                           placeholderImage:placeholderImage
                                    success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-                                       weakCell.imageView.image = image;
+                                       weakCell.mealImage.image = image;
                                        [weakCell setNeedsLayout];
                                    } failure: ^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
                                         NSLog(@"%@", error);
                                    }];
 
 
-
-
-//    static NSString *simpleTableIdentifier = @"MealCell";
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier forIndexPath:indexPath];
-//
-//    Order *orderForCurrentSection = [self.appData getOrderForEaterForCurrentEaterBySectionIndex:indexPath.section];
-//
-//    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-//    cell.textLabel.text = [orderForCurrentSection meal].title;
-//    cell.detailTextLabel.text = [orderForCurrentSection meal].descr;
-//
-//    NSString *imageUrl= [NSString stringWithFormat:@"%@%@", BASE_URL, [orderForCurrentSection meal].imagePath];
-//    NSURL *url = [NSURL URLWithString:imageUrl];
-//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//    UIImage *placeholderImage = [UIImage imageNamed:@"none"];
-//
-//    __weak UITableViewCell *weakCell = cell;
-//
-//    [cell.imageView setImageWithURLRequest:request
-//                          placeholderImage:placeholderImage
-//                                   success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-//                                       weakCell.imageView.image = image;
-//                                       [weakCell setNeedsLayout];
-//                                   } failure: ^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-//                                        NSLog(@"%@", error);
-//                                   }];
     return mealCell;
 }
 

@@ -87,9 +87,7 @@
 
 - (void)saveLogin:(NSString *)login andPassword:(NSString *)password
 {
-    NSString *token = [self.txtPassword text];
     [[A0SimpleKeychain keychain] setString:@"123" forKey:@"com.eatnow.lunchmaster.token"];
-
 
     NSLog(@"Save pw: %@", [self.txtPassword text]);
 

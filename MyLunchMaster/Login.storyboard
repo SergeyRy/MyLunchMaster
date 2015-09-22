@@ -92,6 +92,13 @@
                                     <action selector="btnLoginClicked:" destination="UA4-fs-u8e" eventType="touchUpInside" id="WVp-p9-WNS"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoLoginPage" translatesAutoresizingMaskIntoConstraints="NO" id="yzw-jf-P1T">
+                                <rect key="frame" x="87" y="154" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="2pk-zZ-p7b"/>
+                                    <constraint firstAttribute="width" constant="200" id="lRW-yO-aRs"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -100,12 +107,14 @@
                             <constraint firstAttribute="centerX" secondItem="xID-BC-i51" secondAttribute="centerX" id="6US-tO-iRf"/>
                             <constraint firstItem="kd7-p3-Zgg" firstAttribute="bottom" secondItem="sDj-SV-jxg" secondAttribute="bottom" id="8tq-T2-IMG"/>
                             <constraint firstItem="sDj-SV-jxg" firstAttribute="leading" secondItem="kd7-p3-Zgg" secondAttribute="trailing" constant="200" id="9ub-CP-3JU"/>
+                            <constraint firstAttribute="centerX" secondItem="yzw-jf-P1T" secondAttribute="centerX" id="PVX-dg-UqZ"/>
                             <constraint firstAttribute="centerX" secondItem="CsQ-S9-mzx" secondAttribute="centerX" constant="-40" id="THf-I9-eey"/>
                             <constraint firstItem="sDj-SV-jxg" firstAttribute="top" secondItem="CsQ-S9-mzx" secondAttribute="bottom" constant="16" id="ZSx-V4-OgE"/>
                             <constraint firstItem="CsQ-S9-mzx" firstAttribute="leading" secondItem="BcQ-4F-HoH" secondAttribute="trailing" constant="10" id="bPg-2g-V1w"/>
                             <constraint firstAttribute="centerY" secondItem="CsQ-S9-mzx" secondAttribute="centerY" constant="20" id="dox-Es-NCR"/>
                             <constraint firstItem="CsQ-S9-mzx" firstAttribute="bottom" secondItem="BcQ-4F-HoH" secondAttribute="bottom" id="fUn-0M-ucB"/>
                             <constraint firstItem="xID-BC-i51" firstAttribute="top" secondItem="sDj-SV-jxg" secondAttribute="bottom" constant="40" id="pbz-C6-xye"/>
+                            <constraint firstAttribute="centerY" secondItem="yzw-jf-P1T" secondAttribute="centerY" constant="130" id="pin-A2-xOQ"/>
                             <constraint firstItem="sDj-SV-jxg" firstAttribute="leading" secondItem="kd7-p3-Zgg" secondAttribute="trailing" constant="10" id="r8h-Qb-SCc"/>
                         </constraints>
                         <variation key="default">
@@ -134,4 +143,7 @@
             <point key="canvasLocation" x="980.5" y="23.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LogoLoginPage" width="251" height="130"/>
+    </resources>
 </document>

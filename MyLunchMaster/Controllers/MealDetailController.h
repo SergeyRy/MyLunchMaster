@@ -11,9 +11,9 @@
 
 @interface MealDetailController : UIViewController
 
-    @property (weak, nonatomic) IBOutlet UILabel *txtTitle;
-    @property (weak, nonatomic) IBOutlet UILabel *txtAlergents;
-    @property (weak, nonatomic) IBOutlet UITextView *txtDescription;
+@property (weak, nonatomic) IBOutlet UILabel *txtTitle;
+@property (weak, nonatomic) IBOutlet UILabel *txtAlergents;
+@property (weak, nonatomic) IBOutlet UILabel *txtDescription;
 
 
 

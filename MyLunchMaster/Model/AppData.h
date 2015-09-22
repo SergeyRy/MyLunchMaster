@@ -14,8 +14,9 @@
 @property (nonatomic, strong) NSMutableDictionary *weekOrders;
 
 + (AppData *)getInstance;
-- (Order *)getOrderForEaterForCurrentEaterBySectionIndex:(NSInteger *)numberOfSection;
-- (NSNumber *)getCountOrderForCurrentEaterBySectionIndex:(NSInteger *)numberOfSection;
+- (Order *)getOrderForEaterForCurrentEaterBySectionIndex:(NSInteger)numberOfSection;
+- (NSInteger)getCountOrderForCurrentEaterBySectionIndex:(NSInteger)numberOfSection;
 
 @end
 
+	

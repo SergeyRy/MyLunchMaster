@@ -46,7 +46,7 @@
 }
 
 - (NSUInteger)hash {
-    return [self id];
+    return [self.id integerValue];
 }
 
 @end

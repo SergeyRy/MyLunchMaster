@@ -30,7 +30,7 @@
     return [arrayForEater filteredArrayUsingPredicate:theDayEquelSection][0];
 }
 
-- (NSInteger)getCountOrderForCurrentEaterBySectionIndex:(NSInteger *)numberOfSection {
+- (NSInteger)getCountOrderForCurrentEaterBySectionIndex:(NSInteger)numberOfSection {
     NSArray *arrayForEater = self.weekOrders[self.currentEater];
 
     NSPredicate *theDayEquelSection = [NSPredicate predicateWithBlock:

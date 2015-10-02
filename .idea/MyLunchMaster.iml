@@ -6,12 +6,16 @@
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/AppDelegate.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Base.lproj/LaunchScreen.xib" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Base.lproj/Main.storyboard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Controllers/CalendarViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Controllers/CalendarViewController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Controllers/LoginViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Controllers/LoginViewController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Controllers/MealDetailController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Controllers/MealDetailController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Controllers/RootViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Controllers/RootViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Controllers/ShoppingCartViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Controllers/ShoppingCartViewController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Controllers/TabHomeViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Controllers/TabHomeViewController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Controllers/WeekOrdersTableViewController.h" isTestSource="false" />
@@ -26,6 +30,7 @@
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Helpers/KeychainHelper.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Images.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/LMModel.xcdatamodeld/LMModel.xcdatamodel" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Login.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Model/AppData.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Model/AppData.m" isTestSource="false" />
@@ -35,6 +40,8 @@
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Model/Meal.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Model/Order.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Model/Order.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Model/OrderFromCart.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Model/OrderFromCart.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Root.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Views/MealCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Views/MealCell.m" isTestSource="false" />
@@ -79,6 +86,38 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/JTCalendar.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/JTCalendarDelegate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/JTCalendarManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/JTCalendarManager.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/JTCalendarSettings.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/JTCalendarSettings.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/JTDateHelper.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/JTDateHelper.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Managers/JTCalendarDelegateManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Managers/JTCalendarDelegateManager.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Managers/JTCalendarScrollManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Managers/JTCalendarScrollManager.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Protocols/JTCalendarDay.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Protocols/JTCalendarPage.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Protocols/JTCalendarWeek.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Protocols/JTCalendarWeekDay.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Protocols/JTContent.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Protocols/JTMenu.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Views/JTCalendarDayView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Views/JTCalendarDayView.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Views/JTCalendarMenuView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Views/JTCalendarMenuView.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Views/JTCalendarPageView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Views/JTCalendarPageView.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Views/JTCalendarWeekDayView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Views/JTCalendarWeekDayView.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Views/JTCalendarWeekView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Views/JTCalendarWeekView.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Views/JTHorizontalCalendarView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Views/JTHorizontalCalendarView.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Views/JTVerticalCalendarView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/JTCalendar/JTCalendar/Views/JTVerticalCalendarView.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SimpleKeychain/SimpleKeychain/A0SimpleKeychain+KeyPair.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SimpleKeychain/SimpleKeychain/A0SimpleKeychain+KeyPair.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SimpleKeychain/SimpleKeychain/A0SimpleKeychain.h" isTestSource="false" />
@@ -88,6 +127,10 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AFNetworking/AFNetworking-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AFNetworking/AFNetworking-prefix.pch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AFNetworking/AFNetworking.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/JTCalendar/JTCalendar-Private.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/JTCalendar/JTCalendar-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/JTCalendar/JTCalendar-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/JTCalendar/JTCalendar.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.markdown" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-dummy.m" isTestSource="false" />

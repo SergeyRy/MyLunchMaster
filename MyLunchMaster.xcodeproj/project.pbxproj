@@ -12,6 +12,7 @@
 		4722E2C5FE8608D8226F060F /* MealDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E89109AC64C73570CE96 /* MealDetailController.m */; };
 		4722E3F1DD6FEE7EAE4318F6 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EF3491407C4E68055CF6 /* Order.m */; };
 		4722E758CF79C99C6AF07DA8 /* Eater.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EB3DE64280238FEF5523 /* Eater.m */; };
+		4722E80AFCE75A135BAF1AFD /* OrderFromCart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E853C56C423C5E97F0BC /* OrderFromCart.m */; };
 		4722E82AD90E6AB17A355D31 /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E670D15425367C9B3405 /* Meal.m */; };
 		4722E8456B8A1B6BA2BF608F /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E79A128D3EC39D5CC7A8 /* AppData.m */; };
 		4722EB008F984BA5B0B76ED7 /* HttpApiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EF8D735114A390F9CC2B /* HttpApiHelper.m */; };
@@ -20,6 +21,10 @@
 		4722EDD9968DD7CD41E114C7 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E5B55C587E38C235B3DB /* Constants.m */; };
 		4722EF1B66DDBE023444463B /* TabHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E320E7815DF3D43C0113 /* TabHomeViewController.m */; };
 		B45306882A3CAB3F073DDF55 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB70F74D6AEDE8265DB802D /* libPods.a */; };
+		CD3427D71BBAD0C700D15B66 /* ShoppingCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3427D61BBAD0C700D15B66 /* ShoppingCartViewController.m */; };
+		CD3427D91BBAD1C200D15B66 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3427D81BBAD1C200D15B66 /* CoreData.framework */; };
+		CD3427DD1BBBCC0400D15B66 /* LMModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD3427DB1BBBCC0400D15B66 /* LMModel.xcdatamodeld */; };
+		CD3428051BBE6FA400D15B66 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3428041BBE6FA400D15B66 /* CalendarViewController.m */; };
 		CD464D951BA30C820082079A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD464D941BA30C820082079A /* Security.framework */; };
 		CD464D981BA6E63F0082079A /* WeekOrdersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD464D971BA6E63F0082079A /* WeekOrdersTableViewController.m */; };
 		CD464D9C1BA7FB970082079A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD464D9B1BA7FB970082079A /* RootViewController.m */; };
@@ -60,15 +65,23 @@
 		4722E794F11E76EB876AE685 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
 		4722E79A128D3EC39D5CC7A8 /* AppData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppData.m; sourceTree = "<group>"; };
 		4722E7F701A079F33FA96ECA /* JsonParserHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonParserHelper.h; sourceTree = "<group>"; };
+		4722E853C56C423C5E97F0BC /* OrderFromCart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderFromCart.m; sourceTree = "<group>"; };
 		4722E89109AC64C73570CE96 /* MealDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealDetailController.m; sourceTree = "<group>"; };
 		4722E89927716D77583CBD61 /* HttpApiHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpApiHelper.h; sourceTree = "<group>"; };
 		4722E90DBFC47B3D50983A4F /* TabHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabHomeViewController.h; sourceTree = "<group>"; };
 		4722E9A4813E4C0DC69D1BD0 /* MealCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealCell.h; sourceTree = "<group>"; };
 		4722EB3DE64280238FEF5523 /* Eater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Eater.m; sourceTree = "<group>"; };
 		4722EB8897E335930365B4A4 /* MealDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealDetailController.h; sourceTree = "<group>"; };
+		4722EBF94BD464C27099D694 /* OrderFromCart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderFromCart.h; sourceTree = "<group>"; };
 		4722EF3491407C4E68055CF6 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
 		4722EF8D735114A390F9CC2B /* HttpApiHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpApiHelper.m; sourceTree = "<group>"; };
 		8FB70F74D6AEDE8265DB802D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD3427D51BBAD0C700D15B66 /* ShoppingCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCartViewController.h; sourceTree = "<group>"; };
+		CD3427D61BBAD0C700D15B66 /* ShoppingCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartViewController.m; sourceTree = "<group>"; };
+		CD3427D81BBAD1C200D15B66 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CD3427DC1BBBCC0400D15B66 /* LMModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LMModel.xcdatamodel; sourceTree = "<group>"; };
+		CD3428031BBE6FA400D15B66 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		CD3428041BBE6FA400D15B66 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		CD464D941BA30C820082079A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CD464D961BA6E63F0082079A /* WeekOrdersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekOrdersTableViewController.h; sourceTree = "<group>"; };
 		CD464D971BA6E63F0082079A /* WeekOrdersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekOrdersTableViewController.m; sourceTree = "<group>"; };
@@ -97,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD3427D91BBAD1C200D15B66 /* CoreData.framework in Frameworks */,
 				CD464D951BA30C820082079A /* Security.framework in Frameworks */,
 				B45306882A3CAB3F073DDF55 /* libPods.a in Frameworks */,
 			);
@@ -140,6 +154,10 @@
 				CD464D971BA6E63F0082079A /* WeekOrdersTableViewController.m */,
 				4722E89109AC64C73570CE96 /* MealDetailController.m */,
 				4722EB8897E335930365B4A4 /* MealDetailController.h */,
+				CD3427D51BBAD0C700D15B66 /* ShoppingCartViewController.h */,
+				CD3427D61BBAD0C700D15B66 /* ShoppingCartViewController.m */,
+				CD3428031BBE6FA400D15B66 /* CalendarViewController.h */,
+				CD3428041BBE6FA400D15B66 /* CalendarViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,6 +182,8 @@
 				4722E794F11E76EB876AE685 /* Order.h */,
 				4722E670D15425367C9B3405 /* Meal.m */,
 				4722E037CD8F0854013C4E1C /* Meal.h */,
+				4722E853C56C423C5E97F0BC /* OrderFromCart.m */,
+				4722EBF94BD464C27099D694 /* OrderFromCart.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,10 +191,18 @@
 		9B713EEF328E31B80FCFEFC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD3427D81BBAD1C200D15B66 /* CoreData.framework */,
 				CD464D941BA30C820082079A /* Security.framework */,
 				8FB70F74D6AEDE8265DB802D /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD3427DA1BBBC22100D15B66 /* CoreDataClasses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CoreDataClasses;
 			sourceTree = "<group>";
 		};
 		CD6A29801B9D939D008E31C6 = {
@@ -207,11 +235,13 @@
 				CD6A29961B9D939D008E31C6 /* Main.storyboard */,
 				CD6A29991B9D939D008E31C6 /* Images.xcassets */,
 				CD6A299B1B9D939D008E31C6 /* LaunchScreen.xib */,
+				CD3427DA1BBBC22100D15B66 /* CoreDataClasses */,
 				CD6A298C1B9D939D008E31C6 /* Supporting Files */,
 				4722E4A087A0CD10A2C8017C /* Controllers */,
 				4722E48BA967EDA0337671F2 /* Helpers */,
 				4722EB5CB491BDFF1A4F6E44 /* Model */,
 				4722EA0493F3FA37B5C4331A /* Views */,
+				CD3427DB1BBBCC0400D15B66 /* LMModel.xcdatamodeld */,
 			);
 			path = MyLunchMaster;
 			sourceTree = "<group>";
@@ -388,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD3427DD1BBBCC0400D15B66 /* LMModel.xcdatamodeld in Sources */,
 				CD6A29921B9D939D008E31C6 /* AppDelegate.m in Sources */,
 				CD6A298F1B9D939D008E31C6 /* main.m in Sources */,
 				CD464D9C1BA7FB970082079A /* RootViewController.m in Sources */,
@@ -395,8 +426,10 @@
 				4722EC0863FB926387175219 /* LoginViewController.m in Sources */,
 				4722EF1B66DDBE023444463B /* TabHomeViewController.m in Sources */,
 				4722EB008F984BA5B0B76ED7 /* HttpApiHelper.m in Sources */,
+				CD3428051BBE6FA400D15B66 /* CalendarViewController.m in Sources */,
 				4722EDD9968DD7CD41E114C7 /* Constants.m in Sources */,
 				CD464DA31BA806210082079A /* KeychainHelper.m in Sources */,
+				CD3427D71BBAD0C700D15B66 /* ShoppingCartViewController.m in Sources */,
 				4722E8456B8A1B6BA2BF608F /* AppData.m in Sources */,
 				4722E758CF79C99C6AF07DA8 /* Eater.m in Sources */,
 				4722E3F1DD6FEE7EAE4318F6 /* Order.m in Sources */,
@@ -404,6 +437,7 @@
 				4722E298DE16B8D9280BFB90 /* JsonParserHelper.m in Sources */,
 				4722E2C5FE8608D8226F060F /* MealDetailController.m in Sources */,
 				4722E1B729AAF07B159658D8 /* MealCell.m in Sources */,
+				4722E80AFCE75A135BAF1AFD /* OrderFromCart.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +649,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CD3427DB1BBBCC0400D15B66 /* LMModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CD3427DC1BBBCC0400D15B66 /* LMModel.xcdatamodel */,
+			);
+			currentVersion = CD3427DC1BBBCC0400D15B66 /* LMModel.xcdatamodel */;
+			path = LMModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CD6A29811B9D939D008E31C6 /* Project object */;
 }

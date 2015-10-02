@@ -19,6 +19,11 @@ extern NSString * const baseURLString;
                password:(NSString *)password
                 success:(void(^)(AFHTTPRequestOperation *task, id responseObject))success
                 failure:(void(^)(AFHTTPRequestOperation *task, NSError *error))failure;
+
 - (void)getOrdersForCurrentWeekSuccess:(void(^)(AFHTTPRequestOperation *task, id responseObject))success
                                failure:(void(^)(AFHTTPRequestOperation *task, NSError *error))failure;
+
+- (void)getShoppingCartSuccess:(void(^)(AFHTTPRequestOperation *task, id responseObject))success
+                       failure:(void(^)(AFHTTPRequestOperation *task, NSError *error))failure;
+
 @end

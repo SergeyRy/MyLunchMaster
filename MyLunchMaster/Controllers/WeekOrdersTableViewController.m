@@ -36,7 +36,11 @@
     [super viewDidLoad];
     [self initProperties];
 
-
+    UIImageView *navigationImage=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 130, 15)];
+    navigationImage.image=[UIImage imageNamed:@"Logo"];
+    UIImageView *workaroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 130, 15)];
+    [workaroundImageView addSubview:navigationImage];
+    self.navigationItem.titleView=workaroundImageView;
 
     NSLog(@"table view did load");
 
@@ -108,7 +112,7 @@
     self.changeEaterButton.action = @selector(openActionSheet);
     self.changeEaterButton.title = self.appData.currentEater.name;
     NSArray *actionButtonItems = @[self.changeEaterButton];
-    self.parentViewController.navigationItem.rightBarButtonItems = actionButtonItems;
+    self.navigationItem.rightBarButtonItems = actionButtonItems;
 }
 
 #pragma mark - Methods for Action Sheet

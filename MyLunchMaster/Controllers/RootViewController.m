@@ -51,7 +51,12 @@
 
 -(void)showTabHomePage {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UINavigationController *viewController = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"NavigationView"];
+//    UINavigationController *viewController = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"NavigationView"];
+//    [self presentViewController:viewController
+//                       animated:YES
+//                     completion:nil];
+    
+    TabHomeViewController *viewController = (TabHomeViewController *)[storyboard instantiateViewControllerWithIdentifier:@"TabHomePage"];
     [self presentViewController:viewController
                        animated:YES
                      completion:nil];

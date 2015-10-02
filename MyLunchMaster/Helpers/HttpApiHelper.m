@@ -11,6 +11,7 @@
 NSString * const baseURLString = @"https://eatnow.thelunchmaster.com";
 NSString * const authorizationURLString = @"api/v1/users/sign_in";
 NSString * const getOrdersForCurrentWeekURLString = @"api/v1/weekly_order";
+NSString * const getShoppCart = @"api/v1/shopping_cart_orders";
 
 
 
@@ -61,6 +62,18 @@ NSString * const getOrdersForCurrentWeekURLString = @"api/v1/weekly_order";
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         failure(operation, error);
     }];
+}
+
+- (void)getShoppingCartSuccess:(void(^)(AFHTTPRequestOperation *task, id responseObject))success
+                       failure:(void(^)(AFHTTPRequestOperation *task, NSError *error))failure {
+    
+    [self.requestSerializer setValue:_token forHTTPHeaderField:@"X-Auth-Token"];
+    [self GET:getShoppCart parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        success(operation, responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        failure(operation, error);
+    }];
+    
 }
 
 @end

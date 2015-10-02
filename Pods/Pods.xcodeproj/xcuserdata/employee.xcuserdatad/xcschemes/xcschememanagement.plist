@@ -8,32 +8,36 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
+		</dict>
+		<key>JTCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>SimpleKeychain.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>17EA2D7D2A1D0D27C6DA3C5570CDDD42</key>
+		<key>2D4743E4D814AA8D3C16BB89044882CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C2BD64492A2DA3421C4811E5C5D17E4C</key>
+		<key>3CE6E05AE80AEC5077E9109F2D7A5944</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6D3C85690E61DECBE160AEA28E352680</key>
 		<dict>
 			<key>primary</key>
 			<true/>

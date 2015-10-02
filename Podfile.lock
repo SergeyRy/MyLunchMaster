@@ -20,14 +20,17 @@ PODS:
   - AFNetworking/UIKit (2.6.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - JTCalendar (2.1.4)
   - SimpleKeychain (0.5.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
+  - JTCalendar (~> 2.0)
   - SimpleKeychain
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  JTCalendar: 9b1352c7ec41cc26b19c189d6608ba48060a53d9
   SimpleKeychain: ae04c7ca6a960a146081010b412cf0ba2ecb10fe
 
 COCOAPODS: 0.38.2

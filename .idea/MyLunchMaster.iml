@@ -42,9 +42,20 @@
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Model/Order.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Model/OrderFromCart.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Model/OrderFromCart.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistory.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistoryDAO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistoryDAO.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistoryNAO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistoryNAO.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistoryService.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistoryService.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistoryViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistoryViewController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Root.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Views/MealCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Views/MealCell.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Views/OrderDetailCellTableViewCell.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Views/OrderDetailCellTableViewCell.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/main.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMasterTests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMasterTests/MyLunchMasterTests.m" isTestSource="false" />

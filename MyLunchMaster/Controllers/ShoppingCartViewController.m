@@ -10,6 +10,7 @@
 #import "AppData.h"
 #import "HttpApiHelper.h"
 #import "JsonParserHelper.h"
+#import "OrderDetailCellTableViewCell.h"
 #import <CoreData/CoreData.h>
 
 @interface ShoppingCartViewController ()
@@ -56,6 +57,7 @@
                                                          [newOrder setValue:[obj valueForKey:@"meal_size"] forKey:@"meal_size"];
                                                          [newOrder setValue:[obj valueForKey:@"meal_date"] forKey:@"meal_date"];
                                                          [newOrder setValue:[obj valueForKey:@"price"] forKey:@"price"];
+                                                         [newOrder setValue:eaterName forKey:@"eater"];
                                                      }];
 
                                                  }];
@@ -65,6 +67,9 @@
                                                  if (![[self managedObjectContext] save:&error]) {
                                                      NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
                                                  }
+
+                                                    [self.tableView reloadData];
+                 [[self navigationController] tabBarItem].badgeValue = [NSString stringWithFormat: @"%ld", (long)orderItems.count];
 
 
                                                 }
@@ -100,28 +105,82 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
-    NSArray *sections = [self.fetchedResultsController sections];
-    id<NSFetchedResultsSectionInfo> sectionInfo = [sections objectAtIndex:section];
-
-    return [sectionInfo numberOfObjects];
+    if (section == 0) {
+        NSArray *sections = [self.fetchedResultsController sections];
+        id<NSFetchedResultsSectionInfo> sectionInfo = [sections objectAtIndex:section];
+        return [sectionInfo numberOfObjects];
+    } else {
+        return 5;
+    }
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OrderCartCell" forIndexPath:indexPath];
 
-    NSManagedObject *record = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    if (indexPath.section == 0) {
+        OrderDetailCellTableViewCell *cell;
+         cell = [tableView dequeueReusableCellWithIdentifier:@"OrderCartCell" forIndexPath:indexPath];
+
+        NSManagedObject *record = [self.fetchedResultsController objectAtIndexPath:indexPath];
 
 
-    [cell.textLabel setText:[record valueForKey:@"meal_descr"]];
-    [cell.detailTextLabel setText:[record valueForKey:@"price"]];
+        [cell.eaterName setText:[record valueForKey:@"eater"]];
+        [cell.mealDescr setText:[record valueForKey:@"meal_descr"]];
+        [cell.dateOrder setText:[record valueForKey:@"meal_date"]];
+        NSString *size = (NSString *) [record valueForKey:@"meal_size"];
+        [cell.size setText: [size substringToIndex:1].uppercaseString];
+        [cell.price setText:[record valueForKey:@"price"]];
 
-    return cell;
+        //[cell.imgDelete setTintColor:[UIColor blueColor]];
+
+        cell.imgDelete.image = [cell.imgDelete.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        [cell.imgDelete setTintColor:[UIColor blueColor]];
+
+
+        return cell;
+    } else {
+        UITableViewCell *cell;
+        cell = [tableView dequeueReusableCellWithIdentifier:@"AmountCell" forIndexPath:indexPath];
+
+
+        [cell.textLabel setText:@"11"];
+        [cell.detailTextLabel setText: @"22"];
+        return cell;
+    }
+}
+
+-(UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UITableViewCell *headerView;
+    if (section == 0) {
+        static NSString *CellIdentifier = @"OrdersHeader";
+        headerView = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    } else {
+        static NSString *CellIdentifier = @"AmountHeader";
+        headerView = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    }
+
+    return headerView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return 60;
+    } else {
+        return 30;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return 60;
+    } else {
+        return 45;
+    }
 }
 
 
@@ -251,28 +310,29 @@
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
     switch (type) {
         case NSFetchedResultsChangeInsert: {
-            [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
             break;
         }
         case NSFetchedResultsChangeDelete: {
-            [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
             break;
         }
         case NSFetchedResultsChangeUpdate: {
-            static NSString *CellIdentifier = @"OrderCartCell";
-            UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+//            static NSString *CellIdentifier = @"OrderCartCell";
+//            UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
-            NSManagedObject *record = [self.fetchedResultsController objectAtIndexPath:indexPath];
-
-            // Update Cell
-            [cell.textLabel setText:[record valueForKey:@"meal_descr"]];
-            [cell.detailTextLabel setText:[record valueForKey:@"price"]];
+            [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//            NSManagedObject *record = [self.fetchedResultsController objectAtIndexPath:indexPath];
+//
+//            // Update Cell
+//            [cell.textLabel setText:[record valueForKey:@"meal_descr"]];
+//            [cell.detailTextLabel setText:[record valueForKey:@"price"]];
 
             break;
         }
         case NSFetchedResultsChangeMove: {
-            [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
             break;
         }
     }

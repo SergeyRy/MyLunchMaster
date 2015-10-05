@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4722E1B729AAF07B159658D8 /* MealCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E041CF4F22FEDD563436 /* MealCell.m */; };
 		4722E298DE16B8D9280BFB90 /* JsonParserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E0200B6DEE9D24E96DED /* JsonParserHelper.m */; };
+		4722E2A69735AFADB98440BD /* OrderHistoryNAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EBEA853892174C7E9C7E /* OrderHistoryNAO.m */; };
 		4722E2C5FE8608D8226F060F /* MealDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E89109AC64C73570CE96 /* MealDetailController.m */; };
 		4722E3F1DD6FEE7EAE4318F6 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EF3491407C4E68055CF6 /* Order.m */; };
 		4722E758CF79C99C6AF07DA8 /* Eater.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EB3DE64280238FEF5523 /* Eater.m */; };
@@ -18,7 +19,9 @@
 		4722EB008F984BA5B0B76ED7 /* HttpApiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EF8D735114A390F9CC2B /* HttpApiHelper.m */; };
 		4722EC0863FB926387175219 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E103A5FA1C214ADEA20D /* LoginViewController.m */; };
 		4722EC14BFB89FD558FF9E1C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E5B55C587E38C235B3DB /* Constants.m */; };
+		4722ECE67EE483F34D01D4A0 /* OrderHistoryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EAC5A5C19349B4FFC97C /* OrderHistoryService.m */; };
 		4722EDD9968DD7CD41E114C7 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E5B55C587E38C235B3DB /* Constants.m */; };
+		4722EE1DBF5B49BE4D924291 /* OrderHistoryDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E9798DE73E16E6EBD6F9 /* OrderHistoryDAO.m */; };
 		4722EF1B66DDBE023444463B /* TabHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E320E7815DF3D43C0113 /* TabHomeViewController.m */; };
 		B45306882A3CAB3F073DDF55 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB70F74D6AEDE8265DB802D /* libPods.a */; };
 		CD3427D71BBAD0C700D15B66 /* ShoppingCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3427D61BBAD0C700D15B66 /* ShoppingCartViewController.m */; };
@@ -37,6 +40,8 @@
 		CD6A299A1B9D939D008E31C6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD6A29991B9D939D008E31C6 /* Images.xcassets */; };
 		CD6A299D1B9D939D008E31C6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD6A299B1B9D939D008E31C6 /* LaunchScreen.xib */; };
 		CD6A29A91B9D939D008E31C6 /* MyLunchMasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A29A81B9D939D008E31C6 /* MyLunchMasterTests.m */; };
+		CDEE4B311BC2950400C9713D /* OrderDetailCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEE4B301BC2950400C9713D /* OrderDetailCellTableViewCell.m */; };
+		CDEE4B361BC2B15000C9713D /* OrderHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEE4B351BC2B15000C9713D /* OrderHistoryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,7 @@
 		4722E037CD8F0854013C4E1C /* Meal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
 		4722E041CF4F22FEDD563436 /* MealCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealCell.m; sourceTree = "<group>"; };
 		4722E103A5FA1C214ADEA20D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4722E1F9C470F6709ED7B9C1 /* OrderHistoryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderHistoryService.h; sourceTree = "<group>"; };
 		4722E320E7815DF3D43C0113 /* TabHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabHomeViewController.m; sourceTree = "<group>"; };
 		4722E392D392D881E95F0A2C /* AppData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppData.h; sourceTree = "<group>"; };
 		4722E48E67CF800412C6D925 /* Eater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eater.h; sourceTree = "<group>"; };
@@ -64,14 +70,20 @@
 		4722E67A562F4E7FEBB939B5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		4722E794F11E76EB876AE685 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
 		4722E79A128D3EC39D5CC7A8 /* AppData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppData.m; sourceTree = "<group>"; };
+		4722E7BFB11E9A3ED83910A8 /* OrderHistoryDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderHistoryDAO.h; sourceTree = "<group>"; };
 		4722E7F701A079F33FA96ECA /* JsonParserHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonParserHelper.h; sourceTree = "<group>"; };
 		4722E853C56C423C5E97F0BC /* OrderFromCart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderFromCart.m; sourceTree = "<group>"; };
+		4722E88B62757DF9148F49CC /* OrderHistoryNAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderHistoryNAO.h; sourceTree = "<group>"; };
 		4722E89109AC64C73570CE96 /* MealDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealDetailController.m; sourceTree = "<group>"; };
 		4722E89927716D77583CBD61 /* HttpApiHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpApiHelper.h; sourceTree = "<group>"; };
 		4722E90DBFC47B3D50983A4F /* TabHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabHomeViewController.h; sourceTree = "<group>"; };
+		4722E9798DE73E16E6EBD6F9 /* OrderHistoryDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderHistoryDAO.m; sourceTree = "<group>"; };
 		4722E9A4813E4C0DC69D1BD0 /* MealCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealCell.h; sourceTree = "<group>"; };
+		4722EA8734E4C67CD5148D5B /* OrderHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderHistory.h; sourceTree = "<group>"; };
+		4722EAC5A5C19349B4FFC97C /* OrderHistoryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderHistoryService.m; sourceTree = "<group>"; };
 		4722EB3DE64280238FEF5523 /* Eater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Eater.m; sourceTree = "<group>"; };
 		4722EB8897E335930365B4A4 /* MealDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealDetailController.h; sourceTree = "<group>"; };
+		4722EBEA853892174C7E9C7E /* OrderHistoryNAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderHistoryNAO.m; sourceTree = "<group>"; };
 		4722EBF94BD464C27099D694 /* OrderFromCart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderFromCart.h; sourceTree = "<group>"; };
 		4722EF3491407C4E68055CF6 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
 		4722EF8D735114A390F9CC2B /* HttpApiHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpApiHelper.m; sourceTree = "<group>"; };
@@ -102,6 +114,10 @@
 		CD6A29A21B9D939D008E31C6 /* MyLunchMasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLunchMasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6A29A71B9D939D008E31C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD6A29A81B9D939D008E31C6 /* MyLunchMasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLunchMasterTests.m; sourceTree = "<group>"; };
+		CDEE4B2F1BC2950400C9713D /* OrderDetailCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetailCellTableViewCell.h; sourceTree = "<group>"; };
+		CDEE4B301BC2950400C9713D /* OrderDetailCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetailCellTableViewCell.m; sourceTree = "<group>"; };
+		CDEE4B341BC2B15000C9713D /* OrderHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderHistoryViewController.h; sourceTree = "<group>"; };
+		CDEE4B351BC2B15000C9713D /* OrderHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderHistoryViewController.m; sourceTree = "<group>"; };
 		D340F1DBE224231264469A87 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +183,8 @@
 			children = (
 				4722E041CF4F22FEDD563436 /* MealCell.m */,
 				4722E9A4813E4C0DC69D1BD0 /* MealCell.h */,
+				CDEE4B2F1BC2950400C9713D /* OrderDetailCellTableViewCell.h */,
+				CDEE4B301BC2950400C9713D /* OrderDetailCellTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +246,7 @@
 		CD6A298B1B9D939D008E31C6 /* MyLunchMaster */ = {
 			isa = PBXGroup;
 			children = (
+				CDEE4B321BC2B0CE00C9713D /* Modules */,
 				CD6A29901B9D939D008E31C6 /* AppDelegate.h */,
 				CD6A29911B9D939D008E31C6 /* AppDelegate.m */,
 				CD464D9D1BA7FF960082079A /* Root.storyboard */,
@@ -270,6 +289,30 @@
 				CD6A29A71B9D939D008E31C6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CDEE4B321BC2B0CE00C9713D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CDEE4B331BC2B0D900C9713D /* OrderHistory */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		CDEE4B331BC2B0D900C9713D /* OrderHistory */ = {
+			isa = PBXGroup;
+			children = (
+				CDEE4B341BC2B15000C9713D /* OrderHistoryViewController.h */,
+				CDEE4B351BC2B15000C9713D /* OrderHistoryViewController.m */,
+				4722E9798DE73E16E6EBD6F9 /* OrderHistoryDAO.m */,
+				4722E7BFB11E9A3ED83910A8 /* OrderHistoryDAO.h */,
+				4722EBEA853892174C7E9C7E /* OrderHistoryNAO.m */,
+				4722E88B62757DF9148F49CC /* OrderHistoryNAO.h */,
+				4722EA8734E4C67CD5148D5B /* OrderHistory.h */,
+				4722EAC5A5C19349B4FFC97C /* OrderHistoryService.m */,
+				4722E1F9C470F6709ED7B9C1 /* OrderHistoryService.h */,
+			);
+			name = OrderHistory;
 			sourceTree = "<group>";
 		};
 		EA6AEEF175A63B619BA3CEB6 /* Pods */ = {
@@ -420,6 +463,7 @@
 			files = (
 				CD3427DD1BBBCC0400D15B66 /* LMModel.xcdatamodeld in Sources */,
 				CD6A29921B9D939D008E31C6 /* AppDelegate.m in Sources */,
+				CDEE4B311BC2950400C9713D /* OrderDetailCellTableViewCell.m in Sources */,
 				CD6A298F1B9D939D008E31C6 /* main.m in Sources */,
 				CD464D9C1BA7FB970082079A /* RootViewController.m in Sources */,
 				CD464D981BA6E63F0082079A /* WeekOrdersTableViewController.m in Sources */,
@@ -427,6 +471,7 @@
 				4722EF1B66DDBE023444463B /* TabHomeViewController.m in Sources */,
 				4722EB008F984BA5B0B76ED7 /* HttpApiHelper.m in Sources */,
 				CD3428051BBE6FA400D15B66 /* CalendarViewController.m in Sources */,
+				CDEE4B361BC2B15000C9713D /* OrderHistoryViewController.m in Sources */,
 				4722EDD9968DD7CD41E114C7 /* Constants.m in Sources */,
 				CD464DA31BA806210082079A /* KeychainHelper.m in Sources */,
 				CD3427D71BBAD0C700D15B66 /* ShoppingCartViewController.m in Sources */,
@@ -438,6 +483,9 @@
 				4722E2C5FE8608D8226F060F /* MealDetailController.m in Sources */,
 				4722E1B729AAF07B159658D8 /* MealCell.m in Sources */,
 				4722E80AFCE75A135BAF1AFD /* OrderFromCart.m in Sources */,
+				4722EE1DBF5B49BE4D924291 /* OrderHistoryDAO.m in Sources */,
+				4722E2A69735AFADB98440BD /* OrderHistoryNAO.m in Sources */,
+				4722ECE67EE483F34D01D4A0 /* OrderHistoryService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

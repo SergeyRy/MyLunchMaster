@@ -7,6 +7,7 @@
 #import "Eater.h"
 #import "Meal.h"
 #import "Order.h"
+#import "OrderHistoryItem.h"
 
 
 @implementation JsonParserHelper {
@@ -73,6 +74,21 @@
     }
 
     return weekOrders;
+}
+
+- (NSMutableArray *)parseOrderHistoryItems:(NSMutableArray *)orders {
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+
+    for (NSDictionary *item in orders) {
+        OrderHistoryItem *historyItem = [[OrderHistoryItem alloc] init];
+        historyItem.id = item[@"id"];
+        historyItem.amount = item[@"amount"];
+        historyItem.mealDate = item[@"meal_date"];
+        historyItem.orderDate = item[@"order_date"];
+        [result addObject:historyItem];
+    }
+
+    return result;
 }
 
 @end

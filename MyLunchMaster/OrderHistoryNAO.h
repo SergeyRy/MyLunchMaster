@@ -9,7 +9,7 @@
 
 @interface OrderHistoryNAO : AFHTTPRequestOperationManager <OrderHistory>
 
-- (instancetype)init;
-- (NSArray *)getOrderHistoryItemsForEater:(int)eaterId;
+- (instancetype)initWithToken;
+- (NSArray *)getOrderHistoryItems;
 
 @end

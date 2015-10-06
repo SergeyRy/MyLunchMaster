@@ -4,7 +4,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OrderHistory.h"
+#import <CoreData/CoreData.h>
 
 
-@interface OrderHistoryDAO : NSObject
+@interface OrderHistoryDAO : NSObject <OrderHistory>
+
+- (NSArray *)getOrderHistoryItems;
+- (void)saveOrderHitroryItems:(NSMutableArray *)items;
+
+
 @end

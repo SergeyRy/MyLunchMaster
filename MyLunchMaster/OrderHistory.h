@@ -7,6 +7,6 @@
 
 @protocol OrderHistory <NSObject>
 
-- (NSArray *)getOrderHistoryItemsForEater:(int)eaterId;
+- (NSArray *)getOrderHistoryItems;
 
 @end

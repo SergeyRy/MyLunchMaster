@@ -8,13 +8,19 @@
         <attribute name="meal_size" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="OrderHistoryItem" syncable="YES">
+        <attribute name="amount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="mealDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderDate" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="User" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="orders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Order" syncable="YES"/>
     </entity>
     <elements>
         <element name="Order" positionX="-18" positionY="45" width="128" height="135"/>
-        <element name="User" positionX="-45" positionY="0" width="128" height="90"/>
+        <element name="User" positionX="-45" positionY="0" width="128" height="75"/>
+        <element name="OrderHistoryItem" positionX="-27" positionY="72" width="128" height="105"/>
     </elements>
 </model>

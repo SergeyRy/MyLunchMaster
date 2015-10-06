@@ -4,41 +4,40 @@
 //
 
 #import "OrderHistoryNAO.h"
+#import "KeychainHelper.h"
+#import "HttpApiHelper.h"
+#import "JsonParserHelper.h"
+#import <AFHTTPRequestOperationManager+Synchronous.h>
 
 NSString * const _baseURLString = @"https://eatnow.thelunchmaster.com";
-NSString * const getOrderHistoryForEater = @"api/v1/orders_history";
+NSString * const getOrderHistoryItemsURL = @"api/v1/orders_history";
 
 @interface OrderHistoryNAO()
     @property (nonatomic, strong)  NSString *token;
+    @property (nonatomic, strong)  NSString *baseURLString;
 @end
 
 @implementation OrderHistoryNAO {}
 
-- (instancetype)initWithToken:(NSString *)token {
+- (instancetype)initWithToken {
 
-    self = [super initWithBaseURL:_baseURLString];
+    self = [super initWithBaseURL:[NSURL URLWithString:baseURLString]];
     if (!self) {
         return nil;
     }
 
-    self.token = token;
+    self.token = KeychainHelper.getInstance.getToken;
     self.responseSerializer = [AFJSONResponseSerializer serializer];
     self.requestSerializer = [AFJSONRequestSerializer serializer];
     return self;
 }
 
-- (NSMutableArray *)getOrderHistoryItemsForEater:(int)eaterId {
-    NSMutableArray *result = [[NSMutableArray alloc] init];
+- (NSMutableArray *)getOrderHistoryItems {
+    [self.requestSerializer setValue:self.token forHTTPHeaderField:@"X-Auth-Token"];
+    NSError *error = nil;
+    NSData *result = [self syncGET:getOrderHistoryItemsURL parameters:nil operation:NULL error:&error];
 
-    [self.requestSerializer setValue:_token forHTTPHeaderField:@"X-Auth-Token"];
-    [self GET:getOrderHistoryForEater parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"%@", responseObject);
-
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"getOrderHistoryItemsForEater Error");
-    }];
-
-    return result;
+    return [JsonParserHelper.getInstance parseOrderHistoryItems:(NSMutableArray *)[result valueForKeyPath:@"orders"]];
 }
 
 @end

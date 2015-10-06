@@ -19,6 +19,8 @@
 @property (nonatomic, strong) HttpApiHelper *httpClient;
 @property (nonatomic, strong) JsonParserHelper *jsonParserHelper;
 
+@property (nonatomic, strong) NSMutableArray *amounts;
+
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
@@ -32,7 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initProperties];
-    
+
     UIImageView *navigationImage=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 130, 15)];
     navigationImage.image=[UIImage imageNamed:@"Logo"];
     UIImageView *workaroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 130, 15)];
@@ -50,6 +52,7 @@
                                                      NSArray *orders = [obj valueForKey:@"items"];
 
                                                      [orders enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+
                                                          NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Order" inManagedObjectContext:[self managedObjectContext]];
                                                          NSManagedObject *newOrder = [[NSManagedObject alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:[self managedObjectContext]];
                                                          [newOrder setValue:[obj valueForKey:@"id"] forKey:@"id"];
@@ -81,6 +84,20 @@
     [self setAppData:[AppData getInstance]];
     [self setHttpClient:[HttpApiHelper httpClient]];
     [self setJsonParserHelper:[JsonParserHelper getInstance]];
+
+    self.amounts = [[NSMutableArray alloc] init];
+
+    NSDictionary *elem1 = @{@"Petr Smith" : @"$0.20"};
+    NSDictionary *elem2 = @{@"Adjustments" : @"$0.00"};
+    NSDictionary *elem3 = @{@"Due" : @"$0.20"};
+    NSDictionary *elem4 = @{@"Paid" : @"$0.00"};
+    NSDictionary *elem5 = @{@"Credit" : @"$0.00"};
+
+    [self.amounts addObject:elem1];
+    [self.amounts addObject:elem2];
+    [self.amounts addObject:elem3];
+    [self.amounts addObject:elem4];
+    [self.amounts addObject:elem5];
 
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Order"];
     [fetchRequest setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"meal_date" ascending:YES]]];
@@ -141,15 +158,14 @@
         cell.imgDelete.image = [cell.imgDelete.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         [cell.imgDelete setTintColor:[UIColor blueColor]];
 
-
         return cell;
     } else {
         UITableViewCell *cell;
         cell = [tableView dequeueReusableCellWithIdentifier:@"AmountCell" forIndexPath:indexPath];
 
-
-        [cell.textLabel setText:@"11"];
-        [cell.detailTextLabel setText: @"22"];
+        NSDictionary *elem = [self.amounts objectAtIndex:indexPath.row];
+        [cell.textLabel setText:elem.allKeys[0]];
+        [cell.detailTextLabel setText: elem.allValues[0]];
         return cell;
     }
 }
@@ -169,7 +185,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section == 0) {
-        return 60;
+        return 65;
     } else {
         return 30;
     }

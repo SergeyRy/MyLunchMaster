@@ -57,10 +57,13 @@
 
                                             [self setChangeEaterButtonSettings];
 
-                                            [[A0SimpleKeychain keychain] deleteEntryForKey:@"com.eatnow.lunchmaster.token"];
+                                            //[[A0SimpleKeychain keychain] deleteEntryForKey:@"com.eatnow.lunchmaster.token"];
+
+
                                         }
                                        failure:^(AFHTTPRequestOperation *task, NSError *error) {
                                        }];
+
 }
 
 #pragma mark - init Properties

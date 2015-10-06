@@ -8,6 +8,8 @@
 
 @interface OrderHistoryService : NSObject
 
-- (NSMutableArray *)getOrderHistoryItems;
+@property (nonatomic, strong) NSMutableArray *orderHistoryItems;
+
+- (void) initData;
 
 @end

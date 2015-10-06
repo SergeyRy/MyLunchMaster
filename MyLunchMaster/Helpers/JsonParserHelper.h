@@ -12,5 +12,7 @@
 
 - (NSMutableArray *) parseEaters: (NSArray *) eaters;
 - (NSMutableDictionary *) parseOrders: (NSMutableDictionary *) orders : (NSArray *) eaters;
+- (NSMutableArray *) parseOrderHistoryItems: (NSMutableArray *) orders;
+
 
 @end

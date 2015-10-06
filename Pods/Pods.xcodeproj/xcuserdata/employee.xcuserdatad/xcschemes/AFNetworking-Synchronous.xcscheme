@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1A7BC7606A08220CE19F28AB8264FEC1"
-               BuildableName = "libJTCalendar.a"
-               BlueprintName = "JTCalendar"
+               BlueprintIdentifier = "65E8681F4B0785B2392E72D2D6C4BA31"
+               BuildableName = "libAFNetworking-Synchronous.a"
+               BlueprintName = "AFNetworking-Synchronous"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

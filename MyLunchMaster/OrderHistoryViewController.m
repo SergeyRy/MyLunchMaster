@@ -8,6 +8,7 @@
 
 #import "OrderHistoryViewController.h"
 #import "OrderHistoryService.h"
+#import "OrderHistoryItem.h"
 
 @interface OrderHistoryViewController ()
 
@@ -22,17 +23,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self initFields];
+    //[self initFields];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    [self initFields];
+    [self.tableView reloadData];
+
 }
 
 - (void)initFields {
     self.orderHistoryService = [[OrderHistoryService alloc] init];
+    self.orderHistoryService.initData;
 }
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [tableData count];
+    return self.orderHistoryService.orderHistoryItems.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -40,9 +50,8 @@
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
 
-
-
-    cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.orderHistoryService.orderHistoryItems[indexPath.row] orderDate];
+    cell.detailTextLabel.text = [self.orderHistoryService.orderHistoryItems[indexPath.row] amount];
     return cell;
 }
 

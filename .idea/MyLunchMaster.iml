@@ -28,10 +28,18 @@
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Helpers/JsonParserHelper.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Helpers/KeychainHelper.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Helpers/KeychainHelper.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Helpers/Reachability.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Helpers/Reachability.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Images.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/LMModel.xcdatamodeld/LMModel.xcdatamodel" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/ListMealIterator.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/ListMealIterator.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/ListMealPresenter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/ListMealPresenter.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Login.storyboard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/MealListViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/MealListViewController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Model/AppData.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Model/AppData.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Model/Eater.h" isTestSource="false" />
@@ -45,6 +53,8 @@
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistory.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistoryDAO.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistoryDAO.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistoryItem.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistoryItem.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistoryNAO.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistoryNAO.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistoryService.h" isTestSource="false" />
@@ -60,6 +70,8 @@
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMasterTests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMasterTests/MyLunchMasterTests.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Podfile" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking-Synchronous/2.x/AFHTTPRequestOperationManager+Synchronous.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking-Synchronous/2.x/AFHTTPRequestOperationManager+Synchronous.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.h" isTestSource="false" />
@@ -134,6 +146,10 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/SimpleKeychain/SimpleKeychain/A0SimpleKeychain.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SimpleKeychain/SimpleKeychain/A0SimpleKeychain.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SimpleKeychain/SimpleKeychain/SimpleKeychain.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AFNetworking-Synchronous/AFNetworking-Synchronous-Private.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AFNetworking-Synchronous/AFNetworking-Synchronous-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AFNetworking-Synchronous/AFNetworking-Synchronous-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AFNetworking-Synchronous/AFNetworking-Synchronous.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AFNetworking/AFNetworking-Private.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AFNetworking/AFNetworking-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AFNetworking/AFNetworking-prefix.pch" isTestSource="false" />

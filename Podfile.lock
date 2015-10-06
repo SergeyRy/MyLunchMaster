@@ -6,6 +6,8 @@ PODS:
     - AFNetworking/Security (= 2.6.0)
     - AFNetworking/Serialization (= 2.6.0)
     - AFNetworking/UIKit (= 2.6.0)
+  - AFNetworking-Synchronous/2.x (0.3.1):
+    - AFNetworking (~> 2.0)
   - AFNetworking/NSURLConnection (2.6.0):
     - AFNetworking/Reachability
     - AFNetworking/Security
@@ -25,11 +27,13 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
+  - AFNetworking-Synchronous/2.x
   - JTCalendar (~> 2.0)
   - SimpleKeychain
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  AFNetworking-Synchronous: 29531ad341ec465a4ff9b66dea9cf7272080e12e
   JTCalendar: 9b1352c7ec41cc26b19c189d6608ba48060a53d9
   SimpleKeychain: ae04c7ca6a960a146081010b412cf0ba2ecb10fe
 

@@ -26,13 +26,14 @@
     [super viewDidAppear:animated];
     NSLog(@"Root controll viewDidAppear");
 
-    if(![[A0SimpleKeychain keychain] stringForKey:@"com.eatnow.lunchmaster.token"]) {
-        NSLog(@"Go to Login screnen ");
-        [self showLoginScreen];
-    } else {
-        NSLog(@"Go to Tab home screnen ");
-        [self showTabHomePage];
-    }
+    [self showLoginScreen];
+//    if(![[A0SimpleKeychain keychain] stringForKey:@"com.eatnow.lunchmaster.token"]) {
+//        NSLog(@"Go to Login screnen ");
+//        [self showLoginScreen];
+//    } else {
+//        NSLog(@"Go to Tab home screnen ");
+//        [self showTabHomePage];
+//    }
 }
 
 - (void)didReceiveMemoryWarning {

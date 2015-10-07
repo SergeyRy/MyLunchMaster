@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSString *descr;
 @property (nonatomic, strong) NSString *allergens;
 @property (nonatomic, strong) NSString *imagePath;
+@property (nonatomic, strong) NSString *price;
 
 - (id) initWithId:(NSNumber *)id title:(NSString *) title descr:(NSString *) descr allergens:(NSString *)allergens imagePath:(NSString *) imagePath;
 

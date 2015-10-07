@@ -6,10 +6,17 @@
 //  Copyright (c) 2015 Employee. All rights reserved.
 //
 
+#import <AFNetworking/UIImageView+AFNetworking.h>
 #import "MealListViewController.h"
 #import "ListMealPresenter.h"
+#import "ListMealInteractor.h"
+#import "MealForOrderCell.h"
+#import "Meal.h"
+#import "Constants.h"
 
 @interface MealListViewController ()
+
+@property (nonatomic, strong)NSMutableArray *mealList;
 
 @end
 
@@ -17,12 +24,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initProperties];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)initProperties {
+    ListMealPresenter *presenter = [[ListMealPresenter alloc] init];
+    ListMealInteractor *interactor = [[ListMealInteractor alloc] init];
+
+    self.presenter = presenter;
+    presenter.viewController = self;
+
+    presenter.interactor = interactor;
+    interactor.presenter = presenter;
+
+    [self.presenter getMealList];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,18 +62,50 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return self.presenter.interactor.;
+    return self.mealList.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    MealForOrderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MealForOrderCell" forIndexPath:indexPath];
+
+    Meal *meal = self.mealList[indexPath.row];
+    cell.title.text = meal.title;
+    cell.descr.text = meal.descr;
+    cell.price.text = meal.price;
+
+    cell.mealImage.contentMode = UIViewContentModeScaleAspectFit;
+
+    NSString *imageUrl= [NSString stringWithFormat:@"%@%@", BASE_URL, meal.imagePath];
+    NSURL *url = [NSURL URLWithString:imageUrl];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    UIImage *placeholderImage = [UIImage imageNamed:@"none"];
+
+    __weak MealForOrderCell *weakCell = cell;
+
+    [cell.mealImage setImageWithURLRequest:request
+                              placeholderImage:placeholderImage
+                                       success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                                           weakCell.mealImage.image = image;
+                                           [weakCell setNeedsLayout];
+                                       } failure: ^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+                NSLog(@"%@", error);
+            }];
+
+    cell.delegate = self;
+    cell.cellIndex = indexPath.row;
+    cell.imgOk.hidden = YES;
+
     return cell;
 }
-*/
+
+- (void)didClickOnCellAtIndex:(NSInteger)cellIndex withData:(id)data
+{
+    // Do additional actions as required.
+    NSLog(@"Cell at Index: %d clicked.\n Data received : %@", cellIndex, data);
+
+
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -97,5 +150,24 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - ViewInterface implement
+
+- (void)setDayOfWeek:(NSString *)dayOfWeek {
+
+}
+
+- (void)setCurrentDate:(NSString *)currentDate {
+
+}
+
+- (void)updateMealList:(NSMutableArray *)mealListParam {
+    if (mealListParam) {
+        self.mealList = mealListParam;
+    }
+
+    [self.tableView reloadData];
+}
+
 
 @end

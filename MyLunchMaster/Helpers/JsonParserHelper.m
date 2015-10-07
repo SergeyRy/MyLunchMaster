@@ -91,4 +91,27 @@
     return result;
 }
 
+- (NSMutableArray *)parseMealListItems:(NSMutableArray *)items {
+
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+
+    for (NSDictionary *item in items) {
+        Meal *meal = [[Meal alloc] init];
+
+        meal.imagePath = item[@"meal_img"];
+        meal.allergens = item[@"allergens"];
+        meal.price = @"$ 0.20";
+
+        NSDictionary *m = item[@"meal"];
+        meal.id = m[@"id"];
+        meal.title = m[@"title"];
+        meal.descr = m[@"description"];
+
+        [result addObject:meal];
+    }
+
+    return result;
+}
+
+
 @end

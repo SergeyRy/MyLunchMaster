@@ -4,11 +4,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PresenterInterface.h"
+
+@protocol ViewInterface;
+@protocol InteractorInterface;
 
 
-@interface ListMealPresenter : NSObject
+@interface ListMealPresenter : NSObject<PresenterInterface>
 
-@property (nonatomic, weak)     id<CNTCountView>            viewController;
-@property (nonatomic, strong)   id<CNTCountInteractorInput> interactor;
+@property (nonatomic, weak)     id<ViewInterface> viewController;
+@property (nonatomic, strong)   id<InteractorInterface> interactor;
+
+- (void)getMealList;
 
 @end

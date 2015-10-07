@@ -32,9 +32,13 @@
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Helpers/Reachability.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Images.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/InteractorInterface.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/LMModel.xcdatamodeld/LMModel.xcdatamodel" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/ListMealIterator.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/ListMealIterator.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/ListMealCellDelegate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/ListMealInteractor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/ListMealInteractor.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/ListMealNAO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/ListMealNAO.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/ListMealPresenter.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/ListMealPresenter.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Login.storyboard" isTestSource="false" />
@@ -61,9 +65,13 @@
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistoryService.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistoryViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/OrderHistoryViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/PresenterInterface.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Root.storyboard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/ViewInterface.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Views/MealCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Views/MealCell.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Views/MealForOrderCell.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Views/MealForOrderCell.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Views/OrderDetailCellTableViewCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/Views/OrderDetailCellTableViewCell.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyLunchMaster/main.m" isTestSource="false" />

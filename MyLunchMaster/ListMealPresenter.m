@@ -4,9 +4,33 @@
 //
 
 #import "ListMealPresenter.h"
+#import "ViewInterface.h"
+#import "InteractorInterface.h"
 
 
 @implementation ListMealPresenter {
 
 }
+
+- (void)getMealList {
+    [self.interactor getMealList];
+}
+
+- (void)updateDayOfWeek:(NSString *)dayOfWeek {
+
+}
+
+- (void)updateCurrentDay:(NSString *)currentDate {
+
+}
+
+- (void)updateTable {
+
+}
+
+- (void)updateMealList:(NSMutableArray *)mealList {
+    [self.viewController updateMealList: mealList];
+}
+
+
 @end

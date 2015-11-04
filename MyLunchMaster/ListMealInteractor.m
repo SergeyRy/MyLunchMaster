@@ -6,6 +6,7 @@
 #import "ListMealInteractor.h"
 #import "PresenterInterface.h"
 #import "ListMealNAO.h"
+#import "Meal.h"
 
 @interface ListMealInteractor ()
 
@@ -29,6 +30,12 @@
 
 - (void)getMealList {
     self.mealList = self.listMealNAO.getMealList;
+    [self.presenter updateMealList:self.mealList];
+}
+
+- (void)setSelectedRow:(NSInteger)index {
+    Meal *meal = self.mealList[index];
+    meal.isSelected = TRUE;
     [self.presenter updateMealList:self.mealList];
 }
 

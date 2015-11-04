@@ -94,6 +94,7 @@
 
     cell.delegate = self;
     cell.cellIndex = indexPath.row;
+    if (self.mealList)
     cell.imgOk.hidden = YES;
 
     return cell;
@@ -102,8 +103,8 @@
 - (void)didClickOnCellAtIndex:(NSInteger)cellIndex withData:(id)data
 {
     // Do additional actions as required.
-    NSLog(@"Cell at Index: %d clicked.\n Data received : %@", cellIndex, data);
-
+    //NSLog(@"Cell at Index: %d clicked.\n Data received : %@", cellIndex, data);
+    [self.presenter setSelectedRow:cellIndex];
 
 }
 

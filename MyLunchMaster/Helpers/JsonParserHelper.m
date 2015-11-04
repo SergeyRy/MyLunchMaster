@@ -101,6 +101,7 @@
         meal.imagePath = item[@"meal_img"];
         meal.allergens = item[@"allergens"];
         meal.price = @"$ 0.20";
+        meal.isSelected = NO;
 
         NSDictionary *m = item[@"meal"];
         meal.id = m[@"id"];

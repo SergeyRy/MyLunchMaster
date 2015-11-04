@@ -10,7 +10,7 @@
 #import "JsonParserHelper.h"
 #import "AFHTTPRequestOperationManager+Synchronous.h"
 
-NSString * const getMealListURL = @"api/v1/meals_menu/16759/2015-10-08";
+NSString * const getMealListURL = @"api/v1/meals_menu/16759/2015-10-09";
 
 @interface ListMealNAO ()
 
@@ -18,9 +18,8 @@ NSString * const getMealListURL = @"api/v1/meals_menu/16759/2015-10-08";
 
 @end
 
-@implementation ListMealNAO {
+@implementation ListMealNAO {}
 
-}
 - (instancetype)init {
 
     self = [super initWithBaseURL:[NSURL URLWithString:baseURLString]];

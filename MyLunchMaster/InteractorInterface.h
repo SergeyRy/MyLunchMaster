@@ -10,5 +10,6 @@
 - (void)getMealList;
 - (void)getDayOfWeek;
 - (void)getCurrentDate;
+- (void)setSelectedRow:(NSInteger)index;
 
 @end

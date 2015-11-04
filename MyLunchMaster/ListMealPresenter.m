@@ -32,5 +32,9 @@
     [self.viewController updateMealList: mealList];
 }
 
+- (void)setSelectedRow:(NSInteger)index {
+    [self.interactor setSelectedRow:index];
+}
+
 
 @end

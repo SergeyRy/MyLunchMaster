@@ -11,5 +11,6 @@
 - (void)updateCurrentDay:(NSString *)currentDate;
 - (void)updateTable;
 - (void)updateMealList:(NSMutableArray *)mealList;
+- (void)setSelectedRow:(NSInteger)index;
 
 @end

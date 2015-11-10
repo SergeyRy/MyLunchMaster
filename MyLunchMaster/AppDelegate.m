@@ -23,17 +23,33 @@
     NSLog(@"saved token %@", [[A0SimpleKeychain keychain] stringForKey:@"com.eatnow.lunchmaster.token"]);
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
 
-    //[[UINavigationBar appearance] setBarTintColor:[UIColor yellowColor]];
-//    UIImage *img=[UIImage imageNamed:@"logo.png"];
-//    [[UINavigationBar appearance] setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
-
-
-
-    //[[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"logo1-1.png"] forBarMetrics:UIBarMetricsDefault];
-
-
-
+    NSError* configureError;
+    [[GGLContext sharedInstance] configureWithError: &configureError];
+    NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
+    [GIDSignIn sharedInstance].delegate = self;
+    
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    
+    return [[GIDSignIn sharedInstance] handleURL:url
+                               sourceApplication:sourceApplication
+                                      annotation:annotation];
+}
+
+- (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
+    
+    NSString *userId = user.userID;                  // For client-side use only!
+    NSString *idToken = user.authentication.idToken; // Safe to send to the server
+    NSString *name = user.profile.name;
+    NSString *email = user.profile.email;
+    
+}
+
+- (void)signIn:(GIDSignIn *)signIn didDisconnectWithUser:(GIDGoogleUser *)user withError:(NSError *)error {
+    // Perform any operations when the user disconnects from app here.
+    // ...
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

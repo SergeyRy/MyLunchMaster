@@ -13,6 +13,7 @@
 #import "TabHomeViewController.h"
 
 
+
 @interface LoginViewController ()
 
 @end
@@ -21,13 +22,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationController setNavigationBarHidden:YES];
 
-    NSLog(@"login view did load");
-    // Do any additional setup after loading the view, typically from a nib.
-
+    [GIDSignIn sharedInstance].uiDelegate = self;
     
+    [self.navigationController setNavigationBarHidden:YES];
+    [self setDisplayingSettingsForButtonsAndTextFields];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -36,8 +37,8 @@
 
 - (IBAction)btnLoginClicked:(id)sender {
     HttpApiHelper *httpClient = [HttpApiHelper httpClient];
-    [httpClient loginWithUserName:self.txtLogin.text
-                         password:self.txtPassword.text
+    [httpClient loginWithUserName:self.login.text
+                         password:self.password.text
                           success:^(AFHTTPRequestOperation *task, id responseObject) {
 
 
@@ -98,13 +99,79 @@
     NSLog(@"Save pw: %@", [self.txtPassword text]);
 
 }
-//
+
+- (void)setDisplayingSettingsForButtonsAndTextFields {
+    CALayer *txtLoginBottomBorder = [CALayer layer];
+    txtLoginBottomBorder.frame = CGRectMake(0.0f, self.login.frame.size.height - 1, self.login.frame.size.width, 1.0f);
+    txtLoginBottomBorder.backgroundColor = [UIColor colorWithWhite: 0.70 alpha:1].CGColor;
+    
+    CALayer *txtLoginTopBorder = [CALayer layer];
+    txtLoginTopBorder.frame = CGRectMake(0.0f, 0.0f, self.login.frame.size.width, 1.0f);
+    txtLoginTopBorder.backgroundColor = [UIColor colorWithWhite: 0.70 alpha:1].CGColor;
+    
+    CALayer *txtLoginLeftBorder = [CALayer layer];
+    txtLoginLeftBorder.frame = CGRectMake(0.0f, 0.0f, 1.0f, self.login.frame.size.height);
+    txtLoginLeftBorder.backgroundColor = [UIColor colorWithWhite: 0.70 alpha:1].CGColor;
+    
+    CALayer *txtLoginRightBorder = [CALayer layer];
+    txtLoginRightBorder.frame = CGRectMake(self.login.frame.size.width - 1, 0.0f, self.login.frame.size.width - 1, self.login.frame.size.height - 1);
+    txtLoginRightBorder.backgroundColor = [UIColor colorWithWhite: 0.70 alpha:1].CGColor;
+    
+    
+    [self.login.layer addSublayer:txtLoginTopBorder];
+    [self.login.layer addSublayer:txtLoginBottomBorder];
+    [self.login.layer addSublayer:txtLoginLeftBorder];
+    [self.login.layer addSublayer:txtLoginRightBorder];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    [imageView setImage:[UIImage imageNamed:@"user_icon.png"]];
+    imageView.contentMode = UIViewContentModeCenter;
+    imageView.alpha = 0.3f;
+    
+    self.login.leftViewMode = UITextFieldViewModeAlways;
+    self.login.leftView = imageView;
+    
+    
+    CALayer *txtPasswordBottomBorder = [CALayer layer];
+    txtPasswordBottomBorder.frame = CGRectMake(0.0f, self.login.frame.size.height - 1, self.login.frame.size.width, 1.0f);
+    txtPasswordBottomBorder.backgroundColor = [UIColor colorWithWhite: 0.70 alpha:1].CGColor;
+   
+    CALayer *txtPasswordLeftBorder = [CALayer layer];
+    txtPasswordLeftBorder.frame = CGRectMake(0.0f, 0.0f, 1.0f, self.login.frame.size.height);
+    txtPasswordLeftBorder.backgroundColor = [UIColor colorWithWhite: 0.70 alpha:1].CGColor;
+    
+    CALayer *txtPasswordRightBorder = [CALayer layer];
+    txtPasswordRightBorder.frame = CGRectMake(self.login.frame.size.width - 1, 0.0f, self.login.frame.size.width - 1, self.login.frame.size.height - 1);
+    txtPasswordRightBorder.backgroundColor = [UIColor colorWithWhite: 0.70 alpha:1].CGColor;
+    
+    [self.password.layer addSublayer:txtPasswordBottomBorder];
+    [self.password.layer addSublayer:txtPasswordLeftBorder];
+    [self.password.layer addSublayer:txtPasswordRightBorder];
+    
+    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    [imageView setImage:[UIImage imageNamed:@"password_icon.png"]];
+    imageView.contentMode = UIViewContentModeCenter;
+    imageView.alpha = 0.3f;
+    
+    self.password.leftViewMode = UITextFieldViewModeAlways;
+    self.password.leftView = imageView;
+    
+    self.btnSignInWithGoogle.layer.cornerRadius = 5;
+    self.btnSignInWithGoogle.clipsToBounds = YES;
+    
+    self.btnSignInWithFacebook.layer.cornerRadius = 5;
+    self.btnSignInWithFacebook.clipsToBounds = YES;
+    
+    self.btnLogin.layer.cornerRadius = 5;
+    self.btnLogin.clipsToBounds = YES;
+    
+    
+}
+
 //- (void)getLoginAndPassword
 //{
 //    NSString *password = [[A0SimpleKeychain keychain] stringForKey:@"com.eatnow.lunchmaster.token"];
 //    NSLog(@"Get pw: %@", password);
-//
-//
 //}
 //
 //- (void)deleteItem

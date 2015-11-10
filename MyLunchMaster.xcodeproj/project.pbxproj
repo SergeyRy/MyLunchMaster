@@ -33,6 +33,8 @@
 		CD3427D91BBAD1C200D15B66 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3427D81BBAD1C200D15B66 /* CoreData.framework */; };
 		CD3427DD1BBBCC0400D15B66 /* LMModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD3427DB1BBBCC0400D15B66 /* LMModel.xcdatamodeld */; };
 		CD3428051BBE6FA400D15B66 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3428041BBE6FA400D15B66 /* CalendarViewController.m */; };
+		CD462E061BF2505E008CB232 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD462E051BF2505E008CB232 /* GoogleService-Info.plist */; };
+		CD462E071BF2505E008CB232 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD462E051BF2505E008CB232 /* GoogleService-Info.plist */; };
 		CD464D951BA30C820082079A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD464D941BA30C820082079A /* Security.framework */; };
 		CD464D981BA6E63F0082079A /* WeekOrdersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD464D971BA6E63F0082079A /* WeekOrdersTableViewController.m */; };
 		CD464D9C1BA7FB970082079A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD464D9B1BA7FB970082079A /* RootViewController.m */; };
@@ -116,6 +118,7 @@
 		CD3427DC1BBBCC0400D15B66 /* LMModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LMModel.xcdatamodel; sourceTree = "<group>"; };
 		CD3428031BBE6FA400D15B66 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		CD3428041BBE6FA400D15B66 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		CD462E051BF2505E008CB232 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CD464D941BA30C820082079A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CD464D961BA6E63F0082079A /* WeekOrdersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekOrdersTableViewController.h; sourceTree = "<group>"; };
 		CD464D971BA6E63F0082079A /* WeekOrdersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekOrdersTableViewController.m; sourceTree = "<group>"; };
@@ -297,6 +300,7 @@
 		CD6A29801B9D939D008E31C6 = {
 			isa = PBXGroup;
 			children = (
+				CD462E051BF2505E008CB232 /* GoogleService-Info.plist */,
 				CD6A298B1B9D939D008E31C6 /* MyLunchMaster */,
 				CD6A29A51B9D939D008E31C6 /* MyLunchMasterTests */,
 				CD6A298A1B9D939D008E31C6 /* Products */,
@@ -546,6 +550,7 @@
 				CD464D9E1BA7FF960082079A /* Root.storyboard in Resources */,
 				CD464DA01BA802480082079A /* Login.storyboard in Resources */,
 				CD6A299A1B9D939D008E31C6 /* Images.xcassets in Resources */,
+				CD462E061BF2505E008CB232 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +558,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD462E071BF2505E008CB232 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

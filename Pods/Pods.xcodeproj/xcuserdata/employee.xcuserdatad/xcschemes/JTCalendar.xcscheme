@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1A7BC7606A08220CE19F28AB8264FEC1"
+               BlueprintIdentifier = "C7C2917C6BB8D64CD3B03F53"
                BuildableName = "libJTCalendar.a"
                BlueprintName = "JTCalendar"
                ReferencedContainer = "container:Pods.xcodeproj">

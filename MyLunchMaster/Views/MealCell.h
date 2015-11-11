@@ -13,4 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *descr;
 @property (weak, nonatomic) IBOutlet UIImageView *mealImage;
 
+-(void)setFrame:(CGRect)frame;
+
 @end

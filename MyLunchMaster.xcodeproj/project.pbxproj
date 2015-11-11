@@ -29,12 +29,20 @@
 		4722EE1DBF5B49BE4D924291 /* OrderHistoryDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E9798DE73E16E6EBD6F9 /* OrderHistoryDAO.m */; };
 		4722EF1B66DDBE023444463B /* TabHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E320E7815DF3D43C0113 /* TabHomeViewController.m */; };
 		B45306882A3CAB3F073DDF55 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB70F74D6AEDE8265DB802D /* libPods.a */; };
+		CD2A06C01BF3861F00CCB6EB /* LoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2A06BF1BF3861F00CCB6EB /* LoginService.m */; };
+		CD2A06C41BF3895A00CCB6EB /* LoginDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2A06C31BF3895A00CCB6EB /* LoginDataProvider.m */; };
 		CD3427D71BBAD0C700D15B66 /* ShoppingCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3427D61BBAD0C700D15B66 /* ShoppingCartViewController.m */; };
 		CD3427D91BBAD1C200D15B66 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3427D81BBAD1C200D15B66 /* CoreData.framework */; };
 		CD3427DD1BBBCC0400D15B66 /* LMModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD3427DB1BBBCC0400D15B66 /* LMModel.xcdatamodeld */; };
 		CD3428051BBE6FA400D15B66 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3428041BBE6FA400D15B66 /* CalendarViewController.m */; };
 		CD462E061BF2505E008CB232 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD462E051BF2505E008CB232 /* GoogleService-Info.plist */; };
 		CD462E071BF2505E008CB232 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD462E051BF2505E008CB232 /* GoogleService-Info.plist */; };
+		CD462E261BF341E1008CB232 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD462E231BF341E1008CB232 /* FBSDKCoreKit.framework */; };
+		CD462E271BF341E1008CB232 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD462E231BF341E1008CB232 /* FBSDKCoreKit.framework */; };
+		CD462E281BF341E1008CB232 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD462E241BF341E1008CB232 /* FBSDKLoginKit.framework */; };
+		CD462E291BF341E1008CB232 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD462E241BF341E1008CB232 /* FBSDKLoginKit.framework */; };
+		CD462E2A1BF341E1008CB232 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD462E251BF341E1008CB232 /* FBSDKShareKit.framework */; };
+		CD462E2B1BF341E1008CB232 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD462E251BF341E1008CB232 /* FBSDKShareKit.framework */; };
 		CD464D951BA30C820082079A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD464D941BA30C820082079A /* Security.framework */; };
 		CD464D981BA6E63F0082079A /* WeekOrdersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD464D971BA6E63F0082079A /* WeekOrdersTableViewController.m */; };
 		CD464D9C1BA7FB970082079A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD464D9B1BA7FB970082079A /* RootViewController.m */; };
@@ -69,7 +77,7 @@
 		4722E0200B6DEE9D24E96DED /* JsonParserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonParserHelper.m; sourceTree = "<group>"; };
 		4722E037CD8F0854013C4E1C /* Meal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
 		4722E041CF4F22FEDD563436 /* MealCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealCell.m; sourceTree = "<group>"; };
-		4722E103A5FA1C214ADEA20D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4722E103A5FA1C214ADEA20D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Controllers/LoginViewController.m; sourceTree = "<group>"; };
 		4722E1D34CE219D0C18A5FEE /* ListMealNAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListMealNAO.h; sourceTree = "<group>"; };
 		4722E1E5DD5CCEFAC973C9B6 /* ListMealNAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListMealNAO.m; sourceTree = "<group>"; };
 		4722E1F9C470F6709ED7B9C1 /* OrderHistoryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderHistoryService.h; sourceTree = "<group>"; };
@@ -83,7 +91,7 @@
 		4722E5B55C587E38C235B3DB /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		4722E651EFB3384568E5FC1F /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		4722E670D15425367C9B3405 /* Meal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meal.m; sourceTree = "<group>"; };
-		4722E67A562F4E7FEBB939B5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4722E67A562F4E7FEBB939B5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Controllers/LoginViewController.h; sourceTree = "<group>"; };
 		4722E6CA79FFF200E91EA5DD /* InteractorInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractorInterface.h; sourceTree = "<group>"; };
 		4722E794F11E76EB876AE685 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
 		4722E79A128D3EC39D5CC7A8 /* AppData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppData.m; sourceTree = "<group>"; };
@@ -112,6 +120,10 @@
 		4722EF8D735114A390F9CC2B /* HttpApiHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpApiHelper.m; sourceTree = "<group>"; };
 		4722EFB3AA8003E28502C863 /* MealForOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealForOrderCell.h; sourceTree = "<group>"; };
 		8FB70F74D6AEDE8265DB802D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD2A06BE1BF3861F00CCB6EB /* LoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginService.h; sourceTree = "<group>"; };
+		CD2A06BF1BF3861F00CCB6EB /* LoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginService.m; sourceTree = "<group>"; };
+		CD2A06C21BF3895A00CCB6EB /* LoginDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginDataProvider.h; sourceTree = "<group>"; };
+		CD2A06C31BF3895A00CCB6EB /* LoginDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginDataProvider.m; sourceTree = "<group>"; };
 		CD3427D51BBAD0C700D15B66 /* ShoppingCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCartViewController.h; sourceTree = "<group>"; };
 		CD3427D61BBAD0C700D15B66 /* ShoppingCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartViewController.m; sourceTree = "<group>"; };
 		CD3427D81BBAD1C200D15B66 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -119,6 +131,9 @@
 		CD3428031BBE6FA400D15B66 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		CD3428041BBE6FA400D15B66 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		CD462E051BF2505E008CB232 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CD462E231BF341E1008CB232 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "FacebookSDKs-iOS-20151026/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		CD462E241BF341E1008CB232 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "FacebookSDKs-iOS-20151026/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		CD462E251BF341E1008CB232 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "FacebookSDKs-iOS-20151026/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		CD464D941BA30C820082079A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CD464D961BA6E63F0082079A /* WeekOrdersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekOrdersTableViewController.h; sourceTree = "<group>"; };
 		CD464D971BA6E63F0082079A /* WeekOrdersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekOrdersTableViewController.m; sourceTree = "<group>"; };
@@ -156,7 +171,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD462E261BF341E1008CB232 /* FBSDKCoreKit.framework in Frameworks */,
 				CDEE4B3A1BC39FD200C9713D /* SystemConfiguration.framework in Frameworks */,
+				CD462E281BF341E1008CB232 /* FBSDKLoginKit.framework in Frameworks */,
+				CD462E2A1BF341E1008CB232 /* FBSDKShareKit.framework in Frameworks */,
 				CD3427D91BBAD1C200D15B66 /* CoreData.framework in Frameworks */,
 				CD464D951BA30C820082079A /* Security.framework in Frameworks */,
 				B45306882A3CAB3F073DDF55 /* libPods.a in Frameworks */,
@@ -167,6 +185,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD462E291BF341E1008CB232 /* FBSDKLoginKit.framework in Frameworks */,
+				CD462E271BF341E1008CB232 /* FBSDKCoreKit.framework in Frameworks */,
+				CD462E2B1BF341E1008CB232 /* FBSDKShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,8 +234,6 @@
 			children = (
 				CD464D9A1BA7FB970082079A /* RootViewController.h */,
 				CD464D9B1BA7FB970082079A /* RootViewController.m */,
-				4722E67A562F4E7FEBB939B5 /* LoginViewController.h */,
-				4722E103A5FA1C214ADEA20D /* LoginViewController.m */,
 				4722E320E7815DF3D43C0113 /* TabHomeViewController.m */,
 				4722E90DBFC47B3D50983A4F /* TabHomeViewController.h */,
 				CD464D961BA6E63F0082079A /* WeekOrdersTableViewController.h */,
@@ -282,12 +301,28 @@
 		9B713EEF328E31B80FCFEFC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD462E231BF341E1008CB232 /* FBSDKCoreKit.framework */,
+				CD462E241BF341E1008CB232 /* FBSDKLoginKit.framework */,
+				CD462E251BF341E1008CB232 /* FBSDKShareKit.framework */,
 				CDEE4B391BC39FD200C9713D /* SystemConfiguration.framework */,
 				CD3427D81BBAD1C200D15B66 /* CoreData.framework */,
 				CD464D941BA30C820082079A /* Security.framework */,
 				8FB70F74D6AEDE8265DB802D /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD2A06BD1BF3856600CCB6EB /* LoginPage */ = {
+			isa = PBXGroup;
+			children = (
+				4722E67A562F4E7FEBB939B5 /* LoginViewController.h */,
+				4722E103A5FA1C214ADEA20D /* LoginViewController.m */,
+				CD2A06BE1BF3861F00CCB6EB /* LoginService.h */,
+				CD2A06BF1BF3861F00CCB6EB /* LoginService.m */,
+				CD2A06C21BF3895A00CCB6EB /* LoginDataProvider.h */,
+				CD2A06C31BF3895A00CCB6EB /* LoginDataProvider.m */,
+			);
+			name = LoginPage;
 			sourceTree = "<group>";
 		};
 		CD3427DA1BBBC22100D15B66 /* CoreDataClasses */ = {
@@ -369,6 +404,7 @@
 		CDEE4B321BC2B0CE00C9713D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CD2A06BD1BF3856600CCB6EB /* LoginPage */,
 				CDEE4B431BC41A0D00C9713D /* MealList */,
 				CDEE4B421BC4174C00C9713D /* OrderHistoryDetails */,
 				CDEE4B331BC2B0D900C9713D /* OrderHistory */,
@@ -630,9 +666,11 @@
 				4722E2A69735AFADB98440BD /* OrderHistoryNAO.m in Sources */,
 				4722ECE67EE483F34D01D4A0 /* OrderHistoryService.m in Sources */,
 				4722EBE44043B5BD5A424376 /* OrderHistoryItem.m in Sources */,
+				CD2A06C01BF3861F00CCB6EB /* LoginService.m in Sources */,
 				4722E659A620617885329EC6 /* ListMealPresenter.m in Sources */,
 				4722E99816210807479113F3 /* ListMealInteractor.m in Sources */,
 				4722ED3C898C7EB9021B3711 /* ListMealNAO.m in Sources */,
+				CD2A06C41BF3895A00CCB6EB /* LoginDataProvider.m in Sources */,
 				4722E04DBCF109E3B8407E6B /* MealForOrderCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -763,7 +801,15 @@
 			baseConfigurationReference = D340F1DBE224231264469A87 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FacebookSDKs-iOS-20151026",
+				);
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
 				INFOPLIST_FILE = MyLunchMaster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
@@ -775,7 +821,15 @@
 			baseConfigurationReference = 2F59403458D15BB955ED8637 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FacebookSDKs-iOS-20151026",
+				);
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
 				INFOPLIST_FILE = MyLunchMaster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
@@ -789,6 +843,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FacebookSDKs-iOS-20151026",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -808,6 +864,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FacebookSDKs-iOS-20151026",
 				);
 				INFOPLIST_FILE = MyLunchMasterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

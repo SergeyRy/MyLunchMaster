@@ -18,6 +18,7 @@
 #import "MealDetailController.h"
 #import "JsonParserHelper.h"
 #import "MealCell.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface WeekOrdersTableViewController ()
 
@@ -63,6 +64,8 @@
                                         }
                                        failure:^(AFHTTPRequestOperation *task, NSError *error) {
                                        }];
+    
+    //self.tableView.contentInset = UIEdgeInsetsMake(50, 50, 50, 50);
 
 }
 
@@ -160,12 +163,10 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    //[tableView dequeueReusableHeaderFooterViewWithIdentifier:<#(NSString *)identifier#>]
-
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 18)];
 
     UILabel *lblDate = [[UILabel alloc] initWithFrame:CGRectMake(30, 5, 170, 18)];
-    [lblDate setFont:[UIFont systemFontOfSize:13]];
+    [lblDate setFont:[UIFont systemFontOfSize:14]];
     lblDate.text = self.datesOfWeek[section];
 
     UIImageView *navigationImage=[[UIImageView alloc]initWithFrame:CGRectMake(10, 6, 15, 15)];
@@ -173,11 +174,12 @@
     navigationImage.contentMode = UIViewContentModeScaleAspectFit;
 
 
-
     [view addSubview:lblDate];
-    [view addSubview:navigationImage];
-    [view setBackgroundColor:[UIColor colorWithRed:166/255.f green:177/255.f blue:186/255.f alpha:0.5]]; //your background color...
+    //[view addSubview:navigationImage];
+    [view setBackgroundColor:[UIColor colorWithRed:216/255.f green:217/255.f blue:216/255.f alpha:0.5]]; //your background color...
+    //[view setBackgroundColor:[UIColor whiteColor]]; //your background color...
 
+    
     return view;
 }
 
@@ -224,7 +226,12 @@
                                    }];
 
 
-    return mealCell;
+    [mealCell.layer setCornerRadius:10.0f];
+    [mealCell.layer setMasksToBounds:YES];
+    [mealCell.layer setBorderWidth:0.3f];
+    
+    mealCell.layoutMargins = UIEdgeInsetsZero;
+        return mealCell;
 }
 
 

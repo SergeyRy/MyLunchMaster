@@ -11,6 +11,9 @@
 #import "SimpleKeychain.h"
 #import "Constants.h"
 #import "TabHomeViewController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "LoginService.h"
 
 
 
@@ -32,54 +35,77 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+- (IBAction)btnSignInWithGoogleClicked:(id)sender {
+    [[GIDSignIn sharedInstance] signIn];
+}
+- (IBAction)btnSignInWithFacebookClicked:(id)sender {
+    
+    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+    [login logInWithReadPermissions: @[@"public_profile"] fromViewController:self handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+         if (error) {
+             NSLog(@"Process error");
+         } else if (result.isCancelled) {
+             NSLog(@"Cancelled");
+         } else {
+             NSLog(@"Logged in");
+         }
+     }];
 }
 
 - (IBAction)btnLoginClicked:(id)sender {
-    HttpApiHelper *httpClient = [HttpApiHelper httpClient];
-    [httpClient loginWithUserName:self.login.text
-                         password:self.password.text
-                          success:^(AFHTTPRequestOperation *task, id responseObject) {
-
-
-                              NSString *token = [responseObject valueForKeyPath:@"auth_token"];
-                              if (token) {
-                                  [[A0SimpleKeychain keychain] setString:token forKey:TOKEN_KEY];
-                                  //[httpClient setToken:token];
-                                  [self showTabHomePage];
-                              }
-
-
-                          }
-                          failure:^(AFHTTPRequestOperation *task, NSError *error) {
-
-                              NSError *e = [NSError errorWithDomain:@"dfg" code:0 userInfo:@{
-                                      NSLocalizedDescriptionKey : @"My custom text lala"
-                              }];
-
-                              UIAlertView *alertView = [[UIAlertView alloc]
-                                      initWithTitle:@"Error"
-                                            message:e.localizedDescription
-                                           delegate:self
+    LoginService *loginService = [[LoginService alloc] init];
+    BOOL result = [loginService loginWithLogin:self.login.text AndPassword:self.password.text];
+    
+    if (result) {
+        [self showTabHomePage];
+    } else {
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"Error"
+                                  message:@"Wrong credential"
+                                  delegate:self
                                   cancelButtonTitle:nil
                                   otherButtonTitles:@"OK", nil];
-
-                              [alertView show];
-                          }];
+        
+        [alertView show];
+    }
+//    HttpApiHelper *httpClient = [HttpApiHelper httpClient];
+//    [httpClient loginWithUserName:self.login.text
+//                         password:self.password.text
+//                          success:^(AFHTTPRequestOperation *task, id responseObject) {
+//
+//
+//                              NSString *token = [responseObject valueForKeyPath:@"auth_token"];
+//                              if (token) {
+//                                  [[A0SimpleKeychain keychain] setString:token forKey:TOKEN_KEY];
+//                                  //[httpClient setToken:token];
+//                                  [self showTabHomePage];
+//                              }
+//
+//
+//                          }
+//                          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+//
+//                              NSError *e = [NSError errorWithDomain:@"dfg" code:0 userInfo:@{
+//                                      NSLocalizedDescriptionKey : @"My custom text lala"
+//                              }];
+//
+//                              UIAlertView *alertView = [[UIAlertView alloc]
+//                                      initWithTitle:@"Error"
+//                                            message:e.localizedDescription
+//                                           delegate:self
+//                                  cancelButtonTitle:nil
+//                                  otherButtonTitles:@"OK", nil];
+//
+//                              [alertView show];
+//                          }];
 
 }
 
 - (void)showTabHomePage {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    UINavigationController *viewController = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"NavigationView"];
-//    [self presentViewController:viewController
-//                       animated:YES
-//                     completion:nil];
-
-        TabHomeViewController *viewController = (TabHomeViewController *)[storyboard instantiateViewControllerWithIdentifier:@"TabHomePage"];
-        [self presentViewController:viewController
-                           animated:YES
-                         completion:nil];
+    TabHomeViewController *viewController = (TabHomeViewController *)[storyboard instantiateViewControllerWithIdentifier:@"TabHomePage"];
+    [self presentViewController:viewController animated:YES completion:nil];
 
 }
 
@@ -95,9 +121,7 @@
 - (void)saveLogin:(NSString *)login andPassword:(NSString *)password
 {
     [[A0SimpleKeychain keychain] setString:@"123" forKey:@"com.eatnow.lunchmaster.token"];
-
     NSLog(@"Save pw: %@", [self.txtPassword text]);
-
 }
 
 - (void)setDisplayingSettingsForButtonsAndTextFields {

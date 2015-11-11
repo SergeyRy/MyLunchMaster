@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Google/SignIn.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface LoginViewController : UIViewController<UITextFieldDelegate, GIDSignInUIDelegate>
 

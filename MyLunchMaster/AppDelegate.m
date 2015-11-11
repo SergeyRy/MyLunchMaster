@@ -10,6 +10,8 @@
 #import <AFNetworking/AFNetworkActivityIndicatorManager.h>
 #import "SimpleKeychain.h"
 #import "LoginViewController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface AppDelegate ()
 
@@ -18,11 +20,14 @@
 @implementation AppDelegate
 
 
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     NSLog(@"saved token %@", [[A0SimpleKeychain keychain] stringForKey:@"com.eatnow.lunchmaster.token"]);
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
 
+    
     NSError* configureError;
     [[GGLContext sharedInstance] configureWithError: &configureError];
     NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
@@ -33,10 +38,26 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     
+    NSLog(@" ------ %@", [url scheme]);
+    
     return [[GIDSignIn sharedInstance] handleURL:url
                                sourceApplication:sourceApplication
                                       annotation:annotation];
 }
+
+
+//- (BOOL)application:(UIApplication *)application
+//            openURL:(NSURL *)url
+//  sourceApplication:(NSString *)sourceApplication
+//         annotation:(id)annotation {
+//    
+//    NSLog(@" ------ %@", [url scheme]); fb904581902928742
+//    
+//    return [[FBSDKApplicationDelegate sharedInstance] application:application
+//                                                          openURL:url
+//                                                sourceApplication:sourceApplication
+//                                                       annotation:annotation];
+//}
 
 - (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
     
@@ -67,7 +88,7 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

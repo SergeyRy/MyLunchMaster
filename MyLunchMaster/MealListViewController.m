@@ -84,13 +84,14 @@
     __weak MealForOrderCell *weakCell = cell;
 
     [cell.mealImage setImageWithURLRequest:request
-                              placeholderImage:placeholderImage
-                                       success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-                                           weakCell.mealImage.image = image;
-                                           [weakCell setNeedsLayout];
-                                       } failure: ^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-                NSLog(@"%@", error);
-            }];
+                          placeholderImage:placeholderImage
+                                   success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                                              weakCell.mealImage.image = image;
+                                              [weakCell setNeedsLayout];
+                                           }
+                                   failure: ^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+                                              NSLog(@"%@", error);
+                                           }];
 
     cell.delegate = self;
     cell.cellIndex = indexPath.row;

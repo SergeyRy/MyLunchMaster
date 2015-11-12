@@ -31,6 +31,7 @@
 		B45306882A3CAB3F073DDF55 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB70F74D6AEDE8265DB802D /* libPods.a */; };
 		CD2A06C01BF3861F00CCB6EB /* LoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2A06BF1BF3861F00CCB6EB /* LoginService.m */; };
 		CD2A06C41BF3895A00CCB6EB /* LoginDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2A06C31BF3895A00CCB6EB /* LoginDataProvider.m */; };
+		CD2A06C71BF4C84C00CCB6EB /* EmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2A06C61BF4C84C00CCB6EB /* EmptyCell.m */; };
 		CD3427D71BBAD0C700D15B66 /* ShoppingCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3427D61BBAD0C700D15B66 /* ShoppingCartViewController.m */; };
 		CD3427D91BBAD1C200D15B66 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3427D81BBAD1C200D15B66 /* CoreData.framework */; };
 		CD3427DD1BBBCC0400D15B66 /* LMModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD3427DB1BBBCC0400D15B66 /* LMModel.xcdatamodeld */; };
@@ -124,6 +125,8 @@
 		CD2A06BF1BF3861F00CCB6EB /* LoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginService.m; sourceTree = "<group>"; };
 		CD2A06C21BF3895A00CCB6EB /* LoginDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginDataProvider.h; sourceTree = "<group>"; };
 		CD2A06C31BF3895A00CCB6EB /* LoginDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginDataProvider.m; sourceTree = "<group>"; };
+		CD2A06C51BF4C84C00CCB6EB /* EmptyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyCell.h; sourceTree = "<group>"; };
+		CD2A06C61BF4C84C00CCB6EB /* EmptyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyCell.m; sourceTree = "<group>"; };
 		CD3427D51BBAD0C700D15B66 /* ShoppingCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCartViewController.h; sourceTree = "<group>"; };
 		CD3427D61BBAD0C700D15B66 /* ShoppingCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartViewController.m; sourceTree = "<group>"; };
 		CD3427D81BBAD1C200D15B66 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -277,6 +280,8 @@
 				CDEE4B301BC2950400C9713D /* OrderDetailCellTableViewCell.m */,
 				4722EA3ABDD415CD5EA02DAD /* MealForOrderCell.m */,
 				4722EFB3AA8003E28502C863 /* MealForOrderCell.h */,
+				CD2A06C51BF4C84C00CCB6EB /* EmptyCell.h */,
+				CD2A06C61BF4C84C00CCB6EB /* EmptyCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -643,6 +648,7 @@
 				CD6A29921B9D939D008E31C6 /* AppDelegate.m in Sources */,
 				CDEE4B311BC2950400C9713D /* OrderDetailCellTableViewCell.m in Sources */,
 				CD6A298F1B9D939D008E31C6 /* main.m in Sources */,
+				CD2A06C71BF4C84C00CCB6EB /* EmptyCell.m in Sources */,
 				CD464D9C1BA7FB970082079A /* RootViewController.m in Sources */,
 				CD464D981BA6E63F0082079A /* WeekOrdersTableViewController.m in Sources */,
 				4722EC0863FB926387175219 /* LoginViewController.m in Sources */,

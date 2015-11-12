@@ -27,7 +27,9 @@
                 return (numberOfSection + 1) == ([[evaluatedObject dayOfWeekNumber] integerValue]);
             }];
 
-    return [arrayForEater filteredArrayUsingPredicate:theDayEquelSection][0];
+    NSArray *result = [arrayForEater filteredArrayUsingPredicate:theDayEquelSection];
+    
+    return ([result count] > 0) ? result[0] : nil;
 }
 
 - (NSInteger)getCountOrderForCurrentEaterBySectionIndex:(NSInteger)numberOfSection {

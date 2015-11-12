@@ -18,7 +18,15 @@
 #import "MealDetailController.h"
 #import "JsonParserHelper.h"
 #import "MealCell.h"
+#import "EmptyCell.h"
 #import <QuartzCore/QuartzCore.h>
+
+
+typedef NS_ENUM(NSInteger, TypeCell) {
+    WithOrder,
+    WithOutOrder
+};
+
 
 @interface WeekOrdersTableViewController ()
 
@@ -44,6 +52,8 @@
     self.navigationItem.titleView=workaroundImageView;
 
     NSLog(@"table view did load");
+    
+    
 
     [[self httpClient] getOrdersForCurrentWeekSuccess:^(AFHTTPRequestOperation *task, id responseObject) {
                                             NSArray *eaters = [responseObject valueForKeyPath:@"eaters"];
@@ -65,8 +75,6 @@
                                        failure:^(AFHTTPRequestOperation *task, NSError *error) {
                                        }];
     
-    //self.tableView.contentInset = UIEdgeInsetsMake(50, 50, 50, 50);
-
 }
 
 #pragma mark - init Properties
@@ -102,7 +110,7 @@
     NSDate *fifthDayOfTheWeek = [myCalendar dateFromComponents:currentComps];
 
     NSDateFormatter *myDateFormatter = [[NSDateFormatter alloc] init];
-    myDateFormatter.dateFormat = @"EEEE dd MMMM";
+    myDateFormatter.dateFormat = @"EEEE (dd MMM YYYY)";
 
     [self setDatesOfWeek:@[
             [myDateFormatter stringFromDate:firstDayOfTheWeek],
@@ -165,10 +173,13 @@
 {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 18)];
 
-    UILabel *lblDate = [[UILabel alloc] initWithFrame:CGRectMake(30, 5, 170, 18)];
-    [lblDate setFont:[UIFont systemFontOfSize:14]];
+    UILabel *lblDate = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, 200, 18)];
+    [lblDate setFont:[UIFont systemFontOfSize:15]];
+    
+    lblDate.textColor = [UIColor colorWithRed:100/255.f green:100/255.f blue:100/255.f alpha:0.7];
     lblDate.text = self.datesOfWeek[section];
-
+    [lblDate setFont:[UIFont fontWithName:@"Arial-BoldMT" size:16]];
+    
     UIImageView *navigationImage=[[UIImageView alloc]initWithFrame:CGRectMake(10, 6, 15, 15)];
     navigationImage.image=[UIImage imageNamed:@"TabCalendar"];
     navigationImage.contentMode = UIViewContentModeScaleAspectFit;
@@ -184,14 +195,14 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
     NSArray *val = self.appData.weekOrders[self.appData.currentEater];
     NSPredicate *theDayEquelSection = [NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
         return (section + 1) == ([[evaluatedObject dayOfWeekNumber] integerValue]);
     }];
     NSArray *filteredOrders = [val filteredArrayUsingPredicate:theDayEquelSection];
 
-    return [filteredOrders count];
+//    return [filteredOrders count];
+    return 1;
 }
 
 
@@ -199,24 +210,34 @@
 
     Order *orderForCurrentSection = [self.appData getOrderForEaterForCurrentEaterBySectionIndex:indexPath.section];
 
-    MealCell *mealCell = (MealCell *)[tableView dequeueReusableCellWithIdentifier:@"MealCell"];
-    mealCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-//    UIEdgeInsets inst = [UIEdgeInsets ]
-    [mealCell.title setText: orderForCurrentSection.meal.title];
-    [mealCell.descr setText: orderForCurrentSection.meal.descr];
-    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    mealCell.separatorInset = UIEdgeInsetsZero;
+    if (!orderForCurrentSection) {
+        EmptyCell *emptyCell = (EmptyCell *)[tableView dequeueReusableCellWithIdentifier:@"EmptyCell"];
+        emptyCell.descr.text = @"You do not have order. To make order click here.";
+//        emptyCell.mealImage = [UIImageView ][UIImage imageNamed:@"empty_order"];
+        [emptyCell.mealImage setImage:[UIImage imageNamed:@"empty_order"]];
+        emptyCell.mealImage.contentMode = UIViewContentModeScaleToFill;
+        
+        [emptyCell.layer setCornerRadius:10.0f];
+        [emptyCell.layer setMasksToBounds:YES];
+        [emptyCell.layer setBorderWidth:0.1f];
+        return emptyCell;
+    } else {
+    
+        MealCell *mealCell = (MealCell *)[tableView dequeueReusableCellWithIdentifier:@"MealCell"];
+        mealCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        [mealCell.title setText: orderForCurrentSection.meal.title];
+        [mealCell.descr setText: orderForCurrentSection.meal.descr];
+        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        mealCell.separatorInset = UIEdgeInsetsZero;
+        mealCell.mealImage.contentMode = UIViewContentModeScaleToFill;
 
-    mealCell.mealImage.contentMode = UIViewContentModeScaleAspectFit;
+        NSString *imageUrl= [NSString stringWithFormat:@"%@%@", BASE_URL, [orderForCurrentSection meal].imagePath];
+        NSURL *url = [NSURL URLWithString:imageUrl];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        UIImage *placeholderImage = [UIImage imageNamed:@"none"];
 
-    NSString *imageUrl= [NSString stringWithFormat:@"%@%@", BASE_URL, [orderForCurrentSection meal].imagePath];
-    NSURL *url = [NSURL URLWithString:imageUrl];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    UIImage *placeholderImage = [UIImage imageNamed:@"none"];
-
-    __weak MealCell *weakCell = mealCell;
-
-    [mealCell.mealImage setImageWithURLRequest:request
+        __weak MealCell *weakCell = mealCell;
+        [mealCell.mealImage setImageWithURLRequest:request
                           placeholderImage:placeholderImage
                                    success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
                                        weakCell.mealImage.image = image;
@@ -226,12 +247,16 @@
                                    }];
 
 
-    [mealCell.layer setCornerRadius:10.0f];
-    [mealCell.layer setMasksToBounds:YES];
-    [mealCell.layer setBorderWidth:0.3f];
-    
-    mealCell.layoutMargins = UIEdgeInsetsZero;
+        [mealCell.layer setCornerRadius:10.0f];
+        [mealCell.layer setMasksToBounds:YES];
+        [mealCell.layer setBorderWidth:0.1f];
         return mealCell;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+   
 }
 
 

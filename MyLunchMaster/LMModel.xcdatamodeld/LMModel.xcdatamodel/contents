@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F27" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F1021" minimumToolsVersion="Xcode 4.3">
+    <entity name="Meal" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="descr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="img" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Order" syncable="YES">
         <attribute name="eater" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -20,7 +26,8 @@
     </entity>
     <elements>
         <element name="Order" positionX="-18" positionY="45" width="128" height="135"/>
-        <element name="User" positionX="-45" positionY="0" width="128" height="75"/>
         <element name="OrderHistoryItem" positionX="-27" positionY="72" width="128" height="105"/>
+        <element name="User" positionX="-45" positionY="0" width="128" height="75"/>
+        <element name="Meal" positionX="-27" positionY="72" width="128" height="105"/>
     </elements>
 </model>

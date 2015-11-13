@@ -10,10 +10,11 @@
 #import "ViewInterface.h"
 #import "ListMealCellDelegate.h"
 
+
 @class ListMealPresenter;
 
 @interface MealListViewController : UITableViewController<ViewInterface, ListMealCellDelegate>
 
-@property (nonatomic, strong) ListMealPresenter *presenter;
+@property (nonatomic, strong)NSString *day;
 
 @end

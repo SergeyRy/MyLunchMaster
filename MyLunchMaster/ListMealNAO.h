@@ -11,7 +11,7 @@
 
 @interface ListMealNAO : AFHTTPRequestOperationManager
 
-- (NSMutableArray *)getMealList;
+- (NSMutableArray *)getMealListBy:(NSString *) eaterId andDate: (NSString *) day;
 - (BOOL)addMealToCart:(Meal *)meal;
 
 @end

@@ -10,7 +10,7 @@
 #import "JsonParserHelper.h"
 #import "AFHTTPRequestOperationManager+Synchronous.h"
 
-NSString * const getMealListURL = @"api/v1/meals_menu/16759/2015-10-09";
+NSString * const getMealListURL = @"api/v1/meals_menu/%@/%@";
 
 @interface ListMealNAO ()
 
@@ -34,10 +34,10 @@ NSString * const getMealListURL = @"api/v1/meals_menu/16759/2015-10-09";
 }
 
 
-- (NSMutableArray *)getMealList {
+- (NSMutableArray *)getMealListBy:(NSString *)eaterId andDate:(NSString *)day {
     [self.requestSerializer setValue:self.token forHTTPHeaderField:@"X-Auth-Token"];
     NSError *error = nil;
-    NSData *result = [self syncGET:getMealListURL parameters:nil operation:NULL error:&error];
+    NSData *result = [self syncGET:[NSString stringWithFormat:getMealListURL, eaterId, day] parameters:nil operation:NULL error:&error];
 
     return [JsonParserHelper.getInstance parseMealListItems:(NSMutableArray *)[result valueForKeyPath:@"meals_list"]];
 }

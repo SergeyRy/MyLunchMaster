@@ -7,7 +7,13 @@
 //
 
 #import "MealService.h"
+#import "ListMealNAO.h"
 
 @implementation MealService
+
+- (NSMutableArray *)getMealListBy:(NSString *) eaterId andDate: (NSString *) day {
+    ListMealNAO *dataProvider = [[ListMealNAO alloc] init];
+    return [dataProvider getMealListBy:eaterId andDate:day];
+}
 
 @end

@@ -8,13 +8,14 @@
 
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import "MealListViewController.h"
-#import "ListMealPresenter.h"
-#import "ListMealInteractor.h"
 #import "MealForOrderCell.h"
 #import "Meal.h"
 #import "Constants.h"
+#import "MealService.h"
+#import "AppData.h"
 
 @interface MealListViewController ()
+
 
 @property (nonatomic, strong)NSMutableArray *mealList;
 
@@ -34,16 +35,12 @@
 }
 
 - (void)initProperties {
-    ListMealPresenter *presenter = [[ListMealPresenter alloc] init];
-    ListMealInteractor *interactor = [[ListMealInteractor alloc] init];
-
-    self.presenter = presenter;
-    presenter.viewController = self;
-
-    presenter.interactor = interactor;
-    interactor.presenter = presenter;
-
-    [self.presenter getMealList];
+    MealService *maelService = [[MealService alloc] init];
+    
+    AppData *appData = [AppData getInstance];
+    //self.mealList = [maelService getMealListBy:appData.currentEater.id  andDate:self.day];
+    self.mealList = [maelService getMealListBy:@"16759"  andDate:@"2015-11-16"];
+    NSLog(@"%@", self.mealList);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,13 +71,15 @@
     cell.descr.text = meal.descr;
     cell.price.text = meal.price;
 
-    cell.mealImage.contentMode = UIViewContentModeScaleAspectFit;
+    cell.mealImage.contentMode = UIViewContentModeScaleToFill;
 
     NSString *imageUrl= [NSString stringWithFormat:@"%@%@", BASE_URL, meal.imagePath];
     NSURL *url = [NSURL URLWithString:imageUrl];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     UIImage *placeholderImage = [UIImage imageNamed:@"none"];
 
+
+    
     __weak MealForOrderCell *weakCell = cell;
 
     [cell.mealImage setImageWithURLRequest:request
@@ -93,11 +92,16 @@
                                               NSLog(@"%@", error);
                                            }];
 
+    [cell.layer setCornerRadius:10.0f];
+    [cell.layer setMasksToBounds:YES];
+    [cell.layer setBorderWidth:0.1f];
+    
     cell.delegate = self;
     cell.cellIndex = indexPath.row;
     if (self.mealList)
     cell.imgOk.hidden = YES;
 
+    
     return cell;
 }
 
@@ -105,7 +109,7 @@
 {
     // Do additional actions as required.
     //NSLog(@"Cell at Index: %d clicked.\n Data received : %@", cellIndex, data);
-    [self.presenter setSelectedRow:cellIndex];
+
 
 }
 

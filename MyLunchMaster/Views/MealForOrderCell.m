@@ -15,4 +15,10 @@
         [self.delegate didClickOnCellAtIndex:_cellIndex withData:@"any other cell data/property"];
     }
 }
+
+- (void)setFrame:(CGRect)frame {
+    frame.origin.x += 5;
+    frame.size.width -= 10;
+    [super setFrame:frame];
+}
 @end

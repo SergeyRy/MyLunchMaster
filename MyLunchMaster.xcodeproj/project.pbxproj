@@ -13,12 +13,10 @@
 		4722E2A69735AFADB98440BD /* OrderHistoryNAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EBEA853892174C7E9C7E /* OrderHistoryNAO.m */; };
 		4722E2C5FE8608D8226F060F /* MealDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E89109AC64C73570CE96 /* MealDetailController.m */; };
 		4722E3F1DD6FEE7EAE4318F6 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EF3491407C4E68055CF6 /* Order.m */; };
-		4722E659A620617885329EC6 /* ListMealPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E41B735F9EC14CF4D89D /* ListMealPresenter.m */; };
 		4722E758CF79C99C6AF07DA8 /* Eater.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EB3DE64280238FEF5523 /* Eater.m */; };
 		4722E80AFCE75A135BAF1AFD /* OrderFromCart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E853C56C423C5E97F0BC /* OrderFromCart.m */; };
 		4722E82AD90E6AB17A355D31 /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E670D15425367C9B3405 /* Meal.m */; };
 		4722E8456B8A1B6BA2BF608F /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E79A128D3EC39D5CC7A8 /* AppData.m */; };
-		4722E99816210807479113F3 /* ListMealInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EA3209FB64B0ED214AA9 /* ListMealInteractor.m */; };
 		4722EB008F984BA5B0B76ED7 /* HttpApiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722EF8D735114A390F9CC2B /* HttpApiHelper.m */; };
 		4722EBE44043B5BD5A424376 /* OrderHistoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E2DF09B3C4EF231CE7AC /* OrderHistoryItem.m */; };
 		4722EC0863FB926387175219 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722E103A5FA1C214ADEA20D /* LoginViewController.m */; };
@@ -56,6 +54,7 @@
 		CD6A299A1B9D939D008E31C6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD6A29991B9D939D008E31C6 /* Images.xcassets */; };
 		CD6A299D1B9D939D008E31C6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD6A299B1B9D939D008E31C6 /* LaunchScreen.xib */; };
 		CD6A29A91B9D939D008E31C6 /* MyLunchMasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6A29A81B9D939D008E31C6 /* MyLunchMasterTests.m */; };
+		CDE799391BF6226B00789041 /* MealService.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE799381BF6226B00789041 /* MealService.m */; };
 		CDEE4B311BC2950400C9713D /* OrderDetailCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEE4B301BC2950400C9713D /* OrderDetailCellTableViewCell.m */; };
 		CDEE4B361BC2B15000C9713D /* OrderHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEE4B351BC2B15000C9713D /* OrderHistoryViewController.m */; };
 		CDEE4B3A1BC39FD200C9713D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEE4B391BC39FD200C9713D /* SystemConfiguration.framework */; };
@@ -83,12 +82,9 @@
 		4722E1E5DD5CCEFAC973C9B6 /* ListMealNAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListMealNAO.m; sourceTree = "<group>"; };
 		4722E1F9C470F6709ED7B9C1 /* OrderHistoryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderHistoryService.h; sourceTree = "<group>"; };
 		4722E2DF09B3C4EF231CE7AC /* OrderHistoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderHistoryItem.m; sourceTree = "<group>"; };
-		4722E2F5FB8B7E6830619283 /* ListMealPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListMealPresenter.h; sourceTree = "<group>"; };
 		4722E320E7815DF3D43C0113 /* TabHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabHomeViewController.m; sourceTree = "<group>"; };
 		4722E392D392D881E95F0A2C /* AppData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppData.h; sourceTree = "<group>"; };
-		4722E41B735F9EC14CF4D89D /* ListMealPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListMealPresenter.m; sourceTree = "<group>"; };
 		4722E48E67CF800412C6D925 /* Eater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eater.h; sourceTree = "<group>"; };
-		4722E4A080A75DC5C60BD8E0 /* ListMealInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListMealInteractor.h; sourceTree = "<group>"; };
 		4722E5B55C587E38C235B3DB /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		4722E651EFB3384568E5FC1F /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		4722E670D15425367C9B3405 /* Meal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meal.m; sourceTree = "<group>"; };
@@ -107,7 +103,6 @@
 		4722E96431CAE7FC594B01EC /* OrderHistoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderHistoryItem.h; sourceTree = "<group>"; };
 		4722E9798DE73E16E6EBD6F9 /* OrderHistoryDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderHistoryDAO.m; sourceTree = "<group>"; };
 		4722E9A4813E4C0DC69D1BD0 /* MealCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealCell.h; sourceTree = "<group>"; };
-		4722EA3209FB64B0ED214AA9 /* ListMealInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListMealInteractor.m; sourceTree = "<group>"; };
 		4722EA3ABDD415CD5EA02DAD /* MealForOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealForOrderCell.m; sourceTree = "<group>"; };
 		4722EA8734E4C67CD5148D5B /* OrderHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderHistory.h; sourceTree = "<group>"; };
 		4722EAC5A5C19349B4FFC97C /* OrderHistoryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderHistoryService.m; sourceTree = "<group>"; };
@@ -157,6 +152,8 @@
 		CD6A29A21B9D939D008E31C6 /* MyLunchMasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLunchMasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6A29A71B9D939D008E31C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD6A29A81B9D939D008E31C6 /* MyLunchMasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLunchMasterTests.m; sourceTree = "<group>"; };
+		CDE799371BF6226B00789041 /* MealService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealService.h; sourceTree = "<group>"; };
+		CDE799381BF6226B00789041 /* MealService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealService.m; sourceTree = "<group>"; };
 		CDEE4B2F1BC2950400C9713D /* OrderDetailCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetailCellTableViewCell.h; sourceTree = "<group>"; };
 		CDEE4B301BC2950400C9713D /* OrderDetailCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetailCellTableViewCell.m; sourceTree = "<group>"; };
 		CDEE4B341BC2B15000C9713D /* OrderHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderHistoryViewController.h; sourceTree = "<group>"; };
@@ -197,24 +194,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4722E037A6BFB395507E3997 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				4722E41B735F9EC14CF4D89D /* ListMealPresenter.m */,
-				4722E2F5FB8B7E6830619283 /* ListMealPresenter.h */,
-			);
-			name = Presenter;
-			sourceTree = "<group>";
-		};
-		4722E383B5DE5BC14C039D7A /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				4722EA3209FB64B0ED214AA9 /* ListMealInteractor.m */,
-				4722E4A080A75DC5C60BD8E0 /* ListMealInteractor.h */,
-			);
-			name = Interactor;
-			sourceTree = "<group>";
-		};
 		4722E48BA967EDA0337671F2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,6 +385,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CDE799361BF6224A00789041 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CDE799371BF6226B00789041 /* MealService.h */,
+				CDE799381BF6226B00789041 /* MealService.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		CDEE4B321BC2B0CE00C9713D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,8 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				CDEE4B441BC41A7C00C9713D /* Controller */,
-				4722E037A6BFB395507E3997 /* Presenter */,
-				4722E383B5DE5BC14C039D7A /* Interactor */,
+				CDE799361BF6224A00789041 /* Service */,
 				4722E92748F6B3A023CEEF3C /* DataProvider */,
 				4722E8897FD7CF93AB4D2E1B /* Protocols */,
 			);
@@ -667,14 +654,13 @@
 				4722E298DE16B8D9280BFB90 /* JsonParserHelper.m in Sources */,
 				4722E2C5FE8608D8226F060F /* MealDetailController.m in Sources */,
 				4722E1B729AAF07B159658D8 /* MealCell.m in Sources */,
+				CDE799391BF6226B00789041 /* MealService.m in Sources */,
 				4722E80AFCE75A135BAF1AFD /* OrderFromCart.m in Sources */,
 				4722EE1DBF5B49BE4D924291 /* OrderHistoryDAO.m in Sources */,
 				4722E2A69735AFADB98440BD /* OrderHistoryNAO.m in Sources */,
 				4722ECE67EE483F34D01D4A0 /* OrderHistoryService.m in Sources */,
 				4722EBE44043B5BD5A424376 /* OrderHistoryItem.m in Sources */,
 				CD2A06C01BF3861F00CCB6EB /* LoginService.m in Sources */,
-				4722E659A620617885329EC6 /* ListMealPresenter.m in Sources */,
-				4722E99816210807479113F3 /* ListMealInteractor.m in Sources */,
 				4722ED3C898C7EB9021B3711 /* ListMealNAO.m in Sources */,
 				CD2A06C41BF3895A00CCB6EB /* LoginDataProvider.m in Sources */,
 				4722E04DBCF109E3B8407E6B /* MealForOrderCell.m in Sources */,

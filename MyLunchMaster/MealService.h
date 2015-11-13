@@ -10,4 +10,6 @@
 
 @interface MealService : NSObject
 
+- (NSMutableArray *)getMealListBy:(NSString *) eaterId andDate: (NSString *) day;
+
 @end

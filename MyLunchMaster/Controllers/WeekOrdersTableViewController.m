@@ -20,6 +20,7 @@
 #import "MealCell.h"
 #import "EmptyCell.h"
 #import <QuartzCore/QuartzCore.h>
+#import "MealListViewController.h"
 
 
 typedef NS_ENUM(NSInteger, TypeCell) {
@@ -52,7 +53,6 @@ typedef NS_ENUM(NSInteger, TypeCell) {
     self.navigationItem.titleView=workaroundImageView;
 
     NSLog(@"table view did load");
-    
     
 
     [[self httpClient] getOrdersForCurrentWeekSuccess:^(AFHTTPRequestOperation *task, id responseObject) {
@@ -96,8 +96,7 @@ typedef NS_ENUM(NSInteger, TypeCell) {
     NSCalendar *myCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 
     NSDateComponents *currentComps = [myCalendar components:( NSYearCalendarUnit | NSMonthCalendarUnit | NSWeekOfYearCalendarUnit | NSWeekdayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:weekDate];
-    int ff = currentComps.weekOfYear;
-
+    
     [currentComps setWeekday:2]; // 2: monday
     NSDate *firstDayOfTheWeek = [myCalendar dateFromComponents:currentComps];
     [currentComps setWeekday:3];
@@ -110,8 +109,8 @@ typedef NS_ENUM(NSInteger, TypeCell) {
     NSDate *fifthDayOfTheWeek = [myCalendar dateFromComponents:currentComps];
 
     NSDateFormatter *myDateFormatter = [[NSDateFormatter alloc] init];
-    myDateFormatter.dateFormat = @"EEEE (dd MMM YYYY)";
-
+//    myDateFormatter.dateFormat = @"EEEE (dd MMM YYYY)";
+    myDateFormatter.dateFormat = @"YYYY-MM-dd";
     [self setDatesOfWeek:@[
             [myDateFormatter stringFromDate:firstDayOfTheWeek],
             [myDateFormatter stringFromDate:secondDayOfTheWeek],
@@ -164,20 +163,18 @@ typedef NS_ENUM(NSInteger, TypeCell) {
     return [self.daysOfWeek count];
 }
 
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-//{
-//    return self.daysOfWeek[section];
-//}
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 18)];
 
-    UILabel *lblDate = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, 200, 18)];
+    UILabel *lblDate = [[UILabel alloc] initWithFrame:CGRectMake(view.bounds.size.width/2 - 40, 5, 200, 18)];
+    //UILabel *lblDate = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 18)];
+    
     [lblDate setFont:[UIFont systemFontOfSize:15]];
     
     lblDate.textColor = [UIColor colorWithRed:100/255.f green:100/255.f blue:100/255.f alpha:0.7];
-    lblDate.text = self.datesOfWeek[section];
+    lblDate.text = self.daysOfWeek[section];
     [lblDate setFont:[UIFont fontWithName:@"Arial-BoldMT" size:16]];
     
     UIImageView *navigationImage=[[UIImageView alloc]initWithFrame:CGRectMake(10, 6, 15, 15)];
@@ -186,6 +183,18 @@ typedef NS_ENUM(NSInteger, TypeCell) {
 
 
     [view addSubview:lblDate];
+    
+//    NSLayoutConstraint *yCenterConstraint = [NSLayoutConstraint constraintWithItem:lblDate attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
+
+//    NSLayoutConstraint *xCenterConstraint = [NSLayoutConstraint constraintWithItem:lblDate attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
+
+//    [lblDate addConstraint:xCenterConstraint];
+//    [lblDate addConstraint:yCenterConstraint];
+    
+    
+    //[lblDate addConstraint:[NSLayoutConstraint constraintWithItem:lblDate attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:0 multiplier:1 constant:200]];
+
+    
     //[view addSubview:navigationImage];
     [view setBackgroundColor:[UIColor colorWithRed:216/255.f green:217/255.f blue:216/255.f alpha:0.5]]; //your background color...
     //[view setBackgroundColor:[UIColor whiteColor]]; //your background color...
@@ -255,8 +264,19 @@ typedef NS_ENUM(NSInteger, TypeCell) {
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-   
+//    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+//    
+//    if ([cell isKindOfClass:[MealCell class]]) {
+//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+//        MealDetailController * vc = [storyboard instantiateViewControllerWithIdentifier:@"MealDetails"];
+//        [self.navigationController pushViewController:vc animated:YES];
+//    } else if ([cell isKindOfClass:[EmptyCell class]]){
+//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+//        MealListViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"MenuList"];
+//        vc.day = self.datesOfWeek[indexPath.row];
+//        [self.navigationController pushViewController:vc animated:YES];
+//    }
+    
 }
 
 
@@ -305,6 +325,12 @@ typedef NS_ENUM(NSInteger, TypeCell) {
         MealDetailController *detailViewController = (MealDetailController *)segue.destinationViewController;
 
         detailViewController.order = [self.appData getOrderForEaterForCurrentEaterBySectionIndex:indexPath.section];
+    }
+    if (([segue.identifier isEqualToString:@"MenuListSegue"])) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        MealListViewController *mealListViewController = (MealListViewController *)segue.destinationViewController;
+        mealListViewController.day = self.datesOfWeek[indexPath.row];
+        
     }
 }
 

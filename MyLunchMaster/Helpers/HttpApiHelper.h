@@ -26,4 +26,10 @@ extern NSString * const baseURLString;
 - (void)getShoppingCartSuccess:(void(^)(AFHTTPRequestOperation *task, id responseObject))success
                        failure:(void(^)(AFHTTPRequestOperation *task, NSError *error))failure;
 
+- (void)addMealToCardWithMealId:(NSString *)mealId
+                     forEaterId:(NSString *)eaterId
+                        forDate:(NSString *)date
+                        success:(void(^)(AFHTTPRequestOperation *task, id responseObject))success
+                        failure:(void(^)(AFHTTPRequestOperation *task, NSError *error))failure;
+
 @end

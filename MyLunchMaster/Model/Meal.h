@@ -17,5 +17,5 @@
 @property (nonatomic) BOOL isSelected;
 
 - (id) initWithId:(NSNumber *)id title:(NSString *) title descr:(NSString *) descr allergens:(NSString *)allergens imagePath:(NSString *) imagePath;
-
+- (id) initWithId:(NSNumber *)id title:(NSString *) title descr:(NSString *) descr allergens:(NSString *)allergens imagePath:(NSString *) imagePath price:(NSString *) price;
 @end

@@ -13,6 +13,7 @@
 #import "Constants.h"
 #import "MealService.h"
 #import "AppData.h"
+#import "MealDetailController.h"
 
 @interface MealListViewController ()
 
@@ -26,12 +27,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initProperties];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)initProperties {
@@ -39,7 +34,7 @@
     
     AppData *appData = [AppData getInstance];
     //self.mealList = [maelService getMealListBy:appData.currentEater.id  andDate:self.day];
-    self.mealList = [maelService getMealListBy:@"16759"  andDate:@"2015-11-16"];
+    self.mealList = [maelService getMealListBy:@"16759"  andDate:self.day];
     NSLog(@"%@", self.mealList);
 }
 
@@ -147,15 +142,21 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    MealDetailController *detailViewController = (MealDetailController *)segue.destinationViewController;
+    
+    Meal *meal = (Meal *)self.mealList[indexPath.row];
+    
+    detailViewController.meal = meal;
+    detailViewController.typePage = TypeMealDetailPageForOrder;
+    detailViewController.selectedDate = self.day;
 }
-*/
+
 
 #pragma mark - ViewInterface implement
 

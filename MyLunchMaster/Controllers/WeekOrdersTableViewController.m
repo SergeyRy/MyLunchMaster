@@ -21,6 +21,7 @@
 #import "EmptyCell.h"
 #import <QuartzCore/QuartzCore.h>
 #import "MealListViewController.h"
+#import "MealDetailController.h"
 
 
 typedef NS_ENUM(NSInteger, TypeCell) {
@@ -37,6 +38,7 @@ typedef NS_ENUM(NSInteger, TypeCell) {
 @property (nonatomic, strong) NSArray *datesOfWeek;
 @property (nonatomic, strong) UIBarButtonItem *changeEaterButton;
 @property (nonatomic, strong) JsonParserHelper *jsonParserHelper;
+
 
 @end
 
@@ -73,6 +75,7 @@ typedef NS_ENUM(NSInteger, TypeCell) {
 
                                         }
                                        failure:^(AFHTTPRequestOperation *task, NSError *error) {
+                                           
                                        }];
     
 }
@@ -130,7 +133,7 @@ typedef NS_ENUM(NSInteger, TypeCell) {
 
 #pragma mark - Methods for Action Sheet
 
-- (void) openActionSheet{
+- (void)openActionSheet{
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Select current child please ..."
                                                              delegate:self
                                                     cancelButtonTitle:@"Cancel"
@@ -140,7 +143,7 @@ typedef NS_ENUM(NSInteger, TypeCell) {
 
 }
 
--(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     NSLog(@"Index = %d - Title = %@", buttonIndex, [actionSheet buttonTitleAtIndex:buttonIndex]);
     if (buttonIndex > [self.appData.eaters count] - 1) {
         return;
@@ -169,8 +172,6 @@ typedef NS_ENUM(NSInteger, TypeCell) {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 18)];
 
     UILabel *lblDate = [[UILabel alloc] initWithFrame:CGRectMake(view.bounds.size.width/2 - 40, 5, 200, 18)];
-    //UILabel *lblDate = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 18)];
-    
     [lblDate setFont:[UIFont systemFontOfSize:15]];
     
     lblDate.textColor = [UIColor colorWithRed:100/255.f green:100/255.f blue:100/255.f alpha:0.7];
@@ -183,21 +184,7 @@ typedef NS_ENUM(NSInteger, TypeCell) {
 
 
     [view addSubview:lblDate];
-    
-//    NSLayoutConstraint *yCenterConstraint = [NSLayoutConstraint constraintWithItem:lblDate attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
-
-//    NSLayoutConstraint *xCenterConstraint = [NSLayoutConstraint constraintWithItem:lblDate attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
-
-//    [lblDate addConstraint:xCenterConstraint];
-//    [lblDate addConstraint:yCenterConstraint];
-    
-    
-    //[lblDate addConstraint:[NSLayoutConstraint constraintWithItem:lblDate attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:0 multiplier:1 constant:200]];
-
-    
-    //[view addSubview:navigationImage];
-    [view setBackgroundColor:[UIColor colorWithRed:216/255.f green:217/255.f blue:216/255.f alpha:0.5]]; //your background color...
-    //[view setBackgroundColor:[UIColor whiteColor]]; //your background color...
+    [view setBackgroundColor:[UIColor colorWithRed:216/255.f green:217/255.f blue:216/255.f alpha:0.5]];
 
     
     return view;
@@ -263,57 +250,6 @@ typedef NS_ENUM(NSInteger, TypeCell) {
     }
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-//    
-//    if ([cell isKindOfClass:[MealCell class]]) {
-//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-//        MealDetailController * vc = [storyboard instantiateViewControllerWithIdentifier:@"MealDetails"];
-//        [self.navigationController pushViewController:vc animated:YES];
-//    } else if ([cell isKindOfClass:[EmptyCell class]]){
-//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-//        MealListViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"MenuList"];
-//        vc.day = self.datesOfWeek[indexPath.row];
-//        [self.navigationController pushViewController:vc animated:YES];
-//    }
-    
-}
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 
 #pragma mark - Navigation
 
@@ -324,13 +260,30 @@ typedef NS_ENUM(NSInteger, TypeCell) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         MealDetailController *detailViewController = (MealDetailController *)segue.destinationViewController;
 
-        detailViewController.order = [self.appData getOrderForEaterForCurrentEaterBySectionIndex:indexPath.section];
-    }
-    if (([segue.identifier isEqualToString:@"MenuListSegue"])) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        MealListViewController *mealListViewController = (MealListViewController *)segue.destinationViewController;
-        mealListViewController.day = self.datesOfWeek[indexPath.row];
+        Order *order = [self.appData getOrderForEaterForCurrentEaterBySectionIndex:indexPath.section];
         
+        //detailViewController.typePage = TypeMealDetailPage.ForView;
+        detailViewController.meal = [[Meal alloc] initWithId:order.meal.id
+                                                       title:order.meal.title
+                                                       descr:order.meal.descr
+                                                   allergens:order.meal.allergens
+                                                   imagePath:order.meal.imagePath];
+        
+        detailViewController.typePage = TypeMealDetailPageForView;
+    }
+
+    if (([segue.identifier isEqualToString:@"MenuListSegue"])) {
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        
+        NSInteger rowNumber = 0;
+        
+        for (NSInteger i = 0; i < indexPath.section; i++) {
+            rowNumber += [self.tableView numberOfRowsInSection:i];
+        }
+        rowNumber += indexPath.row;
+        
+        MealListViewController *mealListViewController = (MealListViewController *)segue.destinationViewController;
+        mealListViewController.day = self.datesOfWeek[rowNumber];
     }
 }
 

@@ -12,7 +12,7 @@ NSString * const baseURLString = @"https://eatnow.thelunchmaster.com";
 NSString * const authorizationURLString = @"api/v1/users/sign_in";
 NSString * const getOrdersForCurrentWeekURLString = @"api/v1/weekly_order";
 NSString * const getShoppCart = @"api/v1/shopping_cart_orders";
-
+NSString * const addMealToCartUrl = @"api/v1/add_to_cart/";
 
 
 @implementation HttpApiHelper
@@ -73,7 +73,28 @@ NSString * const getShoppCart = @"api/v1/shopping_cart_orders";
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         failure(operation, error);
     }];
-    
 }
 
+- (void)addMealToCardWithMealId:(NSString *)mealId
+                     forEaterId:(NSString *)eaterId
+                        forDate:(NSString *)date
+                        success:(nonnull void(^)(AFHTTPRequestOperation *task, id responseObject))success
+                        failure:(nonnull void(^)(AFHTTPRequestOperation *task, NSError *error))failure {
+    
+    NSDictionary *parameters = @{@"daily_school_menu_id": @"1636980",
+                                 @"eater_id": eaterId,
+                                 @"meal_date": date,
+                                 @"meal_size": @"regular",
+                                 @"menu_item_id": mealId,
+                                 @"school_menu_id": @"223"                                 };
+    
+    [self.requestSerializer setValue:_token forHTTPHeaderField:@"X-Auth-Token"];
+    NSString *n = [NSString stringWithFormat:@"%@%@", addMealToCartUrl, parameters];
+    [self GET: n parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        success(operation, responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", error);
+        failure(operation, error);
+    }];
+}
 @end
